@@ -10,7 +10,6 @@ A Corpus of Quotes.
  - 36,165 quotes with 
  - 878,450 words from
  - 2,297 people
- - 
 
 # Contribute
 - Feel free to fork it, add more quotes and do a pull merge request
