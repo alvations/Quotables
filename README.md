@@ -1,12 +1,12 @@
 # Quotables
 A Corpus of Quotes.
 
-#Quotable Quote
+# Quotable Quote
 
 *"I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."* 
 **Bruce Lee**
 
-#Statistics:
+# Statistics:
  - 36,165 quotes with 
  - 878,450 words from
  - 2,297 people
