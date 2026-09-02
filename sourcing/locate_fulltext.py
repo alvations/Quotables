@@ -22,7 +22,7 @@ from rapidfuzz import fuzz
 from norm import norm, norm_author
 
 ROMAN = {"i":1,"ii":2,"iii":3,"iv":4,"v":5,"vi":6,"vii":7,"viii":8,"ix":9,"x":10}
-HEAD_RE = re.compile(r"^\s*(CHAPTER|BOOK|PART|ESSAY|LETTER|SECTION|CANTO|ACT|SCENE|VOLUME|APHORISM|OF )\b", re.I)
+HEAD_RE = re.compile(r"^\s*(CHAPTER|BOOK|PART|ESSAY|LETTER|SECTION|CANTO|ACT|SCENE|VOLUME|APHORISM|Chapter|Book|Part|Essay|Letter|Section|Canto|Act|Scene|Aphorism)\b")
 ACTSCENE_RE = re.compile(r"ACT\s+([IVXLC]+|\d+)\.?\s*SCENE\s+([IVXLC]+|\d+)", re.I)
 ACT_RE = re.compile(r"^\s*ACT\s+([IVXLC]+|\d+)\b", re.I)
 SCENE_RE = re.compile(r"^\s*SCENE\s+([IVXLC]+|\d+)\b", re.I)
@@ -40,7 +40,12 @@ def roman_to_int(s):
 
 def is_caps_heading(line):
     s = line.strip()
-    return 4 <= len(s) <= 80 and s.upper() == s and re.search(r"[A-Z]{3}", s) and not s.endswith(('.', ',', ';', ':')) or bool(HEAD_RE.match(s)) and len(s) < 80
+    if not (3 <= len(s) <= 60) or s.endswith((",", ";", ":", "-")):
+        return False
+    if HEAD_RE.match(s):
+        return True
+    letters = re.sub(r"[^A-Za-z]", "", s)
+    return bool(letters) and letters.upper() == letters and len(letters) >= 3 and len(letters) >= 0.5 * len(s)
 
 def load_text(path, shakespeare):
     raw = open(path, encoding="utf8", errors="replace").read().split("\n")
@@ -107,7 +112,8 @@ def heading_for(lines, works, li, shakespeare):
     for j in range(li, max(-1, li-4000), -1):
         s = lines[j]
         if is_caps_heading(s) and not s.strip().isdigit():
-            return work, re.sub(r"\s+", " ", s.strip())[:70]
+            h = re.sub(r"\s+", " ", s.strip()).rstrip(".")
+            return work, h[:70]
     return work, None
 
 def title_case(t):

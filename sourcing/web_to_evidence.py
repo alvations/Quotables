@@ -13,6 +13,9 @@ with open(sys.argv[1], "w", encoding="utf8") as fo:
             try: r = json.loads(l)
             except json.JSONDecodeError: continue
             if not isinstance(r, dict) or "id" not in r or r["id"] in seen: continue
+            ev = " ".join(r.get("evidence") or [])
+            if "NOT SEARCHED" in ev or (r.get("status") == "unverified" and not r.get("queries")):
+                continue  # placeholder written when the search budget ran out: leave for a re-run
             seen.add(r["id"])
             r["line"] = int(r["id"]); r["dataset"] = "web-search-agent"; r["how"] = "web"
             fo.write(json.dumps(r, ensure_ascii=False) + "\n")

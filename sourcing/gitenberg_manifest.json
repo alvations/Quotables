@@ -1,0 +1,872 @@
+[
+ {
+  "author": "Ralph Waldo Emerson",
+  "work": "The Conduct of Life",
+  "year": 1860,
+  "pg_id": 39827,
+  "repo": "The-Conduct-of-Life_39827",
+  "path": "/home/user/gitenberg/The-Conduct-of-Life_39827",
+  "text_file": "/home/user/gitenberg/The-Conduct-of-Life_39827/39827-0.txt",
+  "note": ""
+ },
+ {
+  "author": "George Bernard Shaw",
+  "work": "Maxims for Revolutionists",
+  "year": 1903,
+  "pg_id": 26107,
+  "repo": "Maxims-for-Revolutionists_26107",
+  "path": "/home/user/gitenberg/Maxims-for-Revolutionists_26107",
+  "text_file": "/home/user/gitenberg/Maxims-for-Revolutionists_26107/26107-8.txt",
+  "note": "Appendix to Man and Superman"
+ },
+ {
+  "author": "George Bernard Shaw",
+  "work": "Pygmalion",
+  "year": 1913,
+  "pg_id": 3825,
+  "repo": "Pygmalion_3825",
+  "path": "/home/user/gitenberg/Pygmalion_3825",
+  "text_file": "/home/user/gitenberg/Pygmalion_3825/3825.txt",
+  "note": ""
+ },
+ {
+  "author": "George Bernard Shaw",
+  "work": "Major Barbara",
+  "year": 1905,
+  "pg_id": 3790,
+  "repo": "Major-Barbara_3790",
+  "path": "/home/user/gitenberg/Major-Barbara_3790",
+  "text_file": "/home/user/gitenberg/Major-Barbara_3790/3790.txt",
+  "note": ""
+ },
+ {
+  "author": "Samuel Johnson",
+  "work": "Rasselas, Prince of Abyssinia",
+  "year": 1759,
+  "pg_id": 652,
+  "repo": "Rasselas-Prince-of-Abyssinia_652",
+  "path": "/home/user/gitenberg/Rasselas-Prince-of-Abyssinia_652",
+  "text_file": "/home/user/gitenberg/Rasselas-Prince-of-Abyssinia_652/652-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Oscar Wilde",
+  "work": "The Picture of Dorian Gray",
+  "year": 1890,
+  "pg_id": 174,
+  "repo": "The-Picture-of-Dorian-Gray_174",
+  "path": "/home/user/gitenberg/The-Picture-of-Dorian-Gray_174",
+  "text_file": "/home/user/gitenberg/The-Picture-of-Dorian-Gray_174/174.txt",
+  "note": ""
+ },
+ {
+  "author": "Oscar Wilde",
+  "work": "Lady Windermere's Fan",
+  "year": 1892,
+  "pg_id": 790,
+  "repo": "Lady-Windermere-s-Fan_790",
+  "path": "/home/user/gitenberg/Lady-Windermere-s-Fan_790",
+  "text_file": "/home/user/gitenberg/Lady-Windermere-s-Fan_790/790-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Oscar Wilde",
+  "work": "Intentions",
+  "year": 1891,
+  "pg_id": 887,
+  "repo": "Intentions_887",
+  "path": "/home/user/gitenberg/Intentions_887",
+  "text_file": "/home/user/gitenberg/Intentions_887/887-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Oscar Wilde",
+  "work": "A Woman of No Importance",
+  "year": 1893,
+  "pg_id": 854,
+  "repo": "A-Woman-of-No-Importance_854",
+  "path": "/home/user/gitenberg/A-Woman-of-No-Importance_854",
+  "text_file": "/home/user/gitenberg/A-Woman-of-No-Importance_854/854-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Mark Twain",
+  "work": "Pudd'nhead Wilson",
+  "year": 1894,
+  "pg_id": 102,
+  "repo": "The-Tragedy-of-Pudd-nhead-Wilson_102",
+  "path": "/home/user/gitenberg/The-Tragedy-of-Pudd-nhead-Wilson_102",
+  "text_file": "/home/user/gitenberg/The-Tragedy-of-Pudd-nhead-Wilson_102/102-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Mark Twain",
+  "work": "Adventures of Huckleberry Finn",
+  "year": 1884,
+  "pg_id": 76,
+  "repo": "Adventures-of-Huckleberry-Finn_76",
+  "path": "/home/user/gitenberg/Adventures-of-Huckleberry-Finn_76",
+  "text_file": "/home/user/gitenberg/Adventures-of-Huckleberry-Finn_76/76-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Mark Twain",
+  "work": "A Connecticut Yankee in King Arthur's Court",
+  "year": 1889,
+  "pg_id": 86,
+  "repo": "A-Connecticut-Yankee-in-King-Arthur-s-Court_86",
+  "path": "/home/user/gitenberg/A-Connecticut-Yankee-in-King-Arthur-s-Court_86",
+  "text_file": "/home/user/gitenberg/A-Connecticut-Yankee-in-King-Arthur-s-Court_86/86-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Mark Twain",
+  "work": "The Innocents Abroad",
+  "year": 1869,
+  "pg_id": 3176,
+  "repo": "The-Innocents-Abroad_3176",
+  "path": "/home/user/gitenberg/The-Innocents-Abroad_3176",
+  "text_file": "/home/user/gitenberg/The-Innocents-Abroad_3176/3176-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Friedrich Nietzsche",
+  "work": "Beyond Good and Evil",
+  "year": 1886,
+  "pg_id": 4363,
+  "repo": "Beyond-Good-and-Evil_4363",
+  "path": "/home/user/gitenberg/Beyond-Good-and-Evil_4363",
+  "text_file": "/home/user/gitenberg/Beyond-Good-and-Evil_4363/4363.txt",
+  "note": "Helen Zimmern translation"
+ },
+ {
+  "author": "Friedrich Nietzsche",
+  "work": "The Antichrist",
+  "year": 1895,
+  "pg_id": 19322,
+  "repo": "The-Antichrist_19322",
+  "path": "/home/user/gitenberg/The-Antichrist_19322",
+  "text_file": "/home/user/gitenberg/The-Antichrist_19322/19322.txt",
+  "note": "H. L. Mencken translation"
+ },
+ {
+  "author": "Francis Bacon",
+  "work": "The Advancement of Learning",
+  "year": 1605,
+  "pg_id": 5500,
+  "repo": "The-Advancement-of-Learning_5500",
+  "path": "/home/user/gitenberg/The-Advancement-of-Learning_5500",
+  "text_file": "/home/user/gitenberg/The-Advancement-of-Learning_5500/5500-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Benjamin Franklin",
+  "work": "The Autobiography of Benjamin Franklin",
+  "year": 1791,
+  "pg_id": 148,
+  "repo": "The-Autobiography-of-Benjamin-Franklin_148",
+  "path": "/home/user/gitenberg/The-Autobiography-of-Benjamin-Franklin_148",
+  "text_file": "/home/user/gitenberg/The-Autobiography-of-Benjamin-Franklin_148/148-8.txt",
+  "note": ""
+ },
+ {
+  "author": "Samuel Butler",
+  "work": "The Note-Books of Samuel Butler",
+  "year": 1912,
+  "pg_id": 6173,
+  "repo": "The-Note-Books-of-Samuel-Butler_6173",
+  "path": "/home/user/gitenberg/The-Note-Books-of-Samuel-Butler_6173",
+  "text_file": "/home/user/gitenberg/The-Note-Books-of-Samuel-Butler_6173/6173-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Samuel Butler",
+  "work": "The Way of All Flesh",
+  "year": 1903,
+  "pg_id": 2084,
+  "repo": "The-Way-of-All-Flesh_2084",
+  "path": "/home/user/gitenberg/The-Way-of-All-Flesh_2084",
+  "text_file": "/home/user/gitenberg/The-Way-of-All-Flesh_2084/2084.txt",
+  "note": ""
+ },
+ {
+  "author": "Henry David Thoreau",
+  "work": "Walden",
+  "year": 1854,
+  "pg_id": 205,
+  "repo": "Walden-and-On-The-Duty-Of-Civil-Disobedience_205",
+  "path": "/home/user/gitenberg/Walden-and-On-The-Duty-Of-Civil-Disobedience_205",
+  "text_file": "/home/user/gitenberg/Walden-and-On-The-Duty-Of-Civil-Disobedience_205/205.txt",
+  "note": "Also contains Civil Disobedience"
+ },
+ {
+  "author": "Henry David Thoreau",
+  "work": "Walking",
+  "year": 1862,
+  "pg_id": 1022,
+  "repo": "Walking_1022",
+  "path": "/home/user/gitenberg/Walking_1022",
+  "text_file": "/home/user/gitenberg/Walking_1022/1022-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Ambrose Bierce",
+  "work": "The Devil's Dictionary",
+  "year": 1911,
+  "pg_id": 972,
+  "repo": "The-Devil-s-Dictionary_972",
+  "path": "/home/user/gitenberg/The-Devil-s-Dictionary_972",
+  "text_file": "/home/user/gitenberg/The-Devil-s-Dictionary_972/972.txt",
+  "note": ""
+ },
+ {
+  "author": "Ambrose Bierce",
+  "work": "Fantastic Fables",
+  "year": 1899,
+  "pg_id": 374,
+  "repo": "Fantastic-Fables_374",
+  "path": "/home/user/gitenberg/Fantastic-Fables_374",
+  "text_file": "/home/user/gitenberg/Fantastic-Fables_374/374.txt",
+  "note": ""
+ },
+ {
+  "author": "William Blake",
+  "work": "Poems of William Blake",
+  "year": 1794,
+  "pg_id": 574,
+  "repo": "Poems-of-William-Blake_574",
+  "path": "/home/user/gitenberg/Poems-of-William-Blake_574",
+  "text_file": "/home/user/gitenberg/Poems-of-William-Blake_574/574.txt",
+  "note": "Includes Songs of Innocence and of Experience"
+ },
+ {
+  "author": "George Eliot",
+  "work": "Middlemarch",
+  "year": 1871,
+  "pg_id": 145,
+  "repo": "Middlemarch_145",
+  "path": "/home/user/gitenberg/Middlemarch_145",
+  "text_file": "/home/user/gitenberg/Middlemarch_145/145-8.txt",
+  "note": ""
+ },
+ {
+  "author": "George Eliot",
+  "work": "Adam Bede",
+  "year": 1859,
+  "pg_id": 507,
+  "repo": "Adam-Bede_507",
+  "path": "/home/user/gitenberg/Adam-Bede_507",
+  "text_file": "/home/user/gitenberg/Adam-Bede_507/507-0.txt",
+  "note": ""
+ },
+ {
+  "author": "George Eliot",
+  "work": "Silas Marner",
+  "year": 1861,
+  "pg_id": 550,
+  "repo": "Silas-Marner_550",
+  "path": "/home/user/gitenberg/Silas-Marner_550",
+  "text_file": "/home/user/gitenberg/Silas-Marner_550/550.txt",
+  "note": ""
+ },
+ {
+  "author": "George Eliot",
+  "work": "The Mill on the Floss",
+  "year": 1860,
+  "pg_id": 6688,
+  "repo": "The-Mill-on-the-Floss_6688",
+  "path": "/home/user/gitenberg/The-Mill-on-the-Floss_6688",
+  "text_file": "/home/user/gitenberg/The-Mill-on-the-Floss_6688/6688-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Charles Dickens",
+  "work": "A Tale of Two Cities",
+  "year": 1859,
+  "pg_id": 98,
+  "repo": "A-Tale-of-Two-Cities_98",
+  "path": "/home/user/gitenberg/A-Tale-of-Two-Cities_98",
+  "text_file": "/home/user/gitenberg/A-Tale-of-Two-Cities_98/98-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Charles Dickens",
+  "work": "David Copperfield",
+  "year": 1850,
+  "pg_id": 766,
+  "repo": "David-Copperfield_766",
+  "path": "/home/user/gitenberg/David-Copperfield_766",
+  "text_file": "/home/user/gitenberg/David-Copperfield_766/766-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Charles Dickens",
+  "work": "Great Expectations",
+  "year": 1861,
+  "pg_id": 1400,
+  "repo": "Great-Expectations_1400",
+  "path": "/home/user/gitenberg/Great-Expectations_1400",
+  "text_file": "/home/user/gitenberg/Great-Expectations_1400/old/grexp10a.txt",
+  "note": ""
+ },
+ {
+  "author": "Charles Dickens",
+  "work": "The Pickwick Papers",
+  "year": 1837,
+  "pg_id": 580,
+  "repo": "The-Pickwick-Papers_580",
+  "path": "/home/user/gitenberg/The-Pickwick-Papers_580",
+  "text_file": "/home/user/gitenberg/The-Pickwick-Papers_580/580-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Lord Byron",
+  "work": "Don Juan",
+  "year": 1819,
+  "pg_id": 21700,
+  "repo": "Don-Juan_21700",
+  "path": "/home/user/gitenberg/Don-Juan_21700",
+  "text_file": "/home/user/gitenberg/Don-Juan_21700/21700-8.txt",
+  "note": ""
+ },
+ {
+  "author": "Lord Byron",
+  "work": "Childe Harold's Pilgrimage",
+  "year": 1812,
+  "pg_id": 5131,
+  "repo": "Childe-Harold-s-Pilgrimage_5131",
+  "path": "/home/user/gitenberg/Childe-Harold-s-Pilgrimage_5131",
+  "text_file": "/home/user/gitenberg/Childe-Harold-s-Pilgrimage_5131/5131.txt",
+  "note": ""
+ },
+ {
+  "author": "Thomas Carlyle",
+  "work": "On Heroes, Hero-Worship, and the Heroic in History",
+  "year": 1841,
+  "pg_id": 1091,
+  "repo": "On-Heroes-Hero-Worship-and-the-Heroic-in-History_1091",
+  "path": "/home/user/gitenberg/On-Heroes-Hero-Worship-and-the-Heroic-in-History_1091",
+  "text_file": "/home/user/gitenberg/On-Heroes-Hero-Worship-and-the-Heroic-in-History_1091/1091.txt",
+  "note": ""
+ },
+ {
+  "author": "Thomas Carlyle",
+  "work": "Past and Present",
+  "year": 1843,
+  "pg_id": 13534,
+  "repo": "Past-and-Present_13534",
+  "path": "/home/user/gitenberg/Past-and-Present_13534",
+  "text_file": "/home/user/gitenberg/Past-and-Present_13534/13534.txt",
+  "note": ""
+ },
+ {
+  "author": "Horace",
+  "work": "The Works of Horace",
+  "year": -20,
+  "pg_id": 14020,
+  "repo": "The-Works-of-Horace_14020",
+  "path": "/home/user/gitenberg/The-Works-of-Horace_14020",
+  "text_file": "/home/user/gitenberg/The-Works-of-Horace_14020/14020.txt",
+  "note": "C. Smart prose translation (1863 ed.)"
+ },
+ {
+  "author": "Henry Wadsworth Longfellow",
+  "work": "The Complete Poetical Works of Henry Wadsworth Longfellow",
+  "year": 1893,
+  "pg_id": 1365,
+  "repo": "The-Complete-Poetical-Works-of-Henry-Wadsworth-Longfellow_1365",
+  "path": "/home/user/gitenberg/The-Complete-Poetical-Works-of-Henry-Wadsworth-Longfellow_1365",
+  "text_file": "/home/user/gitenberg/The-Complete-Poetical-Works-of-Henry-Wadsworth-Longfellow_1365/1365.txt",
+  "note": ""
+ },
+ {
+  "author": "Benjamin Disraeli",
+  "work": "Sybil, or the Two Nations",
+  "year": 1845,
+  "pg_id": 3760,
+  "repo": "Sybil-or-the-Two-Nations_3760",
+  "path": "/home/user/gitenberg/Sybil-or-the-Two-Nations_3760",
+  "text_file": "/home/user/gitenberg/Sybil-or-the-Two-Nations_3760/3760-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Voltaire",
+  "work": "Candide",
+  "year": 1759,
+  "pg_id": 19942,
+  "repo": "Candide_19942",
+  "path": "/home/user/gitenberg/Candide_19942",
+  "text_file": "/home/user/gitenberg/Candide_19942/19942-8.txt",
+  "note": "English translation"
+ },
+ {
+  "author": "Voltaire",
+  "work": "Philosophical Dictionary",
+  "year": 1764,
+  "pg_id": 18569,
+  "repo": "Voltaire-s-Philosophical-Dictionary_18569",
+  "path": "/home/user/gitenberg/Voltaire-s-Philosophical-Dictionary_18569",
+  "text_file": "/home/user/gitenberg/Voltaire-s-Philosophical-Dictionary_18569/18569.txt",
+  "note": "H. I. Woolf selection, English translation"
+ },
+ {
+  "author": "Johann Wolfgang von Goethe",
+  "work": "Faust",
+  "year": 1808,
+  "pg_id": 14591,
+  "repo": "Faust_14591",
+  "path": "/home/user/gitenberg/Faust_14591",
+  "text_file": "/home/user/gitenberg/Faust_14591/14591.txt",
+  "note": "Bayard Taylor translation, Part I"
+ },
+ {
+  "author": "Johann Wolfgang von Goethe",
+  "work": "The Sorrows of Young Werther",
+  "year": 1774,
+  "pg_id": 2527,
+  "repo": "The-Sorrows-of-Young-Werther_2527",
+  "path": "/home/user/gitenberg/The-Sorrows-of-Young-Werther_2527",
+  "text_file": "/home/user/gitenberg/The-Sorrows-of-Young-Werther_2527/2527.txt",
+  "note": "R. D. Boylan translation"
+ },
+ {
+  "author": "Robert Louis Stevenson",
+  "work": "Virginibus Puerisque and Other Papers",
+  "year": 1881,
+  "pg_id": 386,
+  "repo": "Virginibus-Puerisque-and-Other-Papers_386",
+  "path": "/home/user/gitenberg/Virginibus-Puerisque-and-Other-Papers_386",
+  "text_file": "/home/user/gitenberg/Virginibus-Puerisque-and-Other-Papers_386/386-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Robert Louis Stevenson",
+  "work": "Treasure Island",
+  "year": 1883,
+  "pg_id": 120,
+  "repo": "Treasure-Island_120",
+  "path": "/home/user/gitenberg/Treasure-Island_120",
+  "text_file": "/home/user/gitenberg/Treasure-Island_120/120-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Marcus Aurelius",
+  "work": "Meditations",
+  "year": 180,
+  "pg_id": 2680,
+  "repo": "Meditations_2680",
+  "path": "/home/user/gitenberg/Meditations_2680",
+  "text_file": "/home/user/gitenberg/Meditations_2680/2680-8.txt",
+  "note": "George Long translation"
+ },
+ {
+  "author": "Aristotle",
+  "work": "Nicomachean Ethics",
+  "year": -350,
+  "pg_id": 8438,
+  "repo": "The-Ethics-of-Aristotle_8438",
+  "path": "/home/user/gitenberg/The-Ethics-of-Aristotle_8438",
+  "text_file": "/home/user/gitenberg/The-Ethics-of-Aristotle_8438/8438-8.txt",
+  "note": "J. A. Smith / Chase translation"
+ },
+ {
+  "author": "Virgil",
+  "work": "The Aeneid",
+  "year": -19,
+  "pg_id": 228,
+  "repo": "The-Aeneid_228",
+  "path": "/home/user/gitenberg/The-Aeneid_228",
+  "text_file": "/home/user/gitenberg/The-Aeneid_228/228-0.txt",
+  "note": "Dryden translation"
+ },
+ {
+  "author": "Virgil",
+  "work": "The Georgics",
+  "year": -29,
+  "pg_id": 232,
+  "repo": "The-Georgics_232",
+  "path": "/home/user/gitenberg/The-Georgics_232",
+  "text_file": "/home/user/gitenberg/The-Georgics_232/232.txt",
+  "note": "Dryden translation"
+ },
+ {
+  "author": "Rudyard Kipling",
+  "work": "Kim",
+  "year": 1901,
+  "pg_id": 2226,
+  "repo": "Kim_2226",
+  "path": "/home/user/gitenberg/Kim_2226",
+  "text_file": "/home/user/gitenberg/Kim_2226/2226.txt",
+  "note": ""
+ },
+ {
+  "author": "Rudyard Kipling",
+  "work": "The Jungle Book",
+  "year": 1894,
+  "pg_id": 236,
+  "repo": "The-Jungle-Book_236",
+  "path": "/home/user/gitenberg/The-Jungle-Book_236",
+  "text_file": "/home/user/gitenberg/The-Jungle-Book_236/236-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Rudyard Kipling",
+  "work": "Rewards and Fairies",
+  "year": 1910,
+  "pg_id": 556,
+  "repo": "Rewards-and-Fairies_556",
+  "path": "/home/user/gitenberg/Rewards-and-Fairies_556",
+  "text_file": "/home/user/gitenberg/Rewards-and-Fairies_556/556-0.txt",
+  "note": "Contains the poem If—"
+ },
+ {
+  "author": "Walt Whitman",
+  "work": "Leaves of Grass",
+  "year": 1855,
+  "pg_id": 1322,
+  "repo": "Leaves-of-Grass_1322",
+  "path": "/home/user/gitenberg/Leaves-of-Grass_1322",
+  "text_file": "/home/user/gitenberg/Leaves-of-Grass_1322/1322.txt",
+  "note": "1891-92 deathbed edition"
+ },
+ {
+  "author": "Lewis Carroll",
+  "work": "Alice's Adventures in Wonderland",
+  "year": 1865,
+  "pg_id": 11,
+  "repo": "Alice-s-Adventures-in-Wonderland_11",
+  "path": "/home/user/gitenberg/Alice-s-Adventures-in-Wonderland_11",
+  "text_file": "/home/user/gitenberg/Alice-s-Adventures-in-Wonderland_11/11-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Lewis Carroll",
+  "work": "Through the Looking-Glass",
+  "year": 1871,
+  "pg_id": 12,
+  "repo": "Through-the-Looking-Glass_12",
+  "path": "/home/user/gitenberg/Through-the-Looking-Glass_12",
+  "text_file": "/home/user/gitenberg/Through-the-Looking-Glass_12/12-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Jonathan Swift",
+  "work": "The Battle of the Books and Other Short Pieces",
+  "year": 1704,
+  "pg_id": 623,
+  "repo": "The-Battle-of-the-Books-and-Other-Short-Pieces_623",
+  "path": "/home/user/gitenberg/The-Battle-of-the-Books-and-Other-Short-Pieces_623",
+  "text_file": "/home/user/gitenberg/The-Battle-of-the-Books-and-Other-Short-Pieces_623/623.txt",
+  "note": "Includes Thoughts on Various Subjects"
+ },
+ {
+  "author": "Jonathan Swift",
+  "work": "Gulliver's Travels",
+  "year": 1726,
+  "pg_id": 829,
+  "repo": "Gulliver-s-Travels_829",
+  "path": "/home/user/gitenberg/Gulliver-s-Travels_829",
+  "text_file": "/home/user/gitenberg/Gulliver-s-Travels_829/829-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Confucius",
+  "work": "The Analects of Confucius",
+  "year": -475,
+  "pg_id": 3330,
+  "repo": "The-Analects-of-Confucius-from-the-Chinese-Classics_3330",
+  "path": "/home/user/gitenberg/The-Analects-of-Confucius-from-the-Chinese-Classics_3330",
+  "text_file": "/home/user/gitenberg/The-Analects-of-Confucius-from-the-Chinese-Classics_3330/3330.txt",
+  "note": "James Legge translation"
+ },
+ {
+  "author": "Thomas Paine",
+  "work": "Common Sense",
+  "year": 1776,
+  "pg_id": 147,
+  "repo": "Common-Sense_147",
+  "path": "/home/user/gitenberg/Common-Sense_147",
+  "text_file": "/home/user/gitenberg/Common-Sense_147/147-0.txt",
+  "note": ""
+ },
+ {
+  "author": "John Locke",
+  "work": "Second Treatise of Government",
+  "year": 1689,
+  "pg_id": 7370,
+  "repo": "Second-Treatise-of-Government_7370",
+  "path": "/home/user/gitenberg/Second-Treatise-of-Government_7370",
+  "text_file": "/home/user/gitenberg/Second-Treatise-of-Government_7370/7370.txt",
+  "note": ""
+ },
+ {
+  "author": "Robert Browning",
+  "work": "Browning's Shorter Poems",
+  "year": 1917,
+  "pg_id": 16376,
+  "repo": "Browning-s-Shorter-Poems_16376",
+  "path": "/home/user/gitenberg/Browning-s-Shorter-Poems_16376",
+  "text_file": "/home/user/gitenberg/Browning-s-Shorter-Poems_16376/16376.txt",
+  "note": "Franklin T. Baker selection"
+ },
+ {
+  "author": "Ralph Waldo Emerson",
+  "work": "Essays (selection, incl. Self-Reliance, Compensation, Friendship)",
+  "year": 1841,
+  "pg_id": 16643,
+  "repo": "Essays-by-Ralph-Waldo-Emerson_16643",
+  "path": "/home/user/gitenberg/Essays-by-Ralph-Waldo-Emerson_16643",
+  "text_file": "/home/user/gitenberg/Essays-by-Ralph-Waldo-Emerson_16643/16643.txt",
+  "note": "Selection from First and Second Series"
+ },
+ {
+  "author": "Ralph Waldo Emerson",
+  "work": "Nature",
+  "year": 1836,
+  "pg_id": 29433,
+  "repo": "Nature_29433",
+  "path": "/home/user/gitenberg/Nature_29433",
+  "text_file": "/home/user/gitenberg/Nature_29433/29433-8.txt",
+  "note": ""
+ },
+ {
+  "author": "George Bernard Shaw",
+  "work": "Arms and the Man",
+  "year": 1894,
+  "pg_id": 3618,
+  "repo": "Arms-and-the-Man_3618",
+  "path": "/home/user/gitenberg/Arms-and-the-Man_3618",
+  "text_file": "/home/user/gitenberg/Arms-and-the-Man_3618/3618.txt",
+  "note": ""
+ },
+ {
+  "author": "Samuel Johnson",
+  "work": "Boswell's Life of Johnson, Volume 1 (1709-1765)",
+  "year": 1791,
+  "pg_id": 8918,
+  "repo": "Life-of-Johnson-Volume-1-1709-1765_8918",
+  "path": "/home/user/gitenberg/Life-of-Johnson-Volume-1-1709-1765_8918",
+  "text_file": "/home/user/gitenberg/Life-of-Johnson-Volume-1-1709-1765_8918/8918-8.txt",
+  "note": "By James Boswell; Birkbeck Hill edition"
+ },
+ {
+  "author": "Samuel Johnson",
+  "work": "Boswell's Life of Johnson, Volume 2 (1765-1776)",
+  "year": 1791,
+  "pg_id": 9072,
+  "repo": "Life-of-Johnson-Volume-2-1765-1776_9072",
+  "path": "/home/user/gitenberg/Life-of-Johnson-Volume-2-1765-1776_9072",
+  "text_file": "/home/user/gitenberg/Life-of-Johnson-Volume-2-1765-1776_9072/9072.txt",
+  "note": "By James Boswell; Birkbeck Hill edition"
+ },
+ {
+  "author": "Samuel Johnson",
+  "work": "Boswell's Life of Johnson, Volume 3 (1776-1780)",
+  "year": 1791,
+  "pg_id": 9180,
+  "repo": "Life-of-Johnson-Volume-3-1776-1780_9180",
+  "path": "/home/user/gitenberg/Life-of-Johnson-Volume-3-1776-1780_9180",
+  "text_file": "/home/user/gitenberg/Life-of-Johnson-Volume-3-1776-1780_9180/9180-8.txt",
+  "note": "By James Boswell; Birkbeck Hill edition"
+ },
+ {
+  "author": "Friedrich Nietzsche",
+  "work": "The Dawn of Day",
+  "year": 1881,
+  "pg_id": 39955,
+  "repo": "The-Dawn-of-Day_39955",
+  "path": "/home/user/gitenberg/The-Dawn-of-Day_39955",
+  "text_file": "/home/user/gitenberg/The-Dawn-of-Day_39955/39955-0.txt",
+  "note": "J. M. Kennedy translation"
+ },
+ {
+  "author": "Francis Bacon",
+  "work": "Essays, or Counsels Civil and Moral",
+  "year": 1625,
+  "pg_id": 575,
+  "repo": "The-Essays-or-Counsels-Civil-and-Moral_575",
+  "path": "/home/user/gitenberg/The-Essays-or-Counsels-Civil-and-Moral_575",
+  "text_file": "/home/user/gitenberg/The-Essays-or-Counsels-Civil-and-Moral_575/575.txt",
+  "note": ""
+ },
+ {
+  "author": "Francis Bacon",
+  "work": "Bacon's Essays, and Wisdom of the Ancients",
+  "year": 1625,
+  "pg_id": 56463,
+  "repo": "Bacon-s-Essays-and-Wisdom-of-the-Ancients_56463",
+  "path": "/home/user/gitenberg/Bacon-s-Essays-and-Wisdom-of-the-Ancients_56463",
+  "text_file": "/home/user/gitenberg/Bacon-s-Essays-and-Wisdom-of-the-Ancients_56463/56463-0.txt",
+  "note": ""
+ },
+ {
+  "author": "William Blake",
+  "work": "Songs of Innocence and Songs of Experience",
+  "year": 1794,
+  "pg_id": 1934,
+  "repo": "Songs-of-Innocence-and-Songs-of-Experience_1934",
+  "path": "/home/user/gitenberg/Songs-of-Innocence-and-Songs-of-Experience_1934",
+  "text_file": "/home/user/gitenberg/Songs-of-Innocence-and-Songs-of-Experience_1934/1934-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Robert Louis Stevenson",
+  "work": "Across the Plains, with Other Memories and Essays",
+  "year": 1892,
+  "pg_id": 614,
+  "repo": "Across-the-Plains-with-Other-Memories-and-Essays_614",
+  "path": "/home/user/gitenberg/Across-the-Plains-with-Other-Memories-and-Essays_614",
+  "text_file": "/home/user/gitenberg/Across-the-Plains-with-Other-Memories-and-Essays_614/614-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Blaise Pascal",
+  "work": "Pensées (The Thoughts of Blaise Pascal)",
+  "year": 1670,
+  "pg_id": 46921,
+  "repo": "The-Thoughts-of-Blaise-Pascal_46921",
+  "path": "/home/user/gitenberg/The-Thoughts-of-Blaise-Pascal_46921",
+  "text_file": "/home/user/gitenberg/The-Thoughts-of-Blaise-Pascal_46921/46921-0.txt",
+  "note": "C. Kegan Paul translation"
+ },
+ {
+  "author": "Aristotle",
+  "work": "Poetics",
+  "year": -335,
+  "pg_id": 1974,
+  "repo": "The-Poetics-of-Aristotle_1974",
+  "path": "/home/user/gitenberg/The-Poetics-of-Aristotle_1974",
+  "text_file": "/home/user/gitenberg/The-Poetics-of-Aristotle_1974/1974.txt",
+  "note": "S. H. Butcher translation"
+ },
+ {
+  "author": "Sophocles",
+  "work": "The Seven Plays in English Verse",
+  "year": -440,
+  "pg_id": 14484,
+  "repo": "The-Seven-Plays-in-English-Verse_14484",
+  "path": "/home/user/gitenberg/The-Seven-Plays-in-English-Verse_14484",
+  "text_file": "/home/user/gitenberg/The-Seven-Plays-in-English-Verse_14484/14484.txt",
+  "note": "Lewis Campbell translation"
+ },
+ {
+  "author": "Rudyard Kipling",
+  "work": "Barrack-Room Ballads",
+  "year": 1892,
+  "pg_id": 2819,
+  "repo": "Barrack-Room-Ballads_2819",
+  "path": "/home/user/gitenberg/Barrack-Room-Ballads_2819",
+  "text_file": "/home/user/gitenberg/Barrack-Room-Ballads_2819/2819-0.txt",
+  "note": ""
+ },
+ {
+  "author": "James Russell Lowell",
+  "work": "The Complete Poetical Works of James Russell Lowell",
+  "year": 1896,
+  "pg_id": 13310,
+  "repo": "The-Complete-Poetical-Works-of-James-Russell-Lowell_13310",
+  "path": "/home/user/gitenberg/The-Complete-Poetical-Works-of-James-Russell-Lowell_13310",
+  "text_file": "/home/user/gitenberg/The-Complete-Poetical-Works-of-James-Russell-Lowell_13310/13310.txt",
+  "note": ""
+ },
+ {
+  "author": "Abraham Lincoln",
+  "work": "The Papers and Writings of Abraham Lincoln, Complete",
+  "year": 1905,
+  "pg_id": 3253,
+  "repo": "The-Papers-And-Writings-Of-Abraham-Lincoln-Complete_3253",
+  "path": "/home/user/gitenberg/The-Papers-And-Writings-Of-Abraham-Lincoln-Complete_3253",
+  "text_file": "/home/user/gitenberg/The-Papers-And-Writings-Of-Abraham-Lincoln-Complete_3253/old/lcent11.txt",
+  "note": "Constitutional edition, ed. Lapsley"
+ },
+ {
+  "author": "Abraham Lincoln",
+  "work": "Lincoln Letters",
+  "year": 1913,
+  "pg_id": 8110,
+  "repo": "Lincoln-Letters_8110",
+  "path": "/home/user/gitenberg/Lincoln-Letters_8110",
+  "text_file": "/home/user/gitenberg/Lincoln-Letters_8110/8110.txt",
+  "note": ""
+ },
+ {
+  "author": "Abraham Lincoln",
+  "work": "Quotes and Images from the Writings of Abraham Lincoln",
+  "year": 1905,
+  "pg_id": 7547,
+  "repo": "Quotes-and-Images-from-the-Writings-of-Abraham-Lincoln_7547",
+  "path": "/home/user/gitenberg/Quotes-and-Images-from-the-Writings-of-Abraham-Lincoln_7547",
+  "text_file": "/home/user/gitenberg/Quotes-and-Images-from-the-Writings-of-Abraham-Lincoln_7547/7547.txt",
+  "note": ""
+ },
+ {
+  "author": "William James",
+  "work": "The Will to Believe, and Other Essays in Popular Philosophy",
+  "year": 1897,
+  "pg_id": 26659,
+  "repo": "The-Will-to-Believe-and-Other-Essays-in-Popular-Philosophy_26659",
+  "path": "/home/user/gitenberg/The-Will-to-Believe-and-Other-Essays-in-Popular-Philosophy_26659",
+  "text_file": "/home/user/gitenberg/The-Will-to-Believe-and-Other-Essays-in-Popular-Philosophy_26659/26659.txt",
+  "note": ""
+ },
+ {
+  "author": "William James",
+  "work": "Essays in Radical Empiricism",
+  "year": 1912,
+  "pg_id": 32547,
+  "repo": "Essays-in-Radical-Empiricism_32547",
+  "path": "/home/user/gitenberg/Essays-in-Radical-Empiricism_32547",
+  "text_file": "/home/user/gitenberg/Essays-in-Radical-Empiricism_32547/32547.txt",
+  "note": ""
+ },
+ {
+  "author": "Euripides",
+  "work": "The Bacchae",
+  "year": -405,
+  "pg_id": 35173,
+  "repo": "The-Bacchae-of-Euripides_35173",
+  "path": "/home/user/gitenberg/The-Bacchae-of-Euripides_35173",
+  "text_file": "/home/user/gitenberg/The-Bacchae-of-Euripides_35173/35173-8.txt",
+  "note": "Gilbert Murray translation"
+ },
+ {
+  "author": "Euripides",
+  "work": "The Trojan Women",
+  "year": -415,
+  "pg_id": 35171,
+  "repo": "The-Trojan-Women-of-Euripides_35171",
+  "path": "/home/user/gitenberg/The-Trojan-Women-of-Euripides_35171",
+  "text_file": "/home/user/gitenberg/The-Trojan-Women-of-Euripides_35171/35171.txt",
+  "note": "Gilbert Murray translation"
+ },
+ {
+  "author": "Benjamin Disraeli",
+  "work": "Endymion",
+  "year": 1880,
+  "pg_id": 7926,
+  "repo": "Endymion_7926",
+  "path": "/home/user/gitenberg/Endymion_7926",
+  "text_file": "/home/user/gitenberg/Endymion_7926/7926-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Joseph Addison",
+  "work": "The Spectator, Volume 1",
+  "year": 1711,
+  "pg_id": 9334,
+  "repo": "The-Spectator-Volume-1Eighteenth-Century-Periodical-Essays_9334",
+  "path": "/home/user/gitenberg/The-Spectator-Volume-1Eighteenth-Century-Periodical-Essays_9334",
+  "text_file": "/home/user/gitenberg/The-Spectator-Volume-1Eighteenth-Century-Periodical-Essays_9334/9334.txt",
+  "note": "Addison and Steele"
+ },
+ {
+  "author": "Euripides",
+  "work": "Medea",
+  "year": -431,
+  "pg_id": 35451,
+  "repo": "Medea-of-Euripides_35451",
+  "path": "/home/user/gitenberg/Medea-of-Euripides_35451",
+  "text_file": "/home/user/gitenberg/Medea-of-Euripides_35451/35451-8.txt",
+  "note": "Gilbert Murray translation"
+ }
+]
