@@ -103,6 +103,22 @@ python3 web_to_evidence.py evidence/web_search_agents.jsonl <agent result files>
 python3 build_column.py ../author-quote.txt ../author-quote.txt evidence/*.jsonl
 ```
 
+## Continuing the web pass
+
+The environment caps WebSearch at 200 calls per session (shared by all sub-agents of that
+session), so one session sources roughly 100 lines. To continue:
+
+1. `python3 sourcing/make_batches.py author-quote.txt web_batches 100 sourcing/evidence/*.jsonl`
+   writes the remaining lines, most-quoted authors first, as `web_batches/batch_NNNN.tsv`.
+2. In a session with `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION` raised (or one fresh session
+   per batch), run the prompt in `sourcing/AGENT_PROMPT.md` on a batch; it writes
+   `web_results/batch_NNNN.jsonl`.
+3. `python3 sourcing/web_to_evidence.py sourcing/evidence/web_search_agents.jsonl web_results/*.jsonl`
+   then `python3 sourcing/build_column.py author-quote.txt author-quote.txt sourcing/evidence/*.jsonl`.
+
+Rows the agents could not search (budget exhausted) are never written as `unverified`; they
+simply stay absent from the evidence file and are picked up by the next `make_batches.py` run.
+
 ## Coverage
 
 See the statistics section of the README. The evidence files record, for every sourced line,

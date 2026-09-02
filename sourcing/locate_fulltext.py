@@ -113,6 +113,8 @@ def heading_for(lines, works, li, shakespeare):
         s = lines[j]
         if is_caps_heading(s) and not s.strip().isdigit():
             h = re.sub(r"\s+", " ", s.strip()).rstrip(".")
+            if h.startswith(("'", '"', "\u2018", "\u201c")) or len(re.sub(r"[^A-Za-z]", "", h)) < 3:
+                continue  # signature lines and stray marks are not section headings
             return work, h[:70]
     return work, None
 
