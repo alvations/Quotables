@@ -111,16 +111,6 @@
  },
  {
   "author": "Mark Twain",
-  "work": "A Connecticut Yankee in King Arthur's Court",
-  "year": 1889,
-  "pg_id": 86,
-  "repo": "A-Connecticut-Yankee-in-King-Arthur-s-Court_86",
-  "path": "/home/user/gitenberg/A-Connecticut-Yankee-in-King-Arthur-s-Court_86",
-  "text_file": "/home/user/gitenberg/A-Connecticut-Yankee-in-King-Arthur-s-Court_86/86-0.txt",
-  "note": ""
- },
- {
-  "author": "Mark Twain",
   "work": "The Innocents Abroad",
   "year": 1869,
   "pg_id": 3176,
@@ -868,5 +858,85 @@
   "path": "/home/user/gitenberg/Medea-of-Euripides_35451",
   "text_file": "/home/user/gitenberg/Medea-of-Euripides_35451/35451-8.txt",
   "note": "Gilbert Murray translation"
+ },
+ {
+  "author": "Mark Twain",
+  "work": "Mark Twain's Speeches",
+  "year": 1910,
+  "pg_id": 3188,
+  "repo": "Mark-Twain-s-Speeches_3188",
+  "path": "/home/user/gitenberg/Mark-Twain-s-Speeches_3188",
+  "text_file": "/home/user/gitenberg/Mark-Twain-s-Speeches_3188/3188-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Jonathan Swift",
+  "work": "A Tale of a Tub",
+  "year": 1704,
+  "pg_id": 4737,
+  "repo": "A-Tale-of-a-Tub_4737",
+  "path": "/home/user/gitenberg/A-Tale-of-a-Tub_4737",
+  "text_file": "/home/user/gitenberg/A-Tale-of-a-Tub_4737/4737-0.txt",
+  "note": ""
+ },
+ {
+  "author": "Voltaire",
+  "work": "Letters on England",
+  "year": 1733,
+  "pg_id": 2445,
+  "repo": "Letters-on-England_2445",
+  "path": "/home/user/gitenberg/Letters-on-England_2445",
+  "text_file": "/home/user/gitenberg/Letters-on-England_2445/2445.txt",
+  "note": "Letters Concerning the English Nation"
+ },
+ {
+  "author": "Horace",
+  "work": "The Odes and Carmen Saeculare of Horace",
+  "year": -23,
+  "pg_id": 5432,
+  "repo": "The-Odes-and-Carmen-Saeculare-of-Horace_5432",
+  "path": "/home/user/gitenberg/The-Odes-and-Carmen-Saeculare-of-Horace_5432",
+  "text_file": "/home/user/gitenberg/The-Odes-and-Carmen-Saeculare-of-Horace_5432/5432.txt",
+  "note": "John Conington verse translation"
+ },
+ {
+  "author": "Thomas Jefferson",
+  "work": "Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 1",
+  "year": 1829,
+  "pg_id": 16781,
+  "repo": "Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-1_16781",
+  "path": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-1_16781",
+  "text_file": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-1_16781/16781-0.txt",
+  "note": "Ed. Thomas Jefferson Randolph"
+ },
+ {
+  "author": "Thomas Jefferson",
+  "work": "Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 2",
+  "year": 1829,
+  "pg_id": 16782,
+  "repo": "Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-2_16782",
+  "path": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-2_16782",
+  "text_file": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-2_16782/16782-0.txt",
+  "note": "Ed. Thomas Jefferson Randolph"
+ },
+ {
+  "author": "Thomas Jefferson",
+  "work": "Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 3",
+  "year": 1829,
+  "pg_id": 16783,
+  "repo": "Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-3_16783",
+  "path": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-3_16783",
+  "text_file": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-3_16783/16783-0.txt",
+  "note": "Ed. Thomas Jefferson Randolph"
+ },
+ {
+  "author": "Thomas Jefferson",
+  "work": "Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 4",
+  "year": 1829,
+  "pg_id": 16784,
+  "repo": "Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-4_16784",
+  "path": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-4_16784",
+  "text_file": "/home/user/gitenberg/Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-4_16784/16784-0.txt",
+  "note": "Ed. Thomas Jefferson Randolph"
  }
 ]

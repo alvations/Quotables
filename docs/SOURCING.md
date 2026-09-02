@@ -121,8 +121,17 @@ simply stay absent from the evidence file and are picked up by the next `make_ba
 
 ## Coverage
 
-See the statistics section of the README. The evidence files record, for every sourced line,
-which step produced it and what it matched against.
+| step | lines with a source |
+| --- | --- |
+| citation datasets (foba Wikiquote extracts, Bartlett) | 198 |
+| verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 595 |
+| web-search agents (sourced) | 74 |
+| web-search agents (misattributed, kept as []) | 15 |
+| **lines with at least one source** | **732 of 39,269** |
+
+The web pass covered only the first few hundred lines of the most-quoted authors before the
+per-session search cap was reached; see "Continuing the web pass" above. The evidence files
+record, for every sourced line, which step produced it and what it matched against.
 
 ## Known limits
 
