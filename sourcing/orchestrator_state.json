@@ -1,0 +1,229 @@
+{
+ "dispatched": {
+  "batch_0002": "session_01Wtkf1oEQuSEfpyZz1wtzTE",
+  "batch_0003": "session_01Re6uU8M8UEq5VoUU1V3vuV",
+  "batch_0004": "session_01YZo7gwGunYRVLMidJoToQe",
+  "batch_0005": "session_01Jn9xD3jia4KPar2Ur9n1VY",
+  "batch_0006": "session_015516mqE2F323ocViuTGGhY",
+  "batch_0007": "session_016cBSXimRjReTdHbHaLQb3P",
+  "batch_0008": "session_013w8XD5BJqDAzhK4s8tuj71",
+  "batch_0001": "session_011BSZCrXgwYJJab7bV9RJhJ",
+  "batch_0009": "session_01GPEN3ExUKX1DXaNSuGMtqe",
+  "batch_0010": "session_013ZGgRW3tTACtgzN5JqUAk2",
+  "batch_0011": "session_012LMmGyWVjpU15yBsUYKtHU",
+  "batch_0012": "session_01QVsCygejknuwceu3gTD4yA",
+  "batch_0013": "session_01AWu4URjK36qg8xgCppsk37",
+  "batch_0014": "session_011pfaFzYawJXk65CjncpYCJ",
+  "batch_0015": "session_01LXjpHtxSeVXYJKcspLVuSc",
+  "batch_0016": "session_01QQ9DtB25vZThTY9dzA8vuB",
+  "batch_0017": "session_01UyRedktPczjffZrtt24y7U",
+  "batch_0018": "session_01MJe7tywiYsHKPVCd1GY7Uy",
+  "batch_0019": "session_01DmPSgKe9ShaByWHXNDKSwQ",
+  "batch_0020": "session_01FwJGsLksaJhc5JAXCYaUbJ",
+  "batch_0021": "session_01KUQttPMPouc7PB86LSopdq",
+  "batch_0022": "session_01JFrAyxmocZdWYM8cRvL5b9",
+  "batch_0023": "session_0198JkghRcv5THs91pmXQ6EK",
+  "batch_0024": "session_01WBR2bJM2onzBz1rrYxfnwA",
+  "batch_0025": "session_01Ur3Pbd23JyoGVtRGhwZf6g",
+  "batch_0029": "session_01AZj9oBVJcQPk3UHke9PSxF",
+  "batch_0031": "session_015C9Pr664JjeDdC767Z7Bra",
+  "batch_0026": "session_01QiYUe2McegJkeArYYFWtK4",
+  "batch_0027": "session_01TTUBh61zJDWY7jaTUFeo4E",
+  "batch_0028": "session_01S3o7WfBMbHtbtFm9VBhsMz",
+  "batch_0030": "session_0128ZqzQNKLUMupnfM3WcGeK",
+  "batch_0032": "session_01L71ye931BqrkyWdwFRVyNw",
+  "batch_0033": "session_01PDhaYBu5QMcEwqgn6baGMa",
+  "batch_0034": "session_019SNQEcDxJozxwWpDbJ19AE",
+  "batch_0035": "session_015w994FGk9oJfMarAbDnWyk",
+  "batch_0036": "session_01YG2b4whXvNJk2QT7B5zmAx",
+  "batch_0041": "session_012FDW86uFU3E1nsGABoQXSE",
+  "batch_0037": "session_01E8BtiU4PtHZYKH4WgWEA4m",
+  "batch_0038": "session_01CG4kjLXoojAFJWwwyaZ48P",
+  "batch_0039": "session_016uyw4Zd6F2xnVa768ZGMbM",
+  "batch_0040": "session_01ADHcKrCWG7WGTeULCSF7Bp",
+  "batch_0042": "session_01AJ9oq4WsNjop2H9f5f5AY9",
+  "batch_0043": "session_019eroQKDytiHhsXeF8AnuQ6"
+ },
+ "received": [
+  "test_sib",
+  "test_sib2",
+  "batch_0004",
+  "batch_0002",
+  "batch_0006",
+  "batch_0003",
+  "batch_0005",
+  "batch_0007",
+  "batch_0008",
+  "batch_0001",
+  "batch_0010",
+  "batch_0009",
+  "batch_0013",
+  "batch_0012",
+  "batch_0011",
+  "batch_0014",
+  "batch_0015",
+  "batch_0016",
+  "batch_0017",
+  "batch_0019",
+  "batch_0024",
+  "batch_0018",
+  "batch_0020",
+  "batch_0023",
+  "batch_0021",
+  "batch_0025",
+  "batch_0022",
+  "batch_0029",
+  "batch_0031",
+  "batch_0028",
+  "batch_0032",
+  "batch_0034",
+  "batch_0030",
+  "batch_0026",
+  "batch_0027",
+  "batch_0035",
+  "batch_0033"
+ ],
+ "archived": [
+  "session_01NM9hp8FmgSUmbxhbWpgDC5",
+  "session_01XkSjAmVe95E8osUDrGNrzY",
+  "session_01YZo7gwGunYRVLMidJoToQe",
+  "session_01Wtkf1oEQuSEfpyZz1wtzTE",
+  "session_015516mqE2F323ocViuTGGhY",
+  "session_01Re6uU8M8UEq5VoUU1V3vuV",
+  "session_01Jn9xD3jia4KPar2Ur9n1VY",
+  "session_016cBSXimRjReTdHbHaLQb3P",
+  "session_013w8XD5BJqDAzhK4s8tuj71",
+  "session_011BSZCrXgwYJJab7bV9RJhJ",
+  "session_013ZGgRW3tTACtgzN5JqUAk2",
+  "session_01GPEN3ExUKX1DXaNSuGMtqe",
+  "session_01QVsCygejknuwceu3gTD4yA",
+  "session_01AWu4URjK36qg8xgCppsk37",
+  "session_012LMmGyWVjpU15yBsUYKtHU",
+  "session_011pfaFzYawJXk65CjncpYCJ",
+  "session_01LXjpHtxSeVXYJKcspLVuSc",
+  "session_01QQ9DtB25vZThTY9dzA8vuB",
+  "session_01UyRedktPczjffZrtt24y7U",
+  "session_014K7ZKHARNAxkcadjAChtgU",
+  "session_01MjqottAWiuQEf44DG1p3fb",
+  "session_013kBt46KH9M4LjNkimSsvWD",
+  "session_01Jfktcwv8rQ7PosJCeqoFTN",
+  "session_01RkdHi9DBAHHppAuvr5A45o",
+  "session_01LjtVXVCfBzDhJjfayBXmoF",
+  "session_01DmPSgKe9ShaByWHXNDKSwQ",
+  "session_01WBR2bJM2onzBz1rrYxfnwA",
+  "session_01MJe7tywiYsHKPVCd1GY7Uy",
+  "session_01FwJGsLksaJhc5JAXCYaUbJ",
+  "session_0198JkghRcv5THs91pmXQ6EK",
+  "session_01KUQttPMPouc7PB86LSopdq",
+  "session_01Ur3Pbd23JyoGVtRGhwZf6g",
+  "session_01JFrAyxmocZdWYM8cRvL5b9",
+  "session_01TS4kU5Dh3m9sy197UqsKhk",
+  "session_01MpZrvHo7wfGE8QaSTG6qGW",
+  "session_01GERM4xn6K7Tr16t28qDftj",
+  "session_01KLFp1mLjgefzcNHXSiCjRR",
+  "session_01XnoKGo8fPbxcm8hNDovoQ5",
+  "session_011GYjxvhvVVEa9uatXQJdnM",
+  "session_01AZj9oBVJcQPk3UHke9PSxF",
+  "session_015C9Pr664JjeDdC767Z7Bra",
+  "session_01S3o7WfBMbHtbtFm9VBhsMz",
+  "session_01L71ye931BqrkyWdwFRVyNw",
+  "session_019SNQEcDxJozxwWpDbJ19AE",
+  "session_0128ZqzQNKLUMupnfM3WcGeK",
+  "session_01QiYUe2McegJkeArYYFWtK4",
+  "session_01TTUBh61zJDWY7jaTUFeo4E",
+  "session_015w994FGk9oJfMarAbDnWyk",
+  "session_01PDhaYBu5QMcEwqgn6baGMa",
+  "session_015tsuxhi7HbuD1hfAKVckUa",
+  "session_01MQmmXVVj9QCuhByBbVibvb",
+  "session_01DQhYU5EGQnada819f9H7Vi",
+  "session_013UG5h3BRYL1R7mKQeTxBqW",
+  "session_01YUV2uKPzQTGnRvqmtbuX9o",
+  "session_01VRaTcGbwo3TYBrwC3DUxaz"
+ ],
+ "failed": [
+  {
+   "batch_0018": "session_014K7ZKHARNAxkcadjAChtgU",
+   "reason": "account usage limit hit 2026-09-02T04:27Z"
+  },
+  {
+   "batch_0019": "session_01MjqottAWiuQEf44DG1p3fb",
+   "reason": "account usage limit hit 2026-09-02T04:27Z"
+  },
+  {
+   "batch_0020": "session_013kBt46KH9M4LjNkimSsvWD",
+   "reason": "account usage limit hit 2026-09-02T04:27Z"
+  },
+  {
+   "batch_0021": "session_01Jfktcwv8rQ7PosJCeqoFTN",
+   "reason": "account usage limit hit 2026-09-02T04:27Z"
+  },
+  {
+   "batch_0022": "session_01RkdHi9DBAHHppAuvr5A45o",
+   "reason": "account usage limit hit 2026-09-02T04:27Z"
+  },
+  {
+   "batch_0023": "session_01LjtVXVCfBzDhJjfayBXmoF",
+   "reason": "account usage limit hit 2026-09-02T04:27Z"
+  },
+  {
+   "batch": "batch_0026",
+   "session": "session_01TS4kU5Dh3m9sy197UqsKhk",
+   "reason": "five-hour limit 2026-09-02T21:03Z"
+  },
+  {
+   "batch": "batch_0027",
+   "session": "session_01MpZrvHo7wfGE8QaSTG6qGW",
+   "reason": "five-hour limit 2026-09-02T21:03Z"
+  },
+  {
+   "batch": "batch_0028",
+   "session": "session_01GERM4xn6K7Tr16t28qDftj",
+   "reason": "five-hour limit 2026-09-02T21:03Z"
+  },
+  {
+   "batch": "batch_0030",
+   "session": "session_01KLFp1mLjgefzcNHXSiCjRR",
+   "reason": "five-hour limit 2026-09-02T21:03Z"
+  },
+  {
+   "batch": "batch_0032",
+   "session": "session_01XnoKGo8fPbxcm8hNDovoQ5",
+   "reason": "five-hour limit 2026-09-02T21:03Z"
+  },
+  {
+   "batch": "batch_0033",
+   "session": "session_011GYjxvhvVVEa9uatXQJdnM",
+   "reason": "five-hour limit 2026-09-02T21:03Z"
+  },
+  {
+   "batch": "batch_0037",
+   "session": "session_015tsuxhi7HbuD1hfAKVckUa",
+   "reason": "seven-day limit 2026-09-04T09:05Z"
+  },
+  {
+   "batch": "batch_0038",
+   "session": "session_01MQmmXVVj9QCuhByBbVibvb",
+   "reason": "seven-day limit 2026-09-04T09:05Z"
+  },
+  {
+   "batch": "batch_0039",
+   "session": "session_01DQhYU5EGQnada819f9H7Vi",
+   "reason": "seven-day limit 2026-09-04T09:05Z"
+  },
+  {
+   "batch": "batch_0040",
+   "session": "session_013UG5h3BRYL1R7mKQeTxBqW",
+   "reason": "seven-day limit 2026-09-04T09:05Z"
+  },
+  {
+   "batch": "batch_0042",
+   "session": "session_01YUV2uKPzQTGnRvqmtbuX9o",
+   "reason": "seven-day limit 2026-09-04T09:05Z"
+  },
+  {
+   "batch": "batch_0043",
+   "session": "session_01VRaTcGbwo3TYBrwC3DUxaz",
+   "reason": "seven-day limit 2026-09-04T09:05Z"
+  }
+ ]
+}

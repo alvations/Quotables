@@ -103,21 +103,47 @@ python3 web_to_evidence.py evidence/web_search_agents.jsonl <agent result files>
 python3 build_column.py ../author-quote.txt ../author-quote.txt evidence/*.jsonl
 ```
 
-## Continuing the web pass
+## Continuing the web pass (resumable state)
 
-The agent tooling caps web searches at 200 calls per session (shared by all sub-agents of
-that session), so one session sources roughly 100 to 180 lines. To continue:
+Everything needed to resume the web pass lives in the repository, so a fresh clone can carry
+on from the last commit without any external state:
 
-1. `python3 sourcing/make_batches.py author-quote.txt web_batches 100 sourcing/evidence/*.jsonl`
-   writes the remaining lines, most-quoted authors first, as `web_batches/batch_NNNN.tsv`.
-2. In a session with the per-session web-search cap raised (or one fresh session per batch),
-   run the prompt in `sourcing/AGENT_PROMPT.md` on a batch; it writes
-   `web_results/batch_NNNN.jsonl`.
-3. `python3 sourcing/web_to_evidence.py sourcing/evidence/web_search_agents.jsonl web_results/*.jsonl`
-   then `python3 sourcing/build_column.py author-quote.txt author-quote.txt sourcing/evidence/*.jsonl`.
+| path | contents |
+| --- | --- |
+| `sourcing/batches/batch_NNNN.tsv` | the 227 batches of ~170 lines each (id, author, quote), most-quoted authors first, produced once by `make_batches.py` |
+| `sourcing/web_results/batch_NNNN.jsonl` | the raw JSONL returned by the agent that searched that batch (one object per line: id, status, sources, evidence, queries) |
+| `sourcing/orchestrator_state.json` | which batches were dispatched (batch -> session id), received, which sessions were archived, and which runs failed and why |
+| `sourcing/evidence/web_search_agents.jsonl` | the normalised union of all `web_results`, rebuilt by `web_to_evidence.py` |
+| `sourcing/orchestrate/` | the scripts below |
+
+Scripts (run from the repository root):
+
+- `orchestrate/make_sibling_prompt.py batches/batch_NNNN.tsv batch_NNNN <parent session id>`
+  prints the complete prompt for one searching session: rules, evidence policy, result format,
+  the line numbers to process, and the return channel (publish the JSONL as a page titled
+  `Quotables results batch_NNNN`, then schedule a one-line notification to the parent session).
+  The session republishes its page every 20 rows so a run killed by a usage limit loses at
+  most 20 rows.
+- `orchestrate/handle_result.sh batch_NNNN <saved page.html>` extracts the JSONL into
+  `web_results/`, marks the batch received, rebuilds the evidence file and the sources column.
+- `orchestrate/mark_dispatched.py dispatched|archived|failed|status ...` records state changes.
+
+Resume procedure after an interruption (usage limit, container loss):
+
+1. `python3 sourcing/orchestrate/mark_dispatched.py status` lists batches in flight and the next
+   undispatched ones.
+2. For each batch in flight, check its session. If it finished, save its results page and run
+   `handle_result.sh`. If it died, save whatever partial page it published, run
+   `handle_result.sh` on that (rows it never reached simply stay absent), record it with
+   `mark_dispatched.py failed`, and dispatch the batch again; `web_to_evidence.py` keeps one
+   record per line, so a re-run of already-covered rows is harmless.
+3. Dispatch the next batches with `make_sibling_prompt.py` and record them with
+   `mark_dispatched.py dispatched`.
+4. Commit `author-quote.txt`, `sourcing/evidence/`, `sourcing/web_results/` and
+   `sourcing/orchestrator_state.json` after every ingested batch.
 
 Rows the agents could not search (budget exhausted) are never written as `unverified`; they
-simply stay absent from the evidence file and are picked up by the next `make_batches.py` run.
+stay absent from the evidence file and are picked up again by the resume procedure.
 
 ## Coverage
 
