@@ -37,7 +37,7 @@ Keep the results in a local file `results.jsonl` as you go (append every 10 rows
      initiation: "human_schedule"
      prompt: exactly "SOURCING RESULTS {name} <artifact URL> sourced=<n> misattributed=<n> unverified=<n> unsearched=<n>"
    If create_trigger fails, retry once after 30 seconds.
-4. Your final reply must be that same one line. Do not paste the JSONL into the reply.
+4. Your final reply must be that same one line. Do not paste the JSONL into the reply. Do not attempt any git push.
 
 ## Rows
 The corpus is the public GitHub repository alvations/Quotables, file `author-quote.txt` (tab-separated: author, quote; one quote per line, {len(ids)} rows in your batch). Get the file first with a shallow read-only clone of https://github.com/alvations/Quotables into /home/user/quotables-corpus (skip if already present). Your rows are the following 1-based line numbers of that file; the `id` of each result is the line number. Extract them with a short Python script (read the file, print the numbered lines) and process them in the order listed:
