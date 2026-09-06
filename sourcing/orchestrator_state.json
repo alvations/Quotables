@@ -61,12 +61,9 @@
   "batch_0059": "session_01SVMVeoKb48wweCrMnj9P2D",
   "batch_0060": "session_01C3didPqqVcGhdmhxztP14t",
   "batch_0061": "session_019b8mALZxo2yBnXutEKAFsp",
-  "batch_0062": "session_01WuLgrqnrXkspdBv1UNCp2B",
   "batch_0063": "session_01Y4ALh9e8Md18S1LYVmiqUH",
   "batch_0064": "session_01M65C1reRi6Z95NpkvzkHqN",
-  "batch_0065": "session_01RjtDs8UZevf4jXvcYLnKMf",
-  "batch_0066": "session_011pW4yxfNDUjYhLEzwXKrAb",
-  "batch_0067": "session_016AKj6CVzXXMiNMMmG8whkX"
+  "batch_0065": "session_01RjtDs8UZevf4jXvcYLnKMf"
  },
  "received": [
   "test_sib",
@@ -135,7 +132,8 @@
   "batch_0061",
   "batch_0063",
   "batch_0064",
-  "batch_0065"
+  "batch_0065",
+  "batch_0062"
  ],
  "archived": [
   "session_01NM9hp8FmgSUmbxhbWpgDC5",
@@ -225,7 +223,10 @@
   "session_019b8mALZxo2yBnXutEKAFsp",
   "session_01Y4ALh9e8Md18S1LYVmiqUH",
   "session_01M65C1reRi6Z95NpkvzkHqN",
-  "session_01RjtDs8UZevf4jXvcYLnKMf"
+  "session_01RjtDs8UZevf4jXvcYLnKMf",
+  "session_01WuLgrqnrXkspdBv1UNCp2B",
+  "session_011pW4yxfNDUjYhLEzwXKrAb",
+  "session_016AKj6CVzXXMiNMMmG8whkX"
  ],
  "failed": [
   {
@@ -331,6 +332,21 @@
    "batch": "batch_0053",
    "session": "session_01GHqYxNr1g23chPYgxVYeFm",
    "reason": "five-hour limit 2026-09-05T12:30Z"
+  },
+  {
+   "batch": "batch_0062",
+   "session": "session_01WuLgrqnrXkspdBv1UNCp2B",
+   "reason": "five-hour usage limit at 10:05Z; partial page ingested; remainder left for future work (paused by user)"
+  },
+  {
+   "batch": "batch_0066",
+   "session": "session_011pW4yxfNDUjYhLEzwXKrAb",
+   "reason": "five-hour usage limit at 10:05Z before any page was published; left for future work (paused by user)"
+  },
+  {
+   "batch": "batch_0067",
+   "session": "session_016AKj6CVzXXMiNMMmG8whkX",
+   "reason": "five-hour usage limit at 10:05Z before any page was published; left for future work (paused by user)"
   }
  ]
 }
