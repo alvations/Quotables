@@ -47,12 +47,8 @@
   "batch_0045": "session_01V35DzYX3eDaQ1RwFH5vemi",
   "batch_0046": "session_01EKhVRBjLtp9FCXcHyo4jVb",
   "batch_0047": "session_01RMDmnDaiJpTKt7AavtFahT",
-  "batch_0048": "session_01B2ZhtsaSeArFRSWd9iRDDb",
   "batch_0049": "session_019BZSEZa6RqF7Pc1UEjc89W",
-  "batch_0050": "session_01BPxwfB1HNGYzGYAaba88fW",
-  "batch_0051": "session_018pigqwzLspqhH1JG3Wrwum",
-  "batch_0052": "session_01Wme6sddLJM7tCpU3t5Unmw",
-  "batch_0053": "session_01GHqYxNr1g23chPYgxVYeFm"
+  "batch_0050": "session_01BPxwfB1HNGYzGYAaba88fW"
  },
  "received": [
   "test_sib",
@@ -105,7 +101,8 @@
   "batch_0047",
   "batch_0046",
   "batch_0049",
-  "batch_0050"
+  "batch_0050",
+  "batch_0051"
  ],
  "archived": [
   "session_01NM9hp8FmgSUmbxhbWpgDC5",
@@ -176,7 +173,11 @@
   "session_01RMDmnDaiJpTKt7AavtFahT",
   "session_01EKhVRBjLtp9FCXcHyo4jVb",
   "session_019BZSEZa6RqF7Pc1UEjc89W",
-  "session_01BPxwfB1HNGYzGYAaba88fW"
+  "session_01BPxwfB1HNGYzGYAaba88fW",
+  "session_01B2ZhtsaSeArFRSWd9iRDDb",
+  "session_018pigqwzLspqhH1JG3Wrwum",
+  "session_01Wme6sddLJM7tCpU3t5Unmw",
+  "session_01GHqYxNr1g23chPYgxVYeFm"
  ],
  "failed": [
   {
@@ -262,6 +263,26 @@
    "batch": "batch_0043",
    "session": "session_01VRaTcGbwo3TYBrwC3DUxaz",
    "reason": "seven-day limit 2026-09-04T09:05Z"
+  },
+  {
+   "batch": "batch_0048",
+   "session": "session_01B2ZhtsaSeArFRSWd9iRDDb",
+   "reason": "five-hour limit 2026-09-05T12:31Z"
+  },
+  {
+   "batch": "batch_0051",
+   "session": "session_018pigqwzLspqhH1JG3Wrwum",
+   "reason": "five-hour limit 2026-09-05T12:30Z; partial page ingested"
+  },
+  {
+   "batch": "batch_0052",
+   "session": "session_01Wme6sddLJM7tCpU3t5Unmw",
+   "reason": "five-hour limit 2026-09-05T12:30Z"
+  },
+  {
+   "batch": "batch_0053",
+   "session": "session_01GHqYxNr1g23chPYgxVYeFm",
+   "reason": "five-hour limit 2026-09-05T12:30Z"
   }
  ]
 }
