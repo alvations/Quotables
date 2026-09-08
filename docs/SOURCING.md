@@ -151,12 +151,14 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | --- | --- |
 | citation datasets (foba Wikiquote extracts, Bartlett) | 198 |
 | verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 595 |
-| web-search agents (sourced) | 4,529 |
-| web-search agents (misattributed, kept as []) | 355 |
-| **lines with at least one source** | **5,261 of 39,269** |
+| web-search agents (sourced) | 5,121 |
+| web-search agents (misattributed, kept as []) | 365 |
+| **lines with at least one source** | **5,853 of 39,269** |
 
-The web pass has covered 68 of the 227 batches (11,050 lines, most-quoted authors first);
-batches 0066 to 0227 are left for future work. The full audit trail of the agents (prompts,
+The web pass has covered batches 0000 to 0077 (78 of the 227 batches, 13,090 lines, most-quoted
+authors first); batches 0078 to 0227 are left for future work. Batches 0066 to 0077 were run on
+2026-09-08 under the strict evidence policy (only citation-tracking references count; aggregator
+listings never do), four sessions at a time. The full audit trail of the agents (prompts,
 searches, result pages, per-session ledger with costs) is in `sourcing/audit/`. The evidence
 files record, for every sourced line, which step produced it and what it matched against.
 
