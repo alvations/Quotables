@@ -7,6 +7,8 @@
 set -e
 cd "$(dirname "$0")/../.."
 python3 sourcing/orchestrate/ingest_artifact.py "$2" "sourcing/web_results/$1.jsonl"
+# audit trail: keep the page exactly as the agent published it
+mkdir -p sourcing/audit/raw_pages && cp "$2" "sourcing/audit/raw_pages/$1.html"
 python3 - "$1" <<'PY'
 import json, sys, os
 p = 'sourcing/orchestrator_state.json'
@@ -20,3 +22,5 @@ print('received', len(st['received']), 'dispatched', len(st['dispatched']), 'nex
 PY
 python3 sourcing/web_to_evidence.py sourcing/evidence/web_search_agents.jsonl sourcing/web_results/*.jsonl
 python3 sourcing/build_column.py author-quote.txt author-quote.txt sourcing/evidence/*.jsonl
+# audit trail: refresh the per-batch tallies
+python3 sourcing/orchestrate/batch_summary.py > sourcing/audit/batch_summary.tsv

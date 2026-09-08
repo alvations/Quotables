@@ -65,6 +65,11 @@ was used is kept outside the repository.
 
 ## Orchestration
 
+The audit trail is maintained automatically while the run goes on: `handle_result.sh` copies every
+result page into `raw_pages/` and regenerates `batch_summary.tsv`; `record_session.py` appends the
+session record (outcome, cost, tokens, page URL) to `sessions.jsonl`; prompts are saved to
+`prompts/` before dispatch; everything is committed and pushed after each ingest.
+
 `sourcing/orchestrate/` holds the scripts the parent session used: `make_sibling_prompt.py`,
 `handle_result.sh` (extract JSONL from a page with `ingest_artifact.py`, mark received, rebuild
 evidence and column), `mark_dispatched.py` (state changes and status), `commit_progress.sh`
