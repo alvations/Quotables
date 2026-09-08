@@ -67,7 +67,8 @@
   "batch_0066": "session_01BhmH6Ltc8ogiYpSBu9mZk8",
   "batch_0067": "session_012LM4jaJFPeCm8dGqsVAwve",
   "batch_0068": "session_01V2yf17FPWozHvzAZ71AfLL",
-  "batch_0069": "session_01JMcKLA1ck4DYKxpNHQprKa"
+  "batch_0069": "session_01JMcKLA1ck4DYKxpNHQprKa",
+  "batch_0070": "session_01HHYC5yw6k7nmpV7ynmrZq2"
  },
  "received": [
   "test_sib",
@@ -137,7 +138,8 @@
   "batch_0063",
   "batch_0064",
   "batch_0065",
-  "batch_0062"
+  "batch_0062",
+  "batch_0067"
  ],
  "archived": [
   "session_01NM9hp8FmgSUmbxhbWpgDC5",
@@ -230,7 +232,8 @@
   "session_01RjtDs8UZevf4jXvcYLnKMf",
   "session_01WuLgrqnrXkspdBv1UNCp2B",
   "session_011pW4yxfNDUjYhLEzwXKrAb",
-  "session_016AKj6CVzXXMiNMMmG8whkX"
+  "session_016AKj6CVzXXMiNMMmG8whkX",
+  "session_012LM4jaJFPeCm8dGqsVAwve"
  ],
  "failed": [
   {
