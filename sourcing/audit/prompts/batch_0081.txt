@@ -1,0 +1,37 @@
+You are sourcing quotations for a corpus. Batch name: batch_0081. Work autonomously; nobody will answer questions.
+
+## Goal
+For each row of your batch (see "Rows" at the end: a list of line numbers of the public corpus file, each line being author<TAB>quote), find the FIRST-HAND original source: the specific book, essay, poem, play (act/scene), speech, letter, article, interview or recording in which the named author originally wrote or said it. A page that merely repeats the quote is NOT a source.
+
+## Tools and budget
+- Use the WebSearch tool only for research. Do not use WebFetch (reference sites are blocked) and do not read any repository other than the corpus file named below.
+- This session allows at most 200 web searches in total, and they are all you get. Use ONE search per row: the exact quote (or its first 12 words) in double quotes plus the author's name. Only when the first search is clearly promising but incomplete may you spend a second search on that row, and never if fewer than (rows remaining) searches are left. If the search tool reports that no search was performed, stop searching immediately and report the remaining rows as `unsearched`.
+- Process rows in the order listed. Do not skip rows. Do not stop early except when the budget is exhausted.
+
+## What counts as evidence
+Accept a source only when a citation-tracking reference identifies a specific work: Wikiquote's sourced/"Quotes" sections with a work cited, Quote Investigator, wist.info, Wikipedia with a footnote, Oxford/Yale dictionaries of quotations, Bartlett's, Bartleby, a publisher's or library page for the work, Google Books, the original periodical, the transcript or recording of the speech or interview, or a contemporary's first-hand record (e.g. Boswell's Life of Johnson). Aggregator sites (BrainyQuote, Goodreads, AZQuotes, QuoteFancy, Pinterest, quote blogs) are NOT evidence even when they name a book. If Wikiquote lists it only under Unsourced/Attributed/Disputed, or only aggregators turn up: `unverified`. If evidence shows it is misattributed or apocryphal: `misattributed` with an empty sources list and the finding in evidence.
+
+## Result format
+One JSON object per row, one per line (JSONL):
+{"id": <line number>, "status": "sourced"|"misattributed"|"unverified"|"unsearched", "sources": ["<Title of work> (<year>), <locator>", ...], "evidence": ["<URL> - <one-line note>", ...], "queries": ["<query>"]}
+Source strings: work title, year of first publication when known, locator (chapter, act/scene, section, page, date) when the evidence gives one, e.g. "The House at Pooh Corner (1928), ch. 6" or "Letter to Thomas Jefferson (28 June 1813)" or "Man and Superman (1903), 'Maxims for Revolutionists'". Omit the author's name. Never invent a title, year or locator; never put a Wikiquote/Quote Investigator URL in sources (those go in evidence). For `unsearched` rows: sources [], evidence [], queries [].
+
+## Returning the results (essential)
+Keep the results in a local file `results.jsonl` as you go (append every 10 rows). After every 20 rows, do steps 1 and 2 below with the rows finished so far (publishing the same file_path again updates the same page), so partial progress survives if this session is stopped by a usage limit. When every row has a line:
+1. Build an HTML file `results.html` whose entire content is:
+   <title>Quotables results batch_0081</title>
+   <pre id="jsonl">...the complete JSONL, with &, < and > escaped as &amp; &lt; &gt;...</pre>
+   (write it with a small Python script from results.jsonl; do not retype the data by hand).
+2. Publish it with the Artifact tool: file_path=results.html, favicon "📚", description "Sourcing results for batch batch_0081". Note the URL it returns.
+3. Notify the parent session by calling the `create_trigger` tool of the remote-session MCP server with:
+     name: "sourcing results batch_0081"
+     persistent_session_id: "session_018SonTZr2inCLhXqzcif71w"
+     run_once_at: an RFC3339 UTC time 2 minutes in the future (run `date -u +%Y-%m-%dT%H:%M:%SZ` for the current time)
+     initiation: "human_schedule"
+     prompt: exactly "SOURCING RESULTS batch_0081 <artifact URL> sourced=<n> misattributed=<n> unverified=<n> unsearched=<n>"
+   If create_trigger fails, retry once after 30 seconds.
+4. Your final reply must be that same one line. Do not paste the JSONL into the reply. Do not attempt any git push.
+
+## Rows
+The corpus is the public GitHub repository alvations/Quotables, file `author-quote.txt` (tab-separated: author, quote; one quote per line, 170 rows in your batch). Get the file first with a shallow read-only clone of https://github.com/alvations/Quotables into /home/user/quotables-corpus (skip if already present). Your rows are the following 1-based line numbers of that file; the `id` of each result is the line number. Extract them with a short Python script (read the file, print the numbered lines) and process them in the order listed:
+19939,19940,19941,19942,19943,19944,19945,19946,19947,19948,19949,19950,19951,20016,20017,20018,20019,20020,20021,20022,20023,20024,20025,20026,20027,20028,20029,20030,20031,20032,20033,20034,20035,20036,20037,20038,20039,20040,20054,20055,20056,20057,20058,20059,20060,20061,20062,20063,20064,20065,20066,20067,20068,20069,20070,20071,20072,20073,20074,20075,20076,20077,20078,20169,20170,20171,20172,20173,20174,20175,20176,20177,20178,20179,20180,20181,20182,20183,20184,20185,20186,20187,20188,20189,20190,20191,20192,20193,20206,20207,20208,20209,20210,20211,20212,20213,20214,20215,20216,20217,20218,20219,20220,20221,20222,20223,20224,20225,20226,20227,20228,20229,20230,20315,20316,20317,20318,20319,20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330,20331,20332,20333,20334,20335,20336,20337,20338,20339,20399,20400,20401,20402,20403,20404,20405,20406,20407,20408,20409,20410,20411,20412,20413,20414,20415,20416,20417,20418,20419,20420,20421,20422,20423,20493,20494,20495,20496,20497,20498,20499
