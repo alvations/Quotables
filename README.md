@@ -10,7 +10,7 @@ A Corpus of Quotes.
  - 39,269 quotes with
  - 1,015,338 words from
  - 3,112 people
- - 6,539 quotes carry a verified first-hand source (see docs/SOURCING.md; audit trail in sourcing/audit/)
+ - 6,855 quotes carry a verified first-hand source (see docs/SOURCING.md; audit trail in sourcing/audit/)
 
 # Format
 `author-quote.txt` is tab-separated with three columns:
