@@ -110,10 +110,10 @@
   "batch_0109": "session_01UNz6pJoqWoCBAaRa53iXmS",
   "batch_0110": "session_01WJ4btTsPW6g7SYTBwC18qz",
   "batch_0111": "session_01GQD3rBJKVuZYCsSeqAoosL",
-  "batch_0112": "session_01JgjSv5J8Jug2KdHfUfwD81",
-  "batch_0113": "session_012qa6CwtUQ1tSMEWhs9vee1",
-  "batch_0114": "session_01FiWqEr9maQW71oy4QFKRJi",
-  "batch_0115": "session_011ZqM3kvaRjMMGUCH8no2n7"
+  "batch_0112b": "session_01CAEDRLUCBCKQsHYauL4aWM",
+  "batch_0113": "session_01N84V93Z3WR4ZFhiRhSE57n",
+  "batch_0114b": "session_014uY1t7BH6dxGuKfPzNMho3",
+  "batch_0115b": "session_0168syXHueSdgUwRqSFDN51L"
  },
  "received": [
   "test_sib",
@@ -230,7 +230,10 @@
   "batch_0109",
   "batch_0108",
   "batch_0110",
-  "batch_0111"
+  "batch_0111",
+  "batch_0112",
+  "batch_0114",
+  "batch_0115"
  ],
  "archived": [
   "session_01NM9hp8FmgSUmbxhbWpgDC5",
@@ -373,7 +376,11 @@
   "session_01UNz6pJoqWoCBAaRa53iXmS",
   "session_012LVcApouGzUefXLXvS4o9w",
   "session_01WJ4btTsPW6g7SYTBwC18qz",
-  "session_01GQD3rBJKVuZYCsSeqAoosL"
+  "session_01GQD3rBJKVuZYCsSeqAoosL",
+  "session_01JgjSv5J8Jug2KdHfUfwD81",
+  "session_012qa6CwtUQ1tSMEWhs9vee1",
+  "session_01FiWqEr9maQW71oy4QFKRJi",
+  "session_011ZqM3kvaRjMMGUCH8no2n7"
  ],
  "failed": [
   {
@@ -514,6 +521,26 @@
    "batch": "batch_0089",
    "session": "session_01Wf1C9Q31bZtfntQsGYYNv2",
    "reason": "seven-day usage limit 2026-09-10T02:04Z"
+  },
+  {
+   "batch": "batch_0112",
+   "session": "session_01JgjSv5J8Jug2KdHfUfwD81",
+   "reason": "five-hour usage limit 2026-09-15T07:50Z; partial page (59 rows) ingested; remainder re-run as batch_0112b"
+  },
+  {
+   "batch": "batch_0113",
+   "session": "session_012qa6CwtUQ1tSMEWhs9vee1",
+   "reason": "five-hour usage limit 2026-09-15T07:50Z before any page was published; re-run as batch_0113"
+  },
+  {
+   "batch": "batch_0114",
+   "session": "session_01FiWqEr9maQW71oy4QFKRJi",
+   "reason": "five-hour usage limit 2026-09-15T07:50Z; partial page (120 rows) ingested; remainder re-run as batch_0114b"
+  },
+  {
+   "batch": "batch_0115",
+   "session": "session_011ZqM3kvaRjMMGUCH8no2n7",
+   "reason": "five-hour usage limit 2026-09-15T07:50Z; partial page (65 rows) ingested; remainder re-run as batch_0115b"
   }
  ]
 }
