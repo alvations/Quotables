@@ -53,16 +53,16 @@ was used is kept outside the repository.
   `sources` is what went into the column. `status` is one of sourced / misattributed /
   unverified / unsearched.
 - **Result pages:** `raw_pages/batch_NNNN.html` are the pages exactly as published by the
-  agents (98 of the 104 ingested pages were saved from the orchestrator's reads; the others were
-  read inline and their JSONL is in `web_results/`; three inline reads were re-typed into
-  `raw_pages/*_inline.html` and are marked as such).
-- **Sessions:** `sessions.jsonl` has one record per agent session (129 sessions, including two
+  agents (121 of the 124 ingested pages were saved from the orchestrator's reads; batch_0051's
+  partial page was read inline and only its JSONL is in `web_results/`; two inline reads were
+  re-typed into `raw_pages/*_inline.html` and are marked as such).
+- **Sessions:** `sessions.jsonl` has one record per agent session (153 sessions, including two
   5-row pilots): batch, model, start time, outcome, cost in USD, input/output tokens, and the
-  URL of the result page. 101 sessions completed; 28 were killed by account usage limits
+  URL of the result page. 121 sessions completed; 32 were killed by account usage limits
   (five-hour or seven-day) and their batches were re-dispatched. Total agent cost: about
-  USD 1,489 (USD 163 of it for the 2026-09-08 run of batches 0066 to 0077, USD 187 for the
-  2026-09-10/13 run of batches 0078 to 0090 and USD 117 for the 2026-09-14 run of batches
-  0091 to 0099).
+  USD 1,779 (USD 163 of it for the 2026-09-08 run of batches 0066 to 0077, USD 187 for the
+  2026-09-10/13 run of batches 0078 to 0090, USD 117 for the 2026-09-14 run of batches
+  0091 to 0099 and USD 290 for the 2026-09-15 run of batches 0100 to 0119).
 - **Per-batch tallies:** `batch_summary.tsv`.
 
 ## Orchestration
@@ -92,11 +92,17 @@ killed the 0086-0089 wave two minutes after dispatch (0086 had published 42 rows
 partial; the other three published nothing). After the limit reset, 0086b (the 128 remaining
 rows), 0087, 0088, 0089 and 0090 were run on 2026-09-13 and ingested. On 2026-09-14 the user
 asked for nine more (batches 0091 to 0099); they were run four sessions at a time in three
-waves (9 sessions, all completed, about 12 minutes and USD 13 each) and ingested. State now:
+waves (9 sessions, all completed, about 12 minutes and USD 13 each) and ingested. On 2026-09-15
+the user asked for twenty more (batches 0100 to 0119). 0100 to 0111 completed in three waves;
+then the five-hour limit killed the 0112-0115 wave at 07:50Z, about ten minutes after dispatch
+(0112 had published 59 rows, 0114 120 rows and 0115 65 rows, all ingested as partials; 0113
+had published nothing). After the limit reset the remainders were re-run as 0112b (111 rows),
+0114b (50 rows) and 0115b (105 rows) together with a full re-run of 0113, then 0116 to 0119
+followed as slots freed; all were ingested (24 sessions in total, USD 290). State now:
 
-- Batches 0000 to 0099 (16,830 lines) searched by agents; 6,123 sourced, 434 misattributed,
-  10,270 unverified, 3 unsearched (see `batch_summary.tsv`).
-- 6,855 of 39,269 corpus lines carry at least one source (agents plus the offline steps).
-- Batches batch_0100 to batch_0227 (128 batches, lines listed in `sourcing/batches/`) have not
+- Batches 0000 to 0119 (20,230 lines) searched by agents; 7,107 sourced, 458 misattributed,
+  12,662 unverified, 3 unsearched (see `batch_summary.tsv`).
+- 7,839 of 39,269 corpus lines carry at least one source (agents plus the offline steps).
+- Batches batch_0120 to batch_0227 (108 batches, lines listed in `sourcing/batches/`) have not
   been searched. Their rows keep `[]` and are the future work. The resume procedure is in
   `docs/SOURCING.md` ("Continuing the web pass").
