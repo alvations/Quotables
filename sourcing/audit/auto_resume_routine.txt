@@ -1,4 +1,4 @@
-Hourly self-bind routine created 2026-09-17T22:42Z (trig_01XZnjmYnKhZDV41tLaZC24b) for the
+Hourly self-bind routine created 2026-09-17T22:42Z (deadline extended 2026-09-18T04:27Z to 2026-09-19T09:00Z; children switched to claude-opus-5 after the seven-day Fable limit was exhausted) (trig_01XZnjmYnKhZDV41tLaZC24b) for the
 overnight run of batches 0120-0227 (user request: run until 2026-09-18T09:00Z, auto-resume after
 usage/token limits, fan out as needed; 8 sessions in flight). Prompt delivered to the orchestrating
 session every hour at :42 until the routine is deleted:
