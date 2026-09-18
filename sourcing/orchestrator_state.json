@@ -312,7 +312,10 @@
   "batch_0139",
   "batch_0144",
   "batch_0145",
-  "batch_0146"
+  "batch_0146",
+  "batch_0147",
+  "batch_0149",
+  "batch_0150"
  ],
  "archived": [
   "session_01NM9hp8FmgSUmbxhbWpgDC5",
@@ -510,7 +513,10 @@
   "session_01WNvwcpLAPeJiuAhLEDjbXM",
   "session_01PnV6VHoP7JFXGANFCqV56B",
   "session_012FiGPpnh5VTYYNNnx9nyZk",
-  "session_015Kghccxh1spt8vBopWXAJ5"
+  "session_015Kghccxh1spt8vBopWXAJ5",
+  "session_01NaUoUALp9tYvo7jekP1p4u",
+  "session_01DURThTZsn2GPMUeGyhoeG1",
+  "session_015tdHkdbDpom74rLaPWbWy9"
  ],
  "failed": [
   {
