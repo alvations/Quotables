@@ -133,15 +133,7 @@
   "batch_0132": "session_01A2tXgL9QNTdFfXNc652gsp",
   "batch_0133": "session_01QECHkwhv9YBU6pcgPmiLwC",
   "batch_0134": "session_01GbZugEL5KTg7iDWN4TLv91",
-  "batch_0135": "session_017ChC233oEVwtVBtbVjujiY",
-  "batch_0136b": "session_01Nc9kWZffBhw7V7irfhieK8",
-  "batch_0137b": "session_01Bgh8bmaU7ho7L8sC5ShDmV",
-  "batch_0138": "session_01XJ9EyRCL4sn5dWhQBcgKHi",
-  "batch_0139": "session_01GqZwPiu3wV8gwVzrTJ2ZuK",
-  "batch_0140b": "session_018HndSbskEnUFoHafCFq2Uo",
-  "batch_0141b": "session_0198zh2uaGGzFWYi2jcthWhz",
-  "batch_0142b": "session_01WvEZpqEdyPmRhpFGVtso2d",
-  "batch_0143b": "session_01VWbPKrGAuNDyGvYWndmNQD"
+  "batch_0135": "session_017ChC233oEVwtVBtbVjujiY"
  },
  "received": [
   "test_sib",
@@ -470,7 +462,15 @@
   "session_01FHiwp9E5ggWvG28pkuLhAz",
   "session_016tuwCvRPQaeCfWJYpxuR7z",
   "session_01XnsKoV6qjmwxWHiM5jKvFm",
-  "session_019zrAv1cKBbyaZK3zKNbzW6"
+  "session_019zrAv1cKBbyaZK3zKNbzW6",
+  "session_01Nc9kWZffBhw7V7irfhieK8",
+  "session_01Bgh8bmaU7ho7L8sC5ShDmV",
+  "session_01XJ9EyRCL4sn5dWhQBcgKHi",
+  "session_01GqZwPiu3wV8gwVzrTJ2ZuK",
+  "session_018HndSbskEnUFoHafCFq2Uo",
+  "session_0198zh2uaGGzFWYi2jcthWhz",
+  "session_01WvEZpqEdyPmRhpFGVtso2d",
+  "session_01VWbPKrGAuNDyGvYWndmNQD"
  ],
  "failed": [
   {
@@ -671,6 +671,46 @@
    "batch": "batch_0143",
    "session": "session_019zrAv1cKBbyaZK3zKNbzW6",
    "reason": "five-hour usage limit 2026-09-17T23:24Z; partial page (24 rows) ingested; remainder re-run as batch_0143b"
+  },
+  {
+   "batch": "batch_0136b",
+   "session": "session_01Nc9kWZffBhw7V7irfhieK8",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0137b",
+   "session": "session_01Bgh8bmaU7ho7L8sC5ShDmV",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0138",
+   "session": "session_01XJ9EyRCL4sn5dWhQBcgKHi",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0139",
+   "session": "session_01GqZwPiu3wV8gwVzrTJ2ZuK",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0140b",
+   "session": "session_018HndSbskEnUFoHafCFq2Uo",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0141b",
+   "session": "session_0198zh2uaGGzFWYi2jcthWhz",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0142b",
+   "session": "session_01WvEZpqEdyPmRhpFGVtso2d",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0143b",
+   "session": "session_01VWbPKrGAuNDyGvYWndmNQD",
+   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
   }
  ]
 }
