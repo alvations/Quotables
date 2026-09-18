@@ -1,4 +1,19 @@
-You are sourcing quotations for a corpus. Batch name: batch_0208. Work autonomously; nobody will answer questions.
+#!/usr/bin/env python3
+"""Build the self-contained prompt for one batch session, git return channel.
+
+Same research rules as make_sibling_prompt.py, but the child returns its results
+by committing sourcing/web_results/<batch>.jsonl to the quote-sources-column
+branch instead of publishing an Artifact. Written 2026-09-18 after the account's
+artifact-publishing quota was exhausted mid-run, which stranded the results of
+batches 0180-0187 inside their containers.
+
+Usage: python3 make_sibling_prompt_git.py batch.tsv batch_name parent_session_id > prompt.txt
+"""
+import sys
+batch, name, parent = sys.argv[1:4]
+rows = open(batch, encoding="utf8").read().splitlines()[1:]
+ids = [r.split("\t")[0] for r in rows]
+print(f"""You are sourcing quotations for a corpus. Batch name: {name}. Work autonomously; nobody will answer questions.
 
 ## Goal
 For each row of your batch (see "Rows" at the end: a list of line numbers of the corpus file, each line being author<TAB>quote), find the FIRST-HAND original source: the specific book, essay, poem, play (act/scene), speech, letter, article, interview or recording in which the named author originally wrote or said it. A page that merely repeats the quote is NOT a source.
@@ -13,7 +28,7 @@ Accept a source only when a citation-tracking reference identifies a specific wo
 
 ## Result format
 One JSON object per row, one per line (JSONL):
-{"id": <line number>, "status": "sourced"|"misattributed"|"unverified"|"unsearched", "sources": ["<Title of work> (<year>), <locator>", ...], "evidence": ["<URL> - <one-line note>", ...], "queries": ["<query>"]}
+{{"id": <line number>, "status": "sourced"|"misattributed"|"unverified"|"unsearched", "sources": ["<Title of work> (<year>), <locator>", ...], "evidence": ["<URL> - <one-line note>", ...], "queries": ["<query>"]}}
 Source strings: work title, year of first publication when known, locator (chapter, act/scene, section, page, date) when the evidence gives one, e.g. "The House at Pooh Corner (1928), ch. 6" or "Letter to Thomas Jefferson (28 June 1813)" or "Man and Superman (1903), 'Maxims for Revolutionists'". Omit the author's name. Never invent a title, year or locator; never put a Wikiquote/Quote Investigator URL in sources (those go in evidence). For `unsearched` rows: sources [], evidence [], queries [].
 
 ## Setup (do this first)
@@ -22,26 +37,26 @@ Source strings: work title, year of first publication when known, locator (chapt
 Read your rows from `/home/user/quotables-repo/author-quote.txt` (extract them with a short Python script that prints the numbered lines).
 
 ## Returning the results (essential)
-Keep the results in `/home/user/batch_0208-results.jsonl` as you go, appending every 10 rows. Push what you have after row 60, after row 120, and again when every row has a line, so partial progress survives if this session is stopped by a usage limit. Each push is:
+Keep the results in `/home/user/{name}-results.jsonl` as you go, appending every 10 rows. Push what you have after row 60, after row 120, and again when every row has a line, so partial progress survives if this session is stopped by a usage limit. Each push is:
 
     cd /home/user/quotables-repo
     git pull --rebase origin quote-sources-column
-    cp /home/user/batch_0208-results.jsonl sourcing/web_results/batch_0208.jsonl
-    git add sourcing/web_results/batch_0208.jsonl
-    git -c user.name=alvations -c user.email=alvations@gmail.com commit -m "Sources: batch_0208 web results"
+    cp /home/user/{name}-results.jsonl sourcing/web_results/{name}.jsonl
+    git add sourcing/web_results/{name}.jsonl
+    git -c user.name=alvations -c user.email=alvations@gmail.com commit -m "Sources: {name} web results"
     git push origin quote-sources-column
 
-If the push is rejected, run `git pull --rebase origin quote-sources-column` and push again, up to 8 attempts with a short sleep between; other sessions are pushing their own files to the same branch, so rejections are normal. Never modify author-quote.txt or any file other than `sourcing/web_results/batch_0208.jsonl`, and never force-push.
+If the push is rejected, run `git pull --rebase origin quote-sources-column` and push again, up to 8 attempts with a short sleep between; other sessions are pushing their own files to the same branch, so rejections are normal. Never modify author-quote.txt or any file other than `sourcing/web_results/{name}.jsonl`, and never force-push.
 
 When the final push has succeeded, notify the parent session by calling the `create_trigger` tool of the remote-session MCP server with:
-     name: "git results batch_0208"
-     persistent_session_id: "session_018SonTZr2inCLhXqzcif71w"
+     name: "git results {name}"
+     persistent_session_id: "{parent}"
      run_once_at: an RFC3339 UTC time 2 minutes in the future (run `date -u +%Y-%m-%dT%H:%M:%SZ` for the current time)
      initiation: "human_schedule"
-     prompt: exactly "GIT RESULTS batch_0208 rows=<n> sourced=<n> misattributed=<n> unverified=<n> unsearched=<n>"
+     prompt: exactly "GIT RESULTS {name} rows=<n> sourced=<n> misattributed=<n> unverified=<n> unsearched=<n>"
 If create_trigger fails, retry once after 30 seconds, then carry on regardless.
 Your final reply must be that same one line. Do not paste the JSONL into the reply.
 
 ## Rows
-Your rows are the following 1-based line numbers of `author-quote.txt` (170 rows); the `id` of each result is the line number. Process them in the order listed:
-34959,34960,34961,34962,34963,34964,34965,35489,35490,35491,35492,35493,35494,35495,35646,35647,35648,35649,35650,35651,35652,36123,36124,36125,36126,36127,36128,36129,36873,36874,36875,36876,36877,36878,36879,37881,37882,37883,37884,37885,37886,37887,38414,38415,38416,38417,38418,38419,38420,39098,39099,39100,39101,39102,39103,39104,372,373,374,375,376,377,414,415,416,417,418,419,766,767,768,769,770,771,1320,1321,1322,1323,1324,1325,1490,1491,1492,1493,1494,1495,1607,1608,1609,1610,1611,1612,1710,1711,1712,1713,1714,1715,1728,1729,1730,1731,1732,1733,1754,1755,1756,1757,1758,1759,1867,1868,1869,1870,1871,1872,2506,2507,2508,2509,2510,2511,2920,2921,2922,2923,2924,2925,3715,3716,3717,3718,3719,3720,3771,3772,3773,3774,3775,3776,3778,3779,3780,3781,3782,3783,4260,4261,4262,4263,4264,4265,4266,4267,4268,4269,4270,4271,5018,5019,5020,5021,5022,5023,5185,5186,5187,5188,5189,5190
+Your rows are the following 1-based line numbers of `author-quote.txt` ({len(ids)} rows); the `id` of each result is the line number. Process them in the order listed:
+{",".join(ids)}""")

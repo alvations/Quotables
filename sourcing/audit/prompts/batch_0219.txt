@@ -1,10 +1,10 @@
 You are sourcing quotations for a corpus. Batch name: batch_0219. Work autonomously; nobody will answer questions.
 
 ## Goal
-For each row of your batch (see "Rows" at the end: a list of line numbers of the public corpus file, each line being author<TAB>quote), find the FIRST-HAND original source: the specific book, essay, poem, play (act/scene), speech, letter, article, interview or recording in which the named author originally wrote or said it. A page that merely repeats the quote is NOT a source.
+For each row of your batch (see "Rows" at the end: a list of line numbers of the corpus file, each line being author<TAB>quote), find the FIRST-HAND original source: the specific book, essay, poem, play (act/scene), speech, letter, article, interview or recording in which the named author originally wrote or said it. A page that merely repeats the quote is NOT a source.
 
 ## Tools and budget
-- Use the WebSearch tool only for research. Do not use WebFetch (reference sites are blocked) and do not read any repository other than the corpus file named below.
+- Use the WebSearch tool only for research. Do not use WebFetch (reference sites are blocked). Do NOT use the Artifact tool at all: artifact publishing is rate-limited and will fail.
 - This session allows at most 200 web searches in total, and they are all you get. Use ONE search per row: the exact quote (or its first 12 words) in double quotes plus the author's name. Only when the first search is clearly promising but incomplete may you spend a second search on that row, and never if fewer than (rows remaining) searches are left. If the search tool reports that no search was performed, stop searching immediately and report the remaining rows as `unsearched`.
 - Process rows in the order listed. Do not skip rows. Do not stop early except when the budget is exhausted.
 
@@ -16,22 +16,32 @@ One JSON object per row, one per line (JSONL):
 {"id": <line number>, "status": "sourced"|"misattributed"|"unverified"|"unsearched", "sources": ["<Title of work> (<year>), <locator>", ...], "evidence": ["<URL> - <one-line note>", ...], "queries": ["<query>"]}
 Source strings: work title, year of first publication when known, locator (chapter, act/scene, section, page, date) when the evidence gives one, e.g. "The House at Pooh Corner (1928), ch. 6" or "Letter to Thomas Jefferson (28 June 1813)" or "Man and Superman (1903), 'Maxims for Revolutionists'". Omit the author's name. Never invent a title, year or locator; never put a Wikiquote/Quote Investigator URL in sources (those go in evidence). For `unsearched` rows: sources [], evidence [], queries [].
 
+## Setup (do this first)
+    git clone https://github.com/alvations/Quotables /home/user/quotables-repo
+    cd /home/user/quotables-repo && git checkout quote-sources-column
+Read your rows from `/home/user/quotables-repo/author-quote.txt` (extract them with a short Python script that prints the numbered lines).
+
 ## Returning the results (essential)
-Keep the results in a local file `results.jsonl` as you go (append every 10 rows). After every 20 rows, do steps 1 and 2 below with the rows finished so far (publishing the same file_path again updates the same page), so partial progress survives if this session is stopped by a usage limit. When every row has a line:
-1. Build an HTML file `results.html` whose entire content is:
-   <title>Quotables results batch_0219</title>
-   <pre id="jsonl">...the complete JSONL, with &, < and > escaped as &amp; &lt; &gt;...</pre>
-   (write it with a small Python script from results.jsonl; do not retype the data by hand).
-2. Publish it with the Artifact tool: file_path=results.html, favicon "📚", description "Sourcing results for batch batch_0219". Note the URL it returns.
-3. Notify the parent session by calling the `create_trigger` tool of the remote-session MCP server with:
-     name: "sourcing results batch_0219"
+Keep the results in `/home/user/batch_0219-results.jsonl` as you go, appending every 10 rows. Push what you have after row 60, after row 120, and again when every row has a line, so partial progress survives if this session is stopped by a usage limit. Each push is:
+
+    cd /home/user/quotables-repo
+    git pull --rebase origin quote-sources-column
+    cp /home/user/batch_0219-results.jsonl sourcing/web_results/batch_0219.jsonl
+    git add sourcing/web_results/batch_0219.jsonl
+    git -c user.name=alvations -c user.email=alvations@gmail.com commit -m "Sources: batch_0219 web results"
+    git push origin quote-sources-column
+
+If the push is rejected, run `git pull --rebase origin quote-sources-column` and push again, up to 8 attempts with a short sleep between; other sessions are pushing their own files to the same branch, so rejections are normal. Never modify author-quote.txt or any file other than `sourcing/web_results/batch_0219.jsonl`, and never force-push.
+
+When the final push has succeeded, notify the parent session by calling the `create_trigger` tool of the remote-session MCP server with:
+     name: "git results batch_0219"
      persistent_session_id: "session_018SonTZr2inCLhXqzcif71w"
      run_once_at: an RFC3339 UTC time 2 minutes in the future (run `date -u +%Y-%m-%dT%H:%M:%SZ` for the current time)
      initiation: "human_schedule"
-     prompt: exactly "SOURCING RESULTS batch_0219 <artifact URL> sourced=<n> misattributed=<n> unverified=<n> unsearched=<n>"
-   If create_trigger fails, retry once after 30 seconds.
-4. Your final reply must be that same one line. Do not paste the JSONL into the reply. Do not attempt any git push.
+     prompt: exactly "GIT RESULTS batch_0219 rows=<n> sourced=<n> misattributed=<n> unverified=<n> unsearched=<n>"
+If create_trigger fails, retry once after 30 seconds, then carry on regardless.
+Your final reply must be that same one line. Do not paste the JSONL into the reply.
 
 ## Rows
-The corpus is the public GitHub repository alvations/Quotables, file `author-quote.txt` (tab-separated: author, quote; one quote per line, 170 rows in your batch). Get the file first with a shallow read-only clone of https://github.com/alvations/Quotables into /home/user/quotables-corpus (skip if already present). Your rows are the following 1-based line numbers of that file; the `id` of each result is the line number. Extract them with a short Python script (read the file, print the numbered lines) and process them in the order listed:
+Your rows are the following 1-based line numbers of `author-quote.txt` (170 rows); the `id` of each result is the line number. Process them in the order listed:
 10654,10655,10656,10657,10658,10659,10930,10931,10932,10933,10934,10935,11043,11044,11045,11383,11384,11385,11612,11613,11614,11753,11754,11755,11803,11804,11805,11898,11899,11900,12194,12195,12196,12556,12557,12558,12587,12588,12589,12749,12750,12751,12752,12753,12754,13836,13837,13838,13858,13859,13860,13861,13862,13863,13864,13865,13866,13934,13935,13936,14217,14218,14219,14300,14301,14302,14304,14305,14306,14803,14804,14805,14885,14886,14887,15284,15285,15286,15371,15372,15373,15657,15658,15659,15686,15687,15688,15689,15690,15691,15707,15708,15709,15768,15769,15770,15950,15951,15952,16120,16121,16122,16131,16132,16133,16310,16311,16312,16434,16435,16436,16835,16836,16837,16841,16842,16843,17464,17465,17466,18039,18040,18041,18058,18059,18060,18066,18067,18068,18177,18178,18179,19093,19094,19095,19827,19828,19829,19830,19831,19832,19833,19834,19835,19836,19837,19838,19924,19925,19926,20079,20080,20081,20570,20571,20572,20576,20577,20689,20690,20691,21362,21363,21364,21391,21392,21393,22073,22074,22075
