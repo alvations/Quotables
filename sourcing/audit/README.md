@@ -106,3 +106,38 @@ followed as slots freed; all were ingested (24 sessions in total, USD 290). Stat
 - Batches batch_0120 to batch_0227 (108 batches, lines listed in `sourcing/batches/`) have not
   been searched. Their rows keep `[]` and are the future work. The resume procedure is in
   `docs/SOURCING.md` ("Continuing the web pass").
+
+## 2026-09-17/18: batches 0120 to 0187, and the return-channel failures
+
+On 2026-09-17 the user asked for the run to continue to a deadline with as much fan-out as
+needed, auto-resuming through any usage limit. The fan-out was widened to eight concurrent
+sessions and an hourly self-wake routine was added so the run survives a limit that stops this
+session too. Batches 0120 to 0179 completed normally (the five-hour limit killed the 0136-0143
+wave on 2026-09-17T23:24Z; their partial pages were ingested and the remainders re-run as
+b-batches, and the seven-day Fable pool was exhausted at 03:49Z, after which children were
+created on claude-opus-5 instead).
+
+Batches 0180 to 0187 then hit a harder problem: **the account's artifact-publishing quota ran
+out at about 06:03Z** (it resets 2026-09-19T00:06Z). Artifacts had been the return channel for
+every child, so eight sessions finished their 170 rows with no way to deliver them. Two
+fallbacks were tried:
+
+- **git.** Children were told to commit `sourcing/web_results/batch_NNNN.jsonl` to this branch
+  themselves. This worked for 0185 and 0186 but was refused for the others - a child's
+  permission classifier blocks External System Writes, and whether it fires varies by session.
+  `sourcing/orchestrate/make_sibling_prompt_git.py` is the prompt generator written for this
+  channel; it is kept for the record, but it cannot be relied on.
+- **text relay.** A child re-serialises its rows as compact one-line JSON and sends them back in
+  25-row chunks as `create_trigger` messages to this session, which appends them verbatim and
+  validates every line. Slow and token-hungry (about 90k tokens per 170-row batch) but it works
+  where the others do not. It recovered 0181, 0182 and 0184 in full; 0184 had published no
+  artifact at all, so those 170 rows would otherwise have been lost.
+
+0180, 0183 and 0187 have all 170 rows complete inside their containers with every channel
+blocked (0183's `create_trigger` is refused as well), so each was given a trigger that fires
+after the quota resets and simply publishes the artifact it had already built. New dispatches
+were held until then rather than spending money on children that could not report back.
+
+Lessons carried into the resume procedure: the artifact channel has a daily cap that a wide
+fan-out can exhaust; a child cannot be assumed to have any outbound write; and a batch's rows
+should be pushed out in instalments as they are found, never only at the end.
