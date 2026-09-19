@@ -185,7 +185,6 @@
   "batch_0184": "session_01GCo5JWPG3JND9FDU3bQK2L",
   "batch_0185": "session_01WMhRAJLSAMZWSHTaQAARyu",
   "batch_0186": "session_01VG2V5fipAz1Fn4wSL2jMhL",
-  "batch_0187": "session_013bmN4B2SW2aEyCoxjpjBYf",
   "batch_0188": "session_016xW1aVtyzAXDr1mDe4nba2",
   "batch_0189": "session_013pZ3ZsUiVut3KwSjMbKRbf",
   "batch_0190": "session_01K1wh9spase8fdboUhhzG6H",
@@ -201,7 +200,8 @@
   "batch_0200": "session_0122FJn9tAUYmEu6rTVvdwjR",
   "batch_0201": "session_012fQ6xnqUc3Pc5nJdFtDUTA",
   "batch_0202": "session_014mET8MTgdNgGxnvKr743zp",
-  "batch_0203": "session_0121TXozGUHsEv6FGE12Br4W"
+  "batch_0203": "session_0121TXozGUHsEv6FGE12Br4W",
+  "batch_0187": "session_01MmhoRBbPARrhf5EaZj4puR"
  },
  "received": [
   "test_sib",
@@ -656,7 +656,8 @@
   "session_013pZ3ZsUiVut3KwSjMbKRbf",
   "session_015QrT9nma8fDYkQocfAh2jr",
   "session_01QaG6uQ8gBZL8tJ51WSCWJh",
-  "session_01Np5viKKeESSXpKNsKy6Hur"
+  "session_01Np5viKKeESSXpKNsKy6Hur",
+  "session_013bmN4B2SW2aEyCoxjpjBYf"
  ],
  "failed": [
   {
@@ -897,6 +898,11 @@
    "batch": "batch_0143b",
    "session": "session_01VWbPKrGAuNDyGvYWndmNQD",
    "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+  },
+  {
+   "batch": "batch_0187",
+   "session": "session_013bmN4B2SW2aEyCoxjpjBYf",
+   "reason": "all three return channels refused by the child's permission classifier; 170 finished rows stranded in its container; re-dispatched fresh"
   }
  ]
 }
