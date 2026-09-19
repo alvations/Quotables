@@ -18,6 +18,22 @@ AGGREGATOR = re.compile(r"""(?ix) (?: brainyquote | azquotes | goodreads\.com | 
     | successories | quoteambition | everydaypower | keepinspiring | quotecatalog )""")
 URL = re.compile(r"https?://")
 
+
+def is_placeholder(r, ev):
+    """True when the agent never actually searched this row.
+
+    Two shapes mean 'not searched': an explicit `unsearched` status, and the "NOT SEARCHED"
+    note an agent writes when its 200-search budget runs out mid-batch. Beyond those, an
+    `unverified` row counts as a placeholder only when it carries NEITHER evidence NOR a
+    query - both fields empty. A row with either one is a real result and must be kept:
+    evidence but no echoed query (the agent reported findings and forgot the query string),
+    or a query but no evidence (the search ran and turned up nothing).
+    """
+    if r.get("status") == "unsearched" or "NOT SEARCHED" in ev:
+        return True
+    return r.get("status") == "unverified" and not ev.strip() and not r.get("queries")
+
+
 seen = set()
 downgrades = []
 with open(sys.argv[1], "w", encoding="utf8") as fo:
@@ -30,10 +46,8 @@ with open(sys.argv[1], "w", encoding="utf8") as fo:
             except json.JSONDecodeError: continue
             if not isinstance(r, dict) or "id" not in r or r["id"] in seen: continue
             ev = " ".join(r.get("evidence") or [])
-            if (r.get("status") == "unsearched" or "NOT SEARCHED" in ev
-                    or (r.get("status") == "unverified" and not r.get("queries"))):
-                continue  # placeholder written when the search budget ran out: a later
-                          # cleanup batch carries the real result for these ids
+            if is_placeholder(r, ev):
+                continue  # a later cleanup batch carries the real result for these ids
             if r.get("status") == "sourced":
                 urls = [e for e in (r.get("evidence") or []) if URL.match(e)]
                 if urls and all(AGGREGATOR.search(e) for e in urls):
