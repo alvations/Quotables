@@ -128,7 +128,16 @@ python3 locate_fulltext.py ../author-quote.txt evidence/gutenberg_fulltext_shake
     '^(William )?Shakespeare$' "Complete Works" 0 100 <path to Gutenberg 100 text> --shakespeare
 python3 web_to_evidence.py evidence/web_search_agents.jsonl <agent result files>
 python3 build_column.py ../author-quote.txt ../author-quote.txt evidence/*.jsonl
+cd .. && python3 sourcing/normalize_sources.py author-quote.txt author-quote.txt
 ```
+
+The last step applies the corrections from the format audit of the finished corpus: a handful
+of source strings that repeated the author's name as an attribution, carried a machine date
+(`19610711`) instead of a readable one, or ran a paragraph of commentary where a citation
+belongs. Two strings that reported a third party's attribution rather than a first-hand work
+were dropped entirely, so those lines fall back to `[]` as the strict policy requires. Every
+change is listed in `sourcing/audit/format_fixes.tsv`; the agents' own reports in
+`sourcing/web_results/` and the evidence files are untouched.
 
 ## Continuing the web pass (resumable state)
 
@@ -180,7 +189,7 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 561 (539 not also found by the web pass) |
 | web-search agents (sourced) | 12,203 |
 | web-search agents (misattributed, kept as `[]`) | 664 |
-| **lines with at least one source** | **12,861 of 39,269 (32.8%)** |
+| **lines with at least one source** | **12,859 of 39,269 (32.7%)** |
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
 0227, plus eleven "b" recovery batches for the remainders of batches killed mid-run, plus one

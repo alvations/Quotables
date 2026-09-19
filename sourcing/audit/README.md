@@ -179,7 +179,14 @@ hand-off were removed from the received list, which had been inflating the count
   `unsearched` placeholders that batch_0228 superseded and `web_to_evidence.py` now skips. After the strict
   aggregator downgrade: 12,203 sourced, 664 misattributed, 25,743 unverified (see
   `batch_summary.tsv` and `strict_downgrades.tsv`).
-- **12,861 of 39,269 corpus lines (32.8%) carry at least one source** - the agents plus the
+- **12,859 of 39,269 corpus lines (32.7%) carry at least one source** - the agents plus the
   offline steps (119 lines from the citation dictionaries and 539 from verbatim location in
   Gutenberg full texts that the web pass did not also find).
 - 278 agent sessions are recorded in `sessions.jsonl`, about USD 3,469 in total.
+- A format audit of the finished corpus checked every source string for bare URLs, aggregator
+  names, machine dates, whitespace, placeholder wording, commentary in place of a citation, and
+  the author's name repeated as an attribution. The data came through it clean: 13 strings were
+  reformatted and 2 dropped as third-hand attributions (`format_fixes.tsv`), out of 12,861.
+  Titles that legitimately begin with the author's name - *Josh Billings: His Sayings*, *Jane
+  Campion: Interviews*, *William Lloyd Garrison, 1805-1879* - were checked by hand and left
+  alone. `sourcing/normalize_sources.py` applies the corrections as a reproducible step.
