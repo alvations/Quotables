@@ -18,7 +18,7 @@ was used is kept outside the repository.
    authors were fetched and each corpus line was searched for as a normalised substring.
    Evidence: `sourcing/evidence/gutenberg_fulltext_*.jsonl`.
 3. **Web-search agents** (the bulk of the work): the corpus was split into 227 batches of
-   about 170 lines (238 batch runs in the end, once the recovery and cleanup batches are counted), most-quoted authors first (`sourcing/make_batches.py`, batches in
+   about 170 lines (239 batch runs in the end, once the recovery and cleanup batches are counted), most-quoted authors first (`sourcing/make_batches.py`, batches in
    `sourcing/batches/`). Each batch was given to an independent Claude Code session that
    ran one web search per quote and returned a JSONL record per line. Those records are in
    `sourcing/web_results/batch_NNNN.jsonl`, unchanged from what the agent published.
@@ -169,16 +169,17 @@ work that was already done.
 their agents ran out of search budget. They were collected into `batch_0228` and searched at the
 end, which is why the batch count is 238 rather than 227: batches 0000-0227, eleven `NNNNb`
 recovery batches (0051b, 0086b, 0112b, 0114b, 0115b, 0136b, 0137b, 0140b-0143b) and this
-cleanup batch. Two stray test entries (`test_sib`, `test_sib2`) left over from validating the
+cleanup batch - 239 runs in all. Two stray test entries (`test_sib`, `test_sib2`) left over from validating the
 hand-off were removed from the received list, which had been inflating the count by two.
 
 ## Final state
 
-- All 39,269 corpus lines have been searched. Raw agent statuses across the corpus: 12,604
-  sourced, 667 misattributed, 25,468 unverified. After the strict aggregator downgrade: 12,199
-  sourced, 664 misattributed, 25,725 unverified (see `batch_summary.tsv` and
-  `strict_downgrades.tsv`).
-- **12,857 of 39,269 corpus lines (32.7%) carry at least one source** - the agents plus the
+- All 39,269 corpus lines have been searched; no line is left `unsearched`. Raw agent statuses
+  across the corpus: 12,608 sourced, 667 misattributed, 25,486 unverified, plus the 22
+  `unsearched` placeholders that batch_0228 superseded and `web_to_evidence.py` now skips. After the strict
+  aggregator downgrade: 12,203 sourced, 664 misattributed, 25,743 unverified (see
+  `batch_summary.tsv` and `strict_downgrades.tsv`).
+- **12,861 of 39,269 corpus lines (32.8%) carry at least one source** - the agents plus the
   offline steps (119 lines from the citation dictionaries and 539 from verbatim location in
   Gutenberg full texts that the web pass did not also find).
-- 277 agent sessions are recorded in `sessions.jsonl`, about USD 3,466 in total.
+- 278 agent sessions are recorded in `sessions.jsonl`, about USD 3,469 in total.

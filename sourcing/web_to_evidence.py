@@ -30,8 +30,10 @@ with open(sys.argv[1], "w", encoding="utf8") as fo:
             except json.JSONDecodeError: continue
             if not isinstance(r, dict) or "id" not in r or r["id"] in seen: continue
             ev = " ".join(r.get("evidence") or [])
-            if "NOT SEARCHED" in ev or (r.get("status") == "unverified" and not r.get("queries")):
-                continue  # placeholder written when the search budget ran out: leave for a re-run
+            if (r.get("status") == "unsearched" or "NOT SEARCHED" in ev
+                    or (r.get("status") == "unverified" and not r.get("queries"))):
+                continue  # placeholder written when the search budget ran out: a later
+                          # cleanup batch carries the real result for these ids
             if r.get("status") == "sourced":
                 urls = [e for e in (r.get("evidence") or []) if URL.match(e)]
                 if urls and all(AGGREGATOR.search(e) for e in urls):

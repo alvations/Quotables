@@ -178,22 +178,23 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | --- | --- |
 | citation datasets (foba Wikiquote extracts, Bartlett) | 198 (119 not also found by the web pass) |
 | verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 561 (539 not also found by the web pass) |
-| web-search agents (sourced) | 12,199 |
+| web-search agents (sourced) | 12,203 |
 | web-search agents (misattributed, kept as `[]`) | 664 |
-| **lines with at least one source** | **12,857 of 39,269 (32.7%)** |
+| **lines with at least one source** | **12,861 of 39,269 (32.8%)** |
 
-The web pass is complete: all 39,269 lines were searched, in 238 batch runs (batches 0000 to
+The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
 0227, plus eleven "b" recovery batches for the remainders of batches killed mid-run, plus one
 22-row cleanup batch for rows whose original agent ran out of search budget). Every batch was
 run under the strict evidence policy: only citation-tracking references count, and an
 aggregator listing never does, even when it names a book. The raw agent statuses across the
-whole corpus are 12,604 sourced, 667 misattributed, 25,468 unverified and 22 unsearched;
+whole corpus are 12,608 sourced, 667 misattributed and 25,486 unverified (the 22 `unsearched`
+placeholders left by two earlier agents are superseded by batch_0228 and skipped at merge time);
 `web_to_evidence.py` then downgraded 399 of the `sourced` rows to `unverified` because every
 URL they cited was an aggregator (the full list is `sourcing/audit/strict_downgrades.tsv`),
-leaving the 12,199 web-sourced lines above.
+leaving the 12,203 web-sourced lines above.
 
 The full audit trail of the agents (prompts, searches, result pages, per-session ledger with
-costs) is in `sourcing/audit/`: 277 sessions, about USD 3,466 in total. The evidence files
+costs) is in `sourcing/audit/`: 278 sessions, about USD 3,469 in total. The evidence files
 record, for every sourced line, which step produced it and what it matched against.
 
 ## Known limits
