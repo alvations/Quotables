@@ -223,9 +223,9 @@
   "batch_0222": "session_01Mmqco4KDQaYaZDhcFajkdj",
   "batch_0223": "session_01UbKjU7EgpRZCLitVRoQMHk",
   "batch_0224": "session_0182nPQNaChWUtoQLNF2HKCb",
-  "batch_0225": "session_01GbJPXAJG6aszDyMNHeUZw2",
   "batch_0226": "session_01FQKeg6RYx8e9PRaqTSsJ2u",
-  "batch_0227": "session_01TMqADX8ZAQnD6XRtMDKDW4"
+  "batch_0227": "session_01TMqADX8ZAQnD6XRtMDKDW4",
+  "batch_0225": "session_01CJZdZWcFT7dNDRFMwYieJj"
  },
  "received": [
   "batch_0004",
@@ -731,7 +731,8 @@
   "session_018Sgtx4GwhZ9m9eX8TKUgMb",
   "session_017Y3RCjuxCWkdC6HpcXyBpP",
   "session_0157X6C367jqzCTiSDA5q3dq",
-  "session_01U6WJbwRLrpvnHrHPJU7TBo"
+  "session_01U6WJbwRLrpvnHrHPJU7TBo",
+  "session_01GbJPXAJG6aszDyMNHeUZw2"
  ],
  "failed": [
   {
@@ -977,6 +978,11 @@
    "batch": "batch_0187",
    "session": "session_013bmN4B2SW2aEyCoxjpjBYf",
    "reason": "all three return channels refused by the child's permission classifier; 170 finished rows stranded in its container; re-dispatched fresh"
+  },
+  {
+   "batch": "batch_0225",
+   "session": "session_01GbJPXAJG6aszDyMNHeUZw2",
+   "reason": "artifact truncated at 50 of 170 rows by the daily quota; git push and text relay both refused by the permission classifier; re-dispatched fresh"
   }
  ]
 }
