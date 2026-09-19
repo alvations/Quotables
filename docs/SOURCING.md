@@ -74,9 +74,10 @@ repository, edition/translation note).
 
 ### Step 3: web search agents
 
-Every line still without a source was handed, in batches of 150, to parallel agents running
-the prompt in `sourcing/AGENT_PROMPT.md`. Each agent uses the WebSearch tool only (fetching
-reference pages was blocked), with at most two queries per quote:
+Every line still without a source was handed, in batches of about 170, to parallel agents
+running the prompt in `sourcing/AGENT_PROMPT.md` (the exact text sent for each batch is kept in
+`sourcing/audit/prompts/`). Each agent uses the WebSearch tool only (fetching reference pages
+was blocked), with at most two queries per quote:
 
 1. `"<exact quote>" <author>`
 2. `"<distinctive 6-10 word fragment>" source | wikiquote | quote investigator`
@@ -89,6 +90,32 @@ Aggregators are not evidence. Results are `sourced`, `misattributed` (evidence s
 never said it, or someone else did) or `unverified`. Batches were ordered by author frequency
 so the most-quoted authors were processed first. Every result, including the URLs and a
 one-line note of what the evidence said, is in `sourcing/evidence/web_search_agents.jsonl`.
+
+The aggregator rule is not left to the agents' judgement. `web_to_evidence.py` re-checks every
+row an agent called `sourced`: if each URL it cited is an aggregator domain, the row is
+downgraded to `unverified`, its sources are dropped, and the downgrade is logged in
+`sourcing/audit/strict_downgrades.tsv`. The raw files in `sourcing/web_results/` are left
+exactly as the agents returned them, so the record of what each agent claimed stays intact and
+the policy is applied in one auditable place. 399 rows were downgraded this way.
+
+Agents returned their results over three channels, because none of them is reliable on its own:
+
+1. **Artifact page.** The agent publishes its JSONL as a page and schedules a one-line
+   notification to the parent, which reads the page and ingests it. This is the fastest channel
+   and was used for most batches, but publishing is subject to a daily account-wide quota that a
+   wide fan-out exhausts (it ran out twice during this run). Worse, once the quota is gone a
+   republish silently keeps the *previous* version, so a notification can truthfully report 170
+   rows while the page still holds 125. Every ingest is therefore checked row-by-row against the
+   batch manifest before the batch is marked received; two truncated pages were caught this way.
+2. **git push.** The agent commits its own `sourcing/web_results/batch_NNNN.jsonl` to the
+   branch. This works only when the agent's permission classifier allows it, and whether it
+   fires varies between otherwise identical sessions, so it cannot be relied on.
+   `sourcing/orchestrate/make_sibling_prompt_git.py` generates this variant of the prompt.
+3. **Text relay.** The agent re-serialises its rows as compact one-line JSON and sends them to
+   the parent in 25-row chunks as `create_trigger` messages;
+   `sourcing/orchestrate/append_relay.py` appends each chunk, validating every line as JSON,
+   skipping ids already held and reporting the running total against the manifest. Slow and
+   token-hungry (about 90k tokens for a 170-row batch) but it works where the others do not.
 
 ## Reproducing
 
@@ -110,7 +137,7 @@ on from the last commit without any external state:
 
 | path | contents |
 | --- | --- |
-| `sourcing/batches/batch_NNNN.tsv` | the 227 batches of ~170 lines each (id, author, quote), most-quoted authors first, produced once by `make_batches.py` |
+| `sourcing/batches/batch_NNNN.tsv` | the 227 batches of ~170 lines each (id, author, quote), most-quoted authors first, produced once by `make_batches.py`, plus the `NNNNb` recovery batches and the `batch_0228` cleanup batch written by hand from the ids left over |
 | `sourcing/web_results/batch_NNNN.jsonl` | the raw JSONL returned by the agent that searched that batch (one object per line: id, status, sources, evidence, queries) |
 | `sourcing/orchestrator_state.json` | which batches were dispatched (batch -> session id), received, which sessions were archived, and which runs failed and why |
 | `sourcing/evidence/web_search_agents.jsonl` | the normalised union of all `web_results`, rebuilt by `web_to_evidence.py` |
@@ -149,18 +176,25 @@ stay absent from the evidence file and are picked up again by the resume procedu
 
 | step | lines with a source |
 | --- | --- |
-| citation datasets (foba Wikiquote extracts, Bartlett) | 198 |
-| verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 595 |
-| web-search agents (sourced) | 7,107 |
-| web-search agents (misattributed, kept as []) | 458 |
-| **lines with at least one source** | **7,839 of 39,269** |
+| citation datasets (foba Wikiquote extracts, Bartlett) | 198 (119 not also found by the web pass) |
+| verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 561 (539 not also found by the web pass) |
+| web-search agents (sourced) | 12,199 |
+| web-search agents (misattributed, kept as `[]`) | 664 |
+| **lines with at least one source** | **12,857 of 39,269 (32.7%)** |
 
-The web pass has covered batches 0000 to 0119 (120 of the 227 batches, 20,230 lines, most-quoted
-authors first); batches 0120 to 0227 are left for future work. Batches 0066 to 0119 were run on
-2026-09-08, 2026-09-10, 2026-09-13, 2026-09-14 and 2026-09-15 under the strict evidence policy (only
-citation-tracking references count; aggregator listings never do), four sessions at a time. The full audit trail of the agents (prompts,
-searches, result pages, per-session ledger with costs) is in `sourcing/audit/`. The evidence
-files record, for every sourced line, which step produced it and what it matched against.
+The web pass is complete: all 39,269 lines were searched, in 238 batch runs (batches 0000 to
+0227, plus eleven "b" recovery batches for the remainders of batches killed mid-run, plus one
+22-row cleanup batch for rows whose original agent ran out of search budget). Every batch was
+run under the strict evidence policy: only citation-tracking references count, and an
+aggregator listing never does, even when it names a book. The raw agent statuses across the
+whole corpus are 12,604 sourced, 667 misattributed, 25,468 unverified and 22 unsearched;
+`web_to_evidence.py` then downgraded 399 of the `sourced` rows to `unverified` because every
+URL they cited was an aggregator (the full list is `sourcing/audit/strict_downgrades.tsv`),
+leaving the 12,199 web-sourced lines above.
+
+The full audit trail of the agents (prompts, searches, result pages, per-session ledger with
+costs) is in `sourcing/audit/`: 277 sessions, about USD 3,466 in total. The evidence files
+record, for every sourced line, which step produced it and what it matched against.
 
 ## Known limits
 

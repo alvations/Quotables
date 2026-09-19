@@ -18,7 +18,7 @@ was used is kept outside the repository.
    authors were fetched and each corpus line was searched for as a normalised substring.
    Evidence: `sourcing/evidence/gutenberg_fulltext_*.jsonl`.
 3. **Web-search agents** (the bulk of the work): the corpus was split into 227 batches of
-   about 170 lines, most-quoted authors first (`sourcing/make_batches.py`, batches in
+   about 170 lines (238 batch runs in the end, once the recovery and cleanup batches are counted), most-quoted authors first (`sourcing/make_batches.py`, batches in
    `sourcing/batches/`). Each batch was given to an independent Claude Code session that
    ran one web search per quote and returned a JSONL record per line. Those records are in
    `sourcing/web_results/batch_NNNN.jsonl`, unchanged from what the agent published.
@@ -80,7 +80,7 @@ dispatch (batch -> session), every received batch, every archived session and ev
 with its reason. `scratch_scripts/` holds the thin wrappers and the bundle script used from
 the orchestrator's scratch directory.
 
-## Where the work stopped
+## Where the work stood at each pause
 
 The fan-out was paused on 2026-09-06 at the user's request after the five-hour usage limit
 killed the last wave (state then: 68 batches, 4,529 sourced, 5,261 lines with a source). On
@@ -98,14 +98,7 @@ then the five-hour limit killed the 0112-0115 wave at 07:50Z, about ten minutes 
 (0112 had published 59 rows, 0114 120 rows and 0115 65 rows, all ingested as partials; 0113
 had published nothing). After the limit reset the remainders were re-run as 0112b (111 rows),
 0114b (50 rows) and 0115b (105 rows) together with a full re-run of 0113, then 0116 to 0119
-followed as slots freed; all were ingested (24 sessions in total, USD 290). State now:
-
-- Batches 0000 to 0119 (20,230 lines) searched by agents; 7,107 sourced, 458 misattributed,
-  12,662 unverified, 3 unsearched (see `batch_summary.tsv`).
-- 7,839 of 39,269 corpus lines carry at least one source (agents plus the offline steps).
-- Batches batch_0120 to batch_0227 (108 batches, lines listed in `sourcing/batches/`) have not
-  been searched. Their rows keep `[]` and are the future work. The resume procedure is in
-  `docs/SOURCING.md` ("Continuing the web pass").
+followed as slots freed; all were ingested (24 sessions in total, USD 290).
 
 ## 2026-09-17/18: batches 0120 to 0187, and the return-channel failures
 
@@ -118,26 +111,74 @@ b-batches, and the seven-day Fable pool was exhausted at 03:49Z, after which chi
 created on claude-opus-5 instead).
 
 Batches 0180 to 0187 then hit a harder problem: **the account's artifact-publishing quota ran
-out at about 06:03Z** (it resets 2026-09-19T00:06Z). Artifacts had been the return channel for
-every child, so eight sessions finished their 170 rows with no way to deliver them. Two
-fallbacks were tried:
+out at about 06:03Z** (it resets near 00:06Z). Artifacts had been the return channel for every
+child, so eight sessions finished their 170 rows with no way to deliver them. Two fallbacks
+were tried:
 
 - **git.** Children were told to commit `sourcing/web_results/batch_NNNN.jsonl` to this branch
-  themselves. This worked for 0185 and 0186 but was refused for the others - a child's
-  permission classifier blocks External System Writes, and whether it fires varies by session.
-  `sourcing/orchestrate/make_sibling_prompt_git.py` is the prompt generator written for this
-  channel; it is kept for the record, but it cannot be relied on.
+  themselves. This worked for 0180, 0185 and 0186 but was refused for the others - a child's
+  permission classifier blocks the write (it reports it as an "Out-of-Place Publication" and
+  refuses `git add`, `git commit` and even `git config`), and whether it fires varies by
+  session. `sourcing/orchestrate/make_sibling_prompt_git.py` is the prompt generator written
+  for this channel; it is kept for the record, but it cannot be relied on.
 - **text relay.** A child re-serialises its rows as compact one-line JSON and sends them back in
-  25-row chunks as `create_trigger` messages to this session, which appends them verbatim and
-  validates every line. Slow and token-hungry (about 90k tokens per 170-row batch) but it works
-  where the others do not. It recovered 0181, 0182 and 0184 in full; 0184 had published no
-  artifact at all, so those 170 rows would otherwise have been lost.
+  25-row chunks as `create_trigger` messages to this session, which appends them with
+  `sourcing/orchestrate/append_relay.py` (every line validated as JSON, ids already held
+  skipped, running total checked against the manifest). Slow and token-hungry (about 90k tokens
+  per 170-row batch) but it works where the others do not. It recovered 0181, 0182 and 0184 in
+  full; 0184 had published no artifact at all, so those 170 rows would otherwise have been lost.
 
-0180, 0183 and 0187 have all 170 rows complete inside their containers with every channel
-blocked (0183's `create_trigger` is refused as well), so each was given a trigger that fires
-after the quota resets and simply publishes the artifact it had already built. New dispatches
-were held until then rather than spending money on children that could not report back.
+0180, 0183 and 0187 finished all 170 rows inside their containers with every channel blocked
+(0183's `create_trigger` was refused as well), so each was given a trigger that fires after the
+quota resets and simply publishes the artifact it had already built. New dispatches were held
+until then rather than spending money on children that could not report back. 0183 recovered
+this way; 0187 did not, and was re-dispatched from scratch instead of being nursed further.
 
-Lessons carried into the resume procedure: the artifact channel has a daily cap that a wide
-fan-out can exhaust; a child cannot be assumed to have any outbound write; and a batch's rows
-should be pushed out in instalments as they are found, never only at the end.
+## 2026-09-19: batches 0188 to 0228, and the strict-policy correction
+
+After the quota reset at 00:06Z the run resumed at eight sessions in flight and finished the
+remaining batches. Three things are worth recording.
+
+**The aggregator-only correction.** batch_0189 reported 93 of 170 rows sourced, far above the
+run's usual 40-60. Auditing it showed the agent had accepted aggregator pages as evidence when
+they happened to name a book - exactly what the prompt forbids. The same check across the whole
+corpus found 358 such rows (399 by the end of the run). Rather than edit the raw agent files,
+`web_to_evidence.py` was rewritten to enforce the rule at merge time: a `sourced` row whose URL
+evidence is *entirely* aggregator domains is downgraded to `unverified`, its sources dropped,
+and the downgrade logged in `strict_downgrades.tsv`. The raw files in `sourcing/web_results/`
+stay a verbatim record of what each agent claimed. Coverage fell from 11,027 to 10,809 lines as
+a result; the prompt wording was tightened from batch_0200 onwards.
+
+**The second artifact outage.** The quota ran out again at about 01:32Z. This time the failure
+mode was silent: a republish past the quota keeps the previous version of the page, so
+batch_0221 and batch_0224 sent notifications claiming all 170 rows while their pages still held
+125 and 50. Both were caught because every ingest is checked row-by-row against
+`sourcing/batches/batch_NNNN.tsv` before the batch is marked received. The partials were
+ingested, the batches left outstanding, and exactly the missing ids requested from the children
+by text relay. All remaining children were switched to git or text relay.
+
+**Two batches re-run from scratch.** batch_0187 and batch_0225 had children that were blocked
+on all three channels at once. Both were re-dispatched rather than nursed. The batch_0225
+re-run carried one design change - push every 30 rows instead of once at the end - and
+delivered all 170 rows without incident. That change is the run's main lesson and is now in the
+prompt generators: **a child must deliver its rows in instalments as it finds them, never save
+delivery for the end**, because every failure mode here (usage limit, quota, classifier) strands
+work that was already done.
+
+**Cleanup.** 22 rows across batch_0029 and batch_0186 had been written as `unsearched` when
+their agents ran out of search budget. They were collected into `batch_0228` and searched at the
+end, which is why the batch count is 238 rather than 227: batches 0000-0227, eleven `NNNNb`
+recovery batches (0051b, 0086b, 0112b, 0114b, 0115b, 0136b, 0137b, 0140b-0143b) and this
+cleanup batch. Two stray test entries (`test_sib`, `test_sib2`) left over from validating the
+hand-off were removed from the received list, which had been inflating the count by two.
+
+## Final state
+
+- All 39,269 corpus lines have been searched. Raw agent statuses across the corpus: 12,604
+  sourced, 667 misattributed, 25,468 unverified. After the strict aggregator downgrade: 12,199
+  sourced, 664 misattributed, 25,725 unverified (see `batch_summary.tsv` and
+  `strict_downgrades.tsv`).
+- **12,857 of 39,269 corpus lines (32.7%) carry at least one source** - the agents plus the
+  offline steps (119 lines from the citation dictionaries and 539 from verbatim location in
+  Gutenberg full texts that the web pass did not also find).
+- 277 agent sessions are recorded in `sessions.jsonl`, about USD 3,466 in total.
