@@ -246,3 +246,14 @@ record, for every sourced line, which step produced it and what it matched again
   and dictionary-of-quotations references were preferred, but a spot check before relying on
   any single line is advisable.
 - Bartlett (1860s edition) and Gutenberg texts use the spelling and titles of their editions.
+- Finding a quote verbatim in an author's book proves the line is *in* that book, not always
+  that the author coined it: an author may be quoting someone else. Andrew Carnegie's
+  autobiography, for example, contains "He that cannot reason is a fool..." but introduces it
+  as an inscription he is repeating. The full-text steps therefore store the surrounding
+  excerpt (`ref_quote`) in the evidence file, so the context is visible to anyone checking a
+  line; they do not try to decide authorship, which is what the corpus's own author column
+  asserts.
+- Corpus quotes are often modernised versions of the original wording - Josh Billings'
+  dialect spelling regularised, a nineteenth-century "a man...he" rewritten as "you". The
+  fuzzy threshold (>= 92, or >= 97 under 30 characters) is what lets those match their
+  source; every accepted match keeps its score and excerpt in the evidence file.
