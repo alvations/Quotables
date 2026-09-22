@@ -72,6 +72,37 @@ evidence in the corpus: the line is found in the work itself.
 Texts used are listed in `sourcing/gitenberg_manifest.json` (Gutenberg id, GITenberg
 repository, edition/translation note).
 
+### Step 4: a second full-text pass over the quotes the web agents could not source
+
+The web pass left 26,410 quotes without a first-hand source. Most are modern interview lines
+with no published text to check, but a minority belong to authors the corpus itself shows to
+be public-domain era, and for those the quote can be looked for in the work itself.
+
+`build_gutenberg_jobs.py` decides where to look; it never assigns a source. An author counts
+as public-domain era when the publication years already cited in their *sourced* quotes have a
+median before 1930 - measured from the corpus, not from a hand-written list and not from
+recollection. Those authors are matched against the Project Gutenberg catalogue (the
+`hugovk/gutenberg-metadata` mirror; gutenberg.org itself is not reachable from this
+environment), non-English editions are dropped, and each author is capped at 25 books.
+GITenberg repository names are derived as `<title-slug>_<pg_id>`, a rule checked against 18
+books already in the manifest before being used to generate new ones.
+
+Two kinds of candidate are thrown out by hand, because they are the ways this pass could
+invent a source rather than find one:
+
+- **name collisions.** "Tecumseh" matches William *Tecumseh* Sherman, which would have
+  credited Sherman's memoirs to the Shawnee leader; "E. F. L. Wood, 1st Earl of Halifax"
+  (20th century) matches George Savile, Marquess of Halifax (17th century).
+- **derivative compilations.** "Widger's Quotations from the Project Gutenberg Editions of the
+  Works of Mark Twain" is an excerpt collection: finding a line in it proves nothing about
+  *which* Twain work the line came from. The same applies to dictionaries of quotations such
+  as Bartlett - they *cite* a source, they are not one - so a quotation dictionary is only
+  usable through its citations, never by locating a quote inside it.
+
+Publication years are left off these sources. The catalogue carries no reliable date, and an
+invented year in the sources column would be worse than no year at all, so a source from this
+pass reads `Work, Chapter` rather than `Work (wrong year), Chapter`.
+
 ### Step 3: web search agents
 
 Every line still without a source was handed, in batches of about 170, to parallel agents

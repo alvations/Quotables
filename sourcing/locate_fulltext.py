@@ -25,6 +25,9 @@ ROMAN = {"i":1,"ii":2,"iii":3,"iv":4,"v":5,"vi":6,"vii":7,"viii":8,"ix":9,"x":10
 HEAD_RE = re.compile(r"^\s*(CHAPTER|BOOK|PART|ESSAY|LETTER|SECTION|CANTO|ACT|SCENE|VOLUME|APHORISM|Chapter|Book|Part|Essay|Letter|Section|Canto|Act|Scene|Aphorism)\b")
 ACTSCENE_RE = re.compile(r"ACT\s+([IVXLC]+|\d+)\.?\s*SCENE\s+([IVXLC]+|\d+)", re.I)
 ACT_RE = re.compile(r"^\s*ACT\s+([IVXLC]+|\d+)\b", re.I)
+# front matter: never a real locator for a quotation
+FRONT_MATTER = re.compile(r"(?i)^(contents|table of contents|index|illustrations|"
+                          r"list of [a-z ]+|footnotes|transcriber)\b")
 SCENE_RE = re.compile(r"^\s*SCENE\s+([IVXLC]+|\d+)\b", re.I)
 
 def roman_to_int(s):
@@ -116,6 +119,10 @@ def heading_for(lines, works, li, shakespeare):
             if h.startswith(("'", '"', "\u2018", "\u201c")) or len(re.sub(r"[^A-Za-z]", "", h)) < 3 \
                     or (len(h) < 16 and re.search(r"[A-Za-z]\. ", h)):
                 continue  # signature lines and stray marks are not section headings
+            if FRONT_MATTER.match(h):
+                continue  # a quote never lives in the table of contents; the nearest heading
+                          # above it is front matter only when the real one was missed, and a
+                          # wrong locator is worse than none
             return work, h[:70]
     return work, None
 
