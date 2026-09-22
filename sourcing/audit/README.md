@@ -179,10 +179,58 @@ hand-off were removed from the received list, which had been inflating the count
   `unsearched` placeholders that batch_0228 superseded and `web_to_evidence.py` now skips. After the strict
   aggregator downgrade: 12,203 sourced, 664 misattributed, 25,743 unverified (see
   `batch_summary.tsv` and `strict_downgrades.tsv`).
-- **12,859 of 39,269 corpus lines (32.7%) carry at least one source** - the agents plus the
+- **13,034 of 39,269 corpus lines (33.2%) carry at least one source** - the agents plus the
   offline steps (119 lines from the citation dictionaries and 539 from verbatim location in
   Gutenberg full texts that the web pass did not also find).
 - 278 agent sessions are recorded in `sessions.jsonl`, about USD 3,469 in total.
+
+## Second full-text pass (2026-09-22)
+
+The web pass had searched every line, so the remaining 26,410 unsourced quotes could only gain
+a source from something the agents could not see. Re-reading a quotation site was not an
+option - the egress policy blocks gutenberg.org, archive.org, Wikisource, Wikiquote, Google
+Books and WebFetch alike - but GitHub over git, raw.githubusercontent.com and the package
+registries are reachable, and that is enough to search the books themselves.
+
+`hugovk/gutenberg-metadata` supplied the full 68,502-book Project Gutenberg catalogue.
+`build_gutenberg_jobs.py` used it to queue 3,151 books for the 297 authors the corpus itself
+shows to be public-domain era; 1,834 were mirrored by GITenberg and searched (683.6 MB of
+text), 1,308 were not mirrored, and 9 were excluded by hand.
+
+Result: **175 new sources**, every one a verbatim match in the work itself, 72% of them at a
+score of 100. Coverage 12,859 -> 13,034.
+
+What the ledgers caught, which is the reason for keeping them:
+
+- **Four Gutenberg titles carry a trailing carriage return.** Unnoticed it would have put a
+  control character into the sources column of a tab-separated corpus, and it had already
+  broken 151 rows of this pass's own TSV trace into fragments. `locate_fulltext.py` now strips
+  control characters where the source string and the trace row are written, so no caller can
+  reintroduce it.
+- **'CONTENTS' as a locator** on 8 sources: the match was real but the chapter heading had
+  been missed, so the nearest heading above it was the table of contents. Front matter no
+  longer counts as a heading; those sources fall back to the work title alone.
+- **Duplicate editions.** Gutenberg carries the Leonardo notebooks as both "Complete" and
+  "Volume 2", so one quote matched the same work twice. `dedupe_fulltext.py` collapses hits
+  whose titles differ only by an edition suffix or heading punctuation, and keeps genuine
+  multi-work matches - Marden reused a sentence in two books, and a Robert Service poem
+  appears in two collections.
+- **Two kinds of candidate were refused outright**, because they are how this pass could have
+  invented a source: name collisions (9 volumes of William *Tecumseh* Sherman's memoirs would
+  have been credited to Tecumseh the Shawnee leader) and derivative excerpt collections
+  ("Widger's Quotations from the PG Editions of Mark Twain" cannot say *which* Twain work a
+  line came from). Both are listed in the ledger as `excluded`, with the reason, rather than
+  dropped silently.
+
+A container restart killed the locator with one work left to process. Nothing was lost: the
+books, the partial trace and the partial evidence were all on disk, so the run resumed from
+the trace rather than starting over, re-doing only the work that had been mid-write.
+
+Ledgers: `fulltext_books_pass1.tsv` (94 works, 57.6 MB), `fulltext_books_pass2.tsv` (3,151
+books), `fulltext_books_reference.tsv` (73 quotation dictionaries queued, 14 searched, 37
+excluded as compilations that cite a source rather than being one), and the per-quote traces
+`fulltext_searched_pass1.tsv` (4,150 comparisons) and `fulltext_searched_pass2.tsv` (41,091
+comparisons: 1,354 located, 18,006 below threshold, 21,731 no match).
 - A format audit of the finished corpus checked every source string for bare URLs, aggregator
   names, machine dates, whitespace, placeholder wording, commentary in place of a citation, and
   the author's name repeated as an attribution. The data came through it clean: 13 strings were

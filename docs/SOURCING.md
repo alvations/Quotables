@@ -216,11 +216,12 @@ stay absent from the evidence file and are picked up again by the resume procedu
 
 | step | lines with a source |
 | --- | --- |
-| citation datasets (foba Wikiquote extracts, Bartlett) | 198 (119 not also found by the web pass) |
-| verbatim location in Gutenberg full texts (Shakespeare + 94 other works, 41 authors) | 561 (539 not also found by the web pass) |
-| web-search agents (sourced) | 12,203 |
+| citation datasets (foba Wikiquote extracts, Bartlett) | 198 (106 found by no other step) |
+| verbatim location in Gutenberg full texts, first pass (94 works + Shakespeare) | 561 (539 found by no other step) |
+| verbatim location in Gutenberg full texts, second pass (1,753 works, 245 authors) | 1,130 (175 found by no other step) |
+| web-search agents (sourced) | 12,201 |
 | web-search agents (misattributed, kept as `[]`) | 664 |
-| **lines with at least one source** | **12,859 of 39,269 (32.7%)** |
+| **lines with at least one source** | **13,034 of 39,269 (33.2%)** |
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
 0227, plus eleven "b" recovery batches for the remainders of batches killed mid-run, plus one
@@ -234,7 +235,10 @@ URL they cited was an aggregator (the full list is `sourcing/audit/strict_downgr
 leaving the 12,203 web-sourced lines above.
 
 The full audit trail of the agents (prompts, searches, result pages, per-session ledger with
-costs) is in `sourcing/audit/`: 278 sessions, about USD 3,469 in total. The evidence files
+costs) is in `sourcing/audit/`: 278 sessions, about USD 3,469 in total. The full-text passes
+have their own ledgers: `fulltext_books_*.tsv` lists every book queued, with a SHA-256 of the
+exact text searched, and `fulltext_searched_*.tsv` records every (work, quote) pair compared,
+hit or miss, with its score. The evidence files
 record, for every sourced line, which step produced it and what it matched against.
 
 ## Known limits

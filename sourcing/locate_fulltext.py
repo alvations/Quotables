@@ -28,6 +28,15 @@ ACT_RE = re.compile(r"^\s*ACT\s+([IVXLC]+|\d+)\b", re.I)
 # front matter: never a real locator for a quotation
 FRONT_MATTER = re.compile(r"(?i)^(contents|table of contents|index|illustrations|"
                           r"list of [a-z ]+|footnotes|transcriber)\b")
+CONTROL = re.compile(r"[\x00-\x1f\x7f]+")
+
+def clean(s):
+    """Strip control characters and collapse whitespace.
+
+    Four Gutenberg catalogue titles carry a trailing carriage return. Left alone it lands in
+    the sources column of a tab-separated corpus and in this script's own TSV trace, breaking
+    both. Sanitising here rather than only upstream means no caller can reintroduce it."""
+    return CONTROL.sub(" ", s).strip()
 SCENE_RE = re.compile(r"^\s*SCENE\s+([IVXLC]+|\d+)\b", re.I)
 
 def roman_to_int(s):
@@ -154,7 +163,7 @@ def main():
         trace = open(sys.argv[sys.argv.index("--trace") + 1], "a", encoding="utf8")
     def note(line_no, verdict, score=""):
         if trace:
-            trace.write(f"{pg_id}\t{work_title}\t{line_no}\t{verdict}\t{score}\n")
+            trace.write(f"{pg_id}\t{clean(work_title)}\t{line_no}\t{verdict}\t{score}\n")
     n_hit = n_try = 0
     for li_c, line in enumerate(open(corpus, encoding="utf8"), 1):
         author, quote = line.rstrip("\n").split("\t")[:2]
@@ -190,8 +199,8 @@ def main():
         li = bisect.bisect_right(offsets, ds) - 1
         work, loc = heading_for(lines, works, li, shakespeare)
         wt = title_case(work) if (shakespeare and work) else work_title
-        src = wt + (f" ({year})" if year else "")
-        if loc: src += ", " + loc
+        src = clean(wt) + (f" ({year})" if year else "")
+        if loc: src += ", " + clean(loc)
         excerpt = re.sub(r"\s+", " ", " ".join(lines[max(0, li-1):li+2]).strip())[:300]
         out.write(json.dumps({"line": li_c, "author": author, "source": src,
                               "dataset": f"gutenberg-fulltext:pg{pg_id}", "ref_quote": excerpt,

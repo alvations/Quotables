@@ -84,7 +84,8 @@ def main(corpus, catalog, out):
             langs = rec.get("language") or []
             if langs and not any("en" in str(x) for x in langs):
                 continue
-            title = (rec.get("title") or [""])[0].split("\n")[0]
+            title = re.sub(r"[\x00-\x1f\x7f]+", " ",
+                           (rec.get("title") or [""])[0].split("\n")[0]).strip()
             if not title:
                 continue
             jobs.append({"author": author, "pg_id": int(pid), "title": title,

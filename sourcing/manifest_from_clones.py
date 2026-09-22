@@ -12,7 +12,7 @@ than "Work (wrong-year), Chapter".
 
 Usage: manifest_from_clones.py jobs.json <clone dir> manifest.json
 """
-import glob, json, os, sys
+import glob, json, os, re, sys
 
 jobs_path, clone_dir, out = sys.argv[1:4]
 jobs = {j["repo"]: j for j in json.load(open(jobs_path))}
@@ -28,7 +28,8 @@ for path in sorted(glob.glob(os.path.join(clone_dir, "*"))):
     if not texts:
         missing_text += 1
         continue
-    manifest.append({"author": job["author"], "work": job["title"], "year": 0,
+    manifest.append({"author": job["author"],
+                     "work": re.sub(r"[\x00-\x1f\x7f]+", " ", job["title"]).strip(), "year": 0,
                      "pg_id": job["pg_id"], "repo": job["repo"], "path": path,
                      "text_file": os.path.basename(texts[0]),
                      "note": "fetched for the second full-text pass"})
