@@ -129,7 +129,10 @@ def title_case(t):
     return " ".join(out).replace("'S", "'s")
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    argv = sys.argv[1:]
+    if "--trace" in argv:                      # drop the flag and its filename
+        i = argv.index("--trace"); argv = argv[:i] + argv[i+2:]
+    args = [a for a in argv if not a.startswith("--")]
     shakespeare = "--shakespeare" in sys.argv
     corpus, out_path, author_re, work_title, year, pg_id, text_file = args[:7]
     year = int(year)
@@ -137,6 +140,14 @@ def main():
     big, offsets = build_index(lines)
     are = re.compile(author_re, re.I)
     out = open(out_path, "a", encoding="utf8")
+    # --trace <file> records EVERY quote this text was searched against, hit or miss, so the
+    # audit trail shows what was actually looked at rather than only what was found.
+    trace = None
+    if "--trace" in sys.argv:
+        trace = open(sys.argv[sys.argv.index("--trace") + 1], "a", encoding="utf8")
+    def note(line_no, verdict, score=""):
+        if trace:
+            trace.write(f"{pg_id}\t{work_title}\t{line_no}\t{verdict}\t{score}\n")
     n_hit = n_try = 0
     for li_c, line in enumerate(open(corpus, encoding="utf8"), 1):
         author, quote = line.rstrip("\n").split("\t")[:2]
@@ -154,7 +165,8 @@ def main():
             while p != -1 and c < 300:
                 votes[(p - i * 6) // 300] += 1; c += 1
                 p = big.find(sh, p + 1)
-        if not votes: continue
+        if not votes:
+            note(li_c, "no-shingle-match"); continue
         best = None
         for bucket, _ in votes.most_common(6):
             s = max(0, bucket * 300 - len(nq)); e = min(len(big), bucket * 300 + 300 + 2 * len(nq))
@@ -162,10 +174,12 @@ def main():
             if al is None: continue
             if best is None or al.score > best[0]:
                 best = (al.score, s + al.dest_start, s + al.dest_end)
-        if not best: continue
+        if not best:
+            note(li_c, "no-alignment"); continue
         score, ds, de = best
         thr = 97 if len(nq) < 30 else 92
-        if score < thr: continue
+        if score < thr:
+            note(li_c, "below-threshold", int(score)); continue
         li = bisect.bisect_right(offsets, ds) - 1
         work, loc = heading_for(lines, works, li, shakespeare)
         wt = title_case(work) if (shakespeare and work) else work_title
@@ -175,8 +189,10 @@ def main():
         out.write(json.dumps({"line": li_c, "author": author, "source": src,
                               "dataset": f"gutenberg-fulltext:pg{pg_id}", "ref_quote": excerpt,
                               "score": int(score), "how": "fulltext"}, ensure_ascii=False) + "\n")
+        note(li_c, "located", int(score))
         n_hit += 1
     out.close()
+    if trace: trace.close()
     print(f"{work_title}: {n_hit} located of {n_try} quotes tried", file=sys.stderr)
 
 if __name__ == "__main__":

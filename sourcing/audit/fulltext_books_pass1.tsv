@@ -1,0 +1,95 @@
+author	pg_id	title	gitenberg_repo	status	reason	bytes	sha256	text_file
+Abraham Lincoln	3253	The Papers and Writings of Abraham Lincoln, Complete	The-Papers-And-Writings-Of-Abraham-Lincoln-Complete_3253	fetched		3220578	be139c682155e748045c8bbc8296e891c9492807ab6adf97ac0c37f0cbd271c4	3253.txt
+Abraham Lincoln	7547	Quotes and Images from the Writings of Abraham Lincoln	Quotes-and-Images-from-the-Writings-of-Abraham-Lincoln_7547	fetched		27388	ccbb63989b04c36802f25ea12e35cbbb09f7694311c0ac135223209b87ef6be2	7547.txt
+Abraham Lincoln	8110	Lincoln Letters	Lincoln-Letters_8110	fetched		25937	62fae85f994c21b1c1b1af5c9241d945386bcbaf5d7c100565a1a86e78c1cd9b	8110.txt
+Ambrose Bierce	374	Fantastic Fables	Fantastic-Fables_374	fetched		188939	7f2acb7fc6618b017961852f193590803d8f8776fe97a9e0240b148b820b3151	374.txt
+Ambrose Bierce	972	The Devil's Dictionary	The-Devil-s-Dictionary_972	fetched		394044	f61a70f08650fd2b87101cb276b4d6cf12c4714d4bbd0a8a45a27501ffc8fea3	972.txt
+Aristotle	1974	Poetics	The-Poetics-of-Aristotle_1974	fetched		108334	5c0ef9d0fa0479a2bbc11052f1e0a2d036698473c7b71b7a9633fda7c30f8c97	1974.txt
+Aristotle	8438	Nicomachean Ethics	The-Ethics-of-Aristotle_8438	fetched		661767	60aeb2db9ec1e550a81bc828027a944fbbee0053ffa687819de964a4b6b773b3	8438-8.txt
+Benjamin Disraeli	3760	Sybil, or the Two Nations	Sybil-or-the-Two-Nations_3760	fetched		953264	3425b75155f8e41f2594b4c1405086b764c8c4ace6d5a750ddeb62e6555d519b	3760-0.txt
+Benjamin Disraeli	7926	Endymion	Endymion_7926	fetched		1031190	79412edc0a9c71f83fe08e99160bbda79d6be8552e7a6f66f0ddcf6c65a534a2	7926-0.txt
+Benjamin Franklin	148	The Autobiography of Benjamin Franklin	The-Autobiography-of-Benjamin-Franklin_148	fetched		405530	4569f58208f99440992a811d7c2b1c4f7b4dc166196ad01360f8d0e37fbf7d1f	148-8.txt
+Blaise Pascal	46921	Pensées (The Thoughts of Blaise Pascal)	The-Thoughts-of-Blaise-Pascal_46921	fetched		699218	82694d790e9db00b368f8feb90fec2c90a039baa94cee2660f7dfab6bc9c8cf2	46921-0.txt
+Charles Dickens	98	A Tale of Two Cities	A-Tale-of-Two-Cities_98	fetched		804335	2fcfa071498b30724bd1bd714ba89e38477d632b86d74e87559f6259d3917e36	98-0.txt
+Charles Dickens	580	The Pickwick Papers	The-Pickwick-Papers_580	fetched		1855144	d4e007ec55fe5918bf5d4ebb5f2ce5ee08c9193c54f424b5dd7ef188314b2dfe	580-0.txt
+Charles Dickens	766	David Copperfield	David-Copperfield_766	fetched		2033142	405d8997c6c5047c6b3ceb5ad1388bd2d30aa78598952744e23a23cea7100e6b	766-0.txt
+Charles Dickens	1400	Great Expectations	Great-Expectations_1400	fetched		1049619	b58ce42c630e06314f2442d5937fa8a8556b6e3c5c16f4713c7332a4bb50b420	1400-0.txt
+Confucius	3330	The Analects of Confucius	The-Analects-of-Confucius-from-the-Chinese-Classics_3330	fetched		186354	717cd5d679d45ee8f297dc55d9f81551679dd6a3786d74104431afc0347efcaa	3330.txt
+Euripides	35171	The Trojan Women	The-Trojan-Women-of-Euripides_35171	fetched		137907	03c96c6b0ba60819e04feb9d7821941b77e8b5ca502742a0d9805dbceafbd9ba	35171.txt
+Euripides	35173	The Bacchae	The-Bacchae-of-Euripides_35173	fetched		133277	ce75a3ee7333cbaaa861d2504b83938b3f0a76ef8ef5eae7a9930686cda5389c	35173-8.txt
+Euripides	35451	Medea	Medea-of-Euripides_35451	fetched		146158	cad891a43f52ef14a4263286717ad711aa6d11120d6fecdae41ee9cc7ba32e23	35451-8.txt
+Francis Bacon	575	Essays, or Counsels Civil and Moral	The-Essays-or-Counsels-Civil-and-Moral_575	fetched		324252	6d24b0b28b793b57e09e95a3e01ca0170d87bd33d0b5725c8590cee920ecc6ab	575.txt
+Francis Bacon	5500	The Advancement of Learning	The-Advancement-of-Learning_5500	fetched		516939	4601a500267d7bd7351cf19bcbc2c0606467dd864eee569bddc64692b43b9385	5500-0.txt
+Francis Bacon	56463	Bacon's Essays, and Wisdom of the Ancients	Bacon-s-Essays-and-Wisdom-of-the-Ancients_56463	fetched		701337	da94dc4f101ee74c9605dbb93a58e3252ac537e5e8b4c30330ef0ea93c510c31	56463-0.txt
+Friedrich Nietzsche	4363	Beyond Good and Evil	Beyond-Good-and-Evil_4363	fetched		408809	feae718cf7af07e9285958634e3f6ebf639ac3ca6baf72fbadfa9a495206e5d4	4363.txt
+Friedrich Nietzsche	19322	The Antichrist	The-Antichrist_19322	fetched		226311	0ad7240be275c09e9a53743191f8e2a5a85499b2551f6f6730e4910f693bf9ec	19322.txt
+Friedrich Nietzsche	39955	The Dawn of Day	The-Dawn-of-Day_39955	fetched		597091	294bd231a593daaf2b2dd9e6c809ebb5ad76d11c272c28bd6114655c98c32363	39955-0.txt
+George Bernard Shaw	3618	Arms and the Man	Arms-and-the-Man_3618	fetched		164183	4b81366b5768dce164c961af62fb9463d89eac38fcb51018e4caea53d3f45d81	3618.txt
+George Bernard Shaw	3790	Major Barbara	Major-Barbara_3790	fetched		207415	6be521b29f17522cdc3c2cfc09960966f0e739aa3ae61cafa1cfbe814a6a1ea1	3790.txt
+George Bernard Shaw	3825	Pygmalion	Pygmalion_3825	fetched		212678	372eea095186dca19fb169cba041de0b68e075b1ac209df8754022c810f96165	3825.txt
+George Bernard Shaw	26107	Maxims for Revolutionists	Maxims-for-Revolutionists_26107	fetched		41783	f387480edaac6c8dccc796c65d0d417b7ba87a7ebbfdf31e824fea7d9b48bafe	26107-8.txt
+George Eliot	145	Middlemarch	Middlemarch_145	fetched		1847718	13423f5590be43aabc2d383386d544dc121eca306ced42cf790346733968a7f8	145-8.txt
+George Eliot	507	Adam Bede	Adam-Bede_507	fetched		1206576	c9bd99331b1d3689a76eba8c6c82aa0ded6fb216a00a269aecf1061a6f6720bb	507-0.txt
+George Eliot	550	Silas Marner	Silas-Marner_550	fetched		420906	46b39559666acdce85bfbea4d98df3b3db0e044bcbacd22f4a55ba86be76a189	550.txt
+George Eliot	6688	The Mill on the Floss	The-Mill-on-the-Floss_6688	fetched		1185830	9b489d9d8b9d48f06b38447ef37610209ace1464fb783456d0391e4211105f02	6688-0.txt
+Henry David Thoreau	205	Walden	Walden-and-On-The-Duty-Of-Civil-Disobedience_205	fetched		666766	1c8b8df7bf5633b021b9139de4bc241d11984c879456823701d3918f3b2f725d	205.txt
+Henry David Thoreau	1022	Walking	Walking_1022	fetched		88948	ea996729f2b6ff5074ffc94b94838eb99e270eb3297bb52343bcff8798bb6976	1022-0.txt
+Henry Wadsworth Longfellow	1365	The Complete Poetical Works of Henry Wadsworth Longfellow	The-Complete-Poetical-Works-of-Henry-Wadsworth-Longfellow_1365	fetched		1966416	9a2594213268bb8eed98081881264b23515a762eadf19d1ab14031231ceb397d	1365.txt
+Horace	5432	The Odes and Carmen Saeculare of Horace	The-Odes-and-Carmen-Saeculare-of-Horace_5432	fetched		209198	a5b833c11fc47acb699be442f2840f891c8017c02845ca27c2d0ce3494f17444	5432.txt
+Horace	14020	The Works of Horace	The-Works-of-Horace_14020	fetched		485282	1b5e0810038ed32fd14ec55ad50443736a5ef7306198be7739256ffd27301877	14020.txt
+James Russell Lowell	13310	The Complete Poetical Works of James Russell Lowell	The-Complete-Poetical-Works-of-James-Russell-Lowell_13310	fetched		1676327	13d3edb6b0195389d72973249142effa6ba999d9acce2668ad7036ede81e74bf	13310.txt
+Johann Wolfgang von Goethe	2527	The Sorrows of Young Werther	The-Sorrows-of-Young-Werther_2527	fetched		259380	5e9eabd2d321a98d8f9f81fb114a68a1b11e7743879ee92b440e31dc9d6d85f4	2527.txt
+Johann Wolfgang von Goethe	14591	Faust	Faust_14591	fetched		249339	29fcc1c9ac6816c456ea8365629f9c87e45c4fb9776f15406c9d4a91afe91cb2	14591.txt
+John Locke	7370	Second Treatise of Government	Second-Treatise-of-Government_7370	fetched		338612	7d79ca5039cf8da0ba4c36e4a75cb9b24774c2eec063383957fcc30b804ef2db	7370.txt
+Jonathan Swift	623	The Battle of the Books and Other Short Pieces	The-Battle-of-the-Books-and-Other-Short-Pieces_623	fetched		252079	f1e723f62a2c361a1f5e8822eaf0e79e393d48a1e7c1290d6a1b40a8c79f35a9	623.txt
+Jonathan Swift	829	Gulliver's Travels	Gulliver-s-Travels_829	fetched		611864	37e0bf90ce1c9d254bae3ea75be1b0233771b2e2c0a832dd1f85b8d6bfb86935	829-0.txt
+Jonathan Swift	4737	A Tale of a Tub	A-Tale-of-a-Tub_4737	fetched		292423	dcd0ac13f0f362d53bea090cd98316ba23065fc0376cbdb1bea3ea1d3390691d	4737-0.txt
+Joseph Addison	9334	The Spectator, Volume 1	The-Spectator-Volume-1Eighteenth-Century-Periodical-Essays_9334	fetched		1909451	90649f6c754a567ee940f97f602e3e012da24d7ea92eef92d8e7ae5b4fbe8679	9334.txt
+Lewis Carroll	11	Alice's Adventures in Wonderland	Alice-s-Adventures-in-Wonderland_11	fetched		173595	49a0b2726606e1290ac03a63978fa1dd1bd38a8d805704d98265f393533ea094	11-0.txt
+Lewis Carroll	12	Through the Looking-Glass	Through-the-Looking-Glass_12	fetched		193607	24bae70935e7fce7be74357779c53861c0cd04b3687f3005c1a8687f2b909988	12-0.txt
+Lord Byron	5131	Childe Harold's Pilgrimage	Childe-Harold-s-Pilgrimage_5131	fetched		251546	727fda6752d6d5614a5c53f1f0c33216e4b8080d13ae4da26dbe0717fe02663f	5131.txt
+Lord Byron	21700	Don Juan	Don-Juan_21700	fetched		832851	741e4af1bcb3a032618fa47dcddef9ebb91741c3bdf62e1db6a2eabf979d1b44	21700-8.txt
+Marcus Aurelius	2680	Meditations	Meditations_2680	fetched		425178	faced7169430b9bedb39fc8501a0a15fb0bfb52a45c09f3eb4668135e371b65b	2680-8.txt
+Mark Twain	76	Adventures of Huckleberry Finn	Adventures-of-Huckleberry-Finn_76	fetched		616320	cd9931183257a850178225bd5e25e4f2df0cbac544dfe9a49cd0ea5a210c24d9	76-0.txt
+Mark Twain	102	Pudd'nhead Wilson	The-Tragedy-of-Pudd-nhead-Wilson_102	fetched		320243	0e7fdcb7d6f4afe022f8eb257e8ce196f6650550eb33cfa29213f09b6b72cf93	102-0.txt
+Mark Twain	3176	The Innocents Abroad	The-Innocents-Abroad_3176	fetched		1149349	4c57ac3434eb59a86ff1817251b9166398dc6a1f1abfbf119024c52cd14e799c	3176-0.txt
+Mark Twain	3188	Mark Twain's Speeches	Mark-Twain-s-Speeches_3188	fetched		540735	771bc4caecdc54643887e34c69a9af392dbacb6350df072acadbfd8844a969f0	3188-0.txt
+Oscar Wilde	174	The Picture of Dorian Gray	The-Picture-of-Dorian-Gray_174	fetched		462103	0c9a2cbf188ca6534c60381b764ac37bf4594b16971aea5cc8263e83b9ce9a05	174.txt
+Oscar Wilde	790	Lady Windermere's Fan	Lady-Windermere-s-Fan_790	fetched		141508	4bfaa2ba89426d0aa6a8a601526f635c1007b650547591247b18abd897debe2e	790-0.txt
+Oscar Wilde	854	A Woman of No Importance	A-Woman-of-No-Importance_854	fetched		153614	42e4d61cffa60ca0b9bfd00d012f77064f7f1f5133bd8069a033830e2b69d82a	854-0.txt
+Oscar Wilde	887	Intentions	Intentions_887	fetched		361294	616be6357e2fbcf4ba02c1163c4328a94629bf93c8a2f2a3a022c514c95f13b3	887-0.txt
+Ralph Waldo Emerson	16643	Essays (selection, incl. Self-Reliance, Compensation, Friendship)	Essays-by-Ralph-Waldo-Emerson_16643	fetched		567488	fd23dcacc8d72aa98cf13c02cdcbe3d15742d510f3d4b6d66de8d8e5e86d2791	16643.txt
+Ralph Waldo Emerson	29433	Nature	Nature_29433	fetched		108744	07ae7f4d7b9672eb296d6cecebb4640ff285f42ba04186a54378dab033fa3525	29433-8.txt
+Ralph Waldo Emerson	39827	The Conduct of Life	The-Conduct-of-Life_39827	fetched		410220	fc8ffb2ed4a775ff301108777dd20413a510a496fa5618aaff85af69f2866dee	39827-0.txt
+Robert Browning	16376	Browning's Shorter Poems	Browning-s-Shorter-Poems_16376	fetched		327023	da5e46326747348cd7afb54b728d5cc8234f7041dd75a381563d2c945f68663e	16376.txt
+Robert Louis Stevenson	120	Treasure Island	Treasure-Island_120	fetched		396596	0fee2fef1b2ffde22e2c962bd8bc2b75ea1ae9b02b3fe85ef08d44f4cc1bb2de	120-0.txt
+Robert Louis Stevenson	386	Virginibus Puerisque and Other Papers	Virginibus-Puerisque-and-Other-Papers_386	fetched		300797	efd643a8c579304a9f134c7726acdc73d25be50338fae1d0bd522facc425b3dd	386-0.txt
+Robert Louis Stevenson	614	Across the Plains, with Other Memories and Essays	Across-the-Plains-with-Other-Memories-and-Essays_614	fetched		370738	77bdfb9f4a18a7c11c33baa3c00af91851e62332214457ac83035d81538a05be	614-0.txt
+Rudyard Kipling	236	The Jungle Book	The-Jungle-Book_236	fetched		304376	2f9486eb4776d23baf1064eebb73bb0093b808b13e10516e81e20d1dbe4909c9	236-0.txt
+Rudyard Kipling	556	Rewards and Fairies	Rewards-and-Fairies_556	fetched		444831	b9d2d2333dec8015d0ae27b63da20bcff6d421fc8a6f58ecfd096a5050b7712b	556-0.txt
+Rudyard Kipling	2226	Kim	Kim_2226	fetched		615567	85a20ed2f9b6dc6161a2c0757f0bf34a9728f7e7e2962e890837089d16c26617	2226.txt
+Rudyard Kipling	2819	Barrack-Room Ballads	Barrack-Room-Ballads_2819	fetched		118042	9e61cd696580d16f3198c9d59b5407d9bcea7b07375c1f4bb5f16c6500f20152	2819-0.txt
+Samuel Butler	2084	The Way of All Flesh	The-Way-of-All-Flesh_2084	fetched		915623	a883f8848b9e72c110e1ce9b2420a023e3bfb892bd54817f08375b82c8266c0f	2084.txt
+Samuel Butler	6173	The Note-Books of Samuel Butler	The-Note-Books-of-Samuel-Butler_6173	fetched		835641	7660c4ff6b5c024c2299769f3644f9a5cb81acf39fd72b08500eec5ab14c5d19	6173-0.txt
+Samuel Johnson	652	Rasselas, Prince of Abyssinia	Rasselas-Prince-of-Abyssinia_652	fetched		245949	e4abf83c12c0f0cdb1aa83607c45eee94c6112122d40d8ca2d5ed934cf994917	652-0.txt
+Samuel Johnson	8918	Boswell's Life of Johnson, Volume 1 (1709-1765)	Life-of-Johnson-Volume-1-1709-1765_8918	fetched		1496985	bc8750e328f73fbd3d33e08fd66c06b976dafa66b894d4cde4ff8e53183b3f79	8918-8.txt
+Samuel Johnson	9072	Boswell's Life of Johnson, Volume 2 (1765-1776)	Life-of-Johnson-Volume-2-1765-1776_9072	fetched		1331439	92b6b625e1f1e08c7ab99f6be49fe492a741761547ba3fcd773c685a781d4806	9072.txt
+Samuel Johnson	9180	Boswell's Life of Johnson, Volume 3 (1776-1780)	Life-of-Johnson-Volume-3-1776-1780_9180	fetched		1236823	bdab4601397214ad097a2b7c13211c59c64dde2ad5b55d41ee39c3ffbc7bbb27	9180-8.txt
+Sophocles	14484	The Seven Plays in English Verse	The-Seven-Plays-in-English-Verse_14484	fetched		566554	bebf07209f213aa409b3a7213b1bf5ef092eeea76c86b1b3ffdb5d3ffa37e2bc	14484.txt
+Thomas Carlyle	1091	On Heroes, Hero-Worship, and the Heroic in History	On-Heroes-Hero-Worship-and-the-Heroic-in-History_1091	fetched		529346	71785a1369034a8b30c23994969c662768ca282da197b08025930048c181c365	1091.txt
+Thomas Carlyle	13534	Past and Present	Past-and-Present_13534	fetched		681183	94f84eeee3f3cf7aa50b6cc3f8ad28fbf1a89ab4a2389c917eb6aed9b0d44592	13534.txt
+Thomas Jefferson	16781	Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 1	Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-1_16781	fetched		1206873	7f48a38c0d2a3b6b210f3216d4ea3f9e0c865114c51c2abb7842c8177ab87228	16781-0.txt
+Thomas Jefferson	16782	Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 2	Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-2_16782	fetched		1285584	b0f4450d3206dd2e5a4d63f51257f717cd64bdeea492065c277c861374684102	16782-0.txt
+Thomas Jefferson	16783	Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 3	Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-3_16783	fetched		1270793	63307c277af44ae2ba0f724ea942590d4d7b4f46573d64a6baa49155048d6e88	16783-0.txt
+Thomas Jefferson	16784	Memoir, Correspondence, and Miscellanies, from the Papers of Thomas Jefferson, Volume 4	Memoir-Correspondence-And-Miscellanies-From-The-Papers-Of-Thomas-Jefferson-Volume-4_16784	fetched		1377900	524bd02d235046f059f8e7a0a1e3bb25d34749e91c3f2f22b1ddd27c442bc565	16784-0.txt
+Thomas Paine	147	Common Sense	Common-Sense_147	fetched		148133	e10795000c9ec0abad2bac1aad3b1eeced791c64eb21f08d256ff2b2d2489fe6	147-0.txt
+Virgil	228	The Aeneid	The-Aeneid_228	fetched		747061	7ad447d2846cf5b8f53b55c7ace1ae8cfe734dc3d0dd2f1cdd1ccd57739fef5b	228-0.txt
+Virgil	232	The Georgics	The-Georgics_232	fetched		145156	7dd4e7d50fa69be27fe7b08ee2573d668aefe733ebf00806fb9952a5e6d85a6e	232.txt
+Voltaire	2445	Letters on England	Letters-on-England_2445	fetched		240543	655e2640862d678dfe5f94ed534467d7c45edb7ab475e92e6bf856e533b60a13	2445.txt
+Voltaire	18569	Philosophical Dictionary	Voltaire-s-Philosophical-Dictionary_18569	fetched		521891	eb4b13838a6f2e395802ff2d03c1262e95ae2a106e3fc7c5c1e50d602f2dd56e	18569.txt
+Voltaire	19942	Candide	Candide_19942	fetched		229683	2ff4023f920db4e787e9ac6834867086db1ce3c3124d9a0472841ba93f0d6c91	19942-8.txt
+Walt Whitman	1322	Leaves of Grass	Leaves-of-Grass_1322	fetched		775645	3670a70ed46264f6efdbbbef78f594dcbea6bde8c98b07c89fd183bb2c960a1c	1322.txt
+William Blake	574	Poems of William Blake	Poems-of-William-Blake_574	fetched		61245	c46efb8dab4f445eaba88e59fe826f6d308972bf34ce2ec812535e27d783b204	574.txt
+William Blake	1934	Songs of Innocence and Songs of Experience	Songs-of-Innocence-and-Songs-of-Experience_1934	fetched		53923	bd4c0b062bd59d68eb81e0e580fa25ddbb82eb54140e3c5d07e7738981f57dd5	1934-0.txt
+William James	26659	The Will to Believe, and Other Essays in Popular Philosophy	The-Will-to-Believe-and-Other-Essays-in-Popular-Philosophy_26659	fetched		623558	c6f99faa952fbe31034c896099da98fd9048ceb61a18d28ec1a835d3c4f65b13	26659.txt
+William James	32547	Essays in Radical Empiricism	Essays-in-Radical-Empiricism_32547	fetched		356546	f353f7e5247f840dd926ebf1ceca51abcf36f63b2b091791754301894edfb66c	32547.txt
