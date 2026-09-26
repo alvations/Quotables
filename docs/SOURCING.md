@@ -87,8 +87,8 @@ environment), non-English editions are dropped, and each author is capped at 25 
 GITenberg repository names are derived as `<title-slug>_<pg_id>`, a rule checked against 18
 books already in the manifest before being used to generate new ones.
 
-Two kinds of candidate are thrown out by hand, because they are the ways this pass could
-invent a source rather than find one:
+Three kinds of candidate are thrown out, because they are the ways this pass could invent a
+source rather than find one:
 
 - **name collisions.** "Tecumseh" matches William *Tecumseh* Sherman, which would have
   credited Sherman's memoirs to the Shawnee leader; "E. F. L. Wood, 1st Earl of Halifax"
@@ -97,7 +97,14 @@ invent a source rather than find one:
   Works of Mark Twain" is an excerpt collection: finding a line in it proves nothing about
   *which* Twain work the line came from. The same applies to dictionaries of quotations such
   as Bartlett - they *cite* a source, they are not one - so a quotation dictionary is only
-  usable through its citations, never by locating a quote inside it.
+  usable through its citations, never by locating a quote inside it. Gutenberg catalogues
+  these digests under the author's own name, so `manifest_from_clones.py` drops them by title
+  rather than relying on the author field.
+- **collected-works volumes, when something better exists.** A quote found in "Complete Works
+  of X" gets the collection as its work, which is coarse but not false. `dedupe_fulltext.py`
+  drops such a hit only when the SAME quote was also found in an individual work - checked per
+  quote, because Gutenberg does not carry every novel separately and for some lines the
+  collection is the only copy.
 
 Publication years are left off these sources. The catalogue carries no reliable date, and an
 invented year in the sources column would be worse than no year at all, so a source from this
@@ -218,10 +225,10 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | --- | --- |
 | citation datasets (foba Wikiquote extracts, Bartlett) | 198 (106 found by no other step) |
 | verbatim location in Gutenberg full texts, first pass (94 works + Shakespeare) | 561 (539 found by no other step) |
-| verbatim location in Gutenberg full texts, second pass (1,753 works, 245 authors) | 1,130 (175 found by no other step) |
+| verbatim location in Gutenberg full texts, second and third passes (3,631 works, 316 authors) | 1,296 (228 found by no other step) |
 | web-search agents (sourced) | 12,201 |
 | web-search agents (misattributed, kept as `[]`) | 664 |
-| **lines with at least one source** | **13,034 of 39,269 (33.2%)** |
+| **lines with at least one source** | **13,087 of 39,269 (33.3%)** |
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
 0227, plus eleven "b" recovery batches for the remainders of batches killed mid-run, plus one
