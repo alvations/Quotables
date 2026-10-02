@@ -24,6 +24,7 @@ additions are as auditable as the sources already in the file.
 Usage: validate_additions.py author-quote.txt out.txt ledger.tsv in1.jsonl [in2.jsonl ...]
 """
 import json, re, sys, unicodedata
+from collections import Counter
 
 AGGREGATOR = re.compile(r"""(?ix) (?: brainyquote | azquotes | goodreads\.com | quotefancy
     | pinterest | quotepark | libquotes | quotes\.net | quotemaster | inspiringquotes
@@ -253,10 +254,15 @@ corpus_path, out_path, ledger_path = sys.argv[1:4]
 rows = [l.rstrip("\n").split("\t") for l in open(corpus_path, encoding="utf8")]
 have_pair = {(key(a), key(q)) for a, q, _ in rows}
 have_quote = {key(q) for _, q, _ in rows}
-# first spelling wins per folded key, so the corpus's own form is the one adopted
-corpus_authors = {}
+# The corpus's own form is the one an addition adopts. Where the corpus itself spells a name
+# two ways - and it does for twelve people, all of them an accented form against an ASCII
+# flattening of it - the MAJORITY spelling wins, not the first one encountered. Taking the
+# first put one added Leonardo row under "Leonardo Da Vinci", which the corpus uses once,
+# rather than "Leonardo da Vinci", which it uses twenty-five times.
+_author_counts = {}
 for a, _, _ in rows:
-    corpus_authors.setdefault(key(a), a)
+    _author_counts.setdefault(key(a), Counter())[a] += 1
+corpus_authors = {k: c.most_common(1)[0][0] for k, c in _author_counts.items()}
 
 withdrawn = load_withdrawn("sourcing/audit/withdrawn_additions.tsv")
 accepted, ledger, seen = [], [], set()

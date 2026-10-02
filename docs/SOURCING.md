@@ -420,6 +420,16 @@ repoint thousands of citations. A duplicate involving an *added* line does fail,
 
 ## Known limits
 
+- Twelve people are spelled two ways in the corpus, each an accented form against an ASCII
+  flattening of it - Molière/Moliere, Čapek/Capek, Buñuel/Bunuel, Machiavelli with and
+  without the grave, and so on. Every one of those pairs was in the file before this project
+  began, and both spellings carry quotes. They are left alone: rewriting an author's name
+  across the corpus is a decision for whoever owns the data, not for a sourcing pass, and the
+  line numbers in `sourcing/evidence/` would survive a rename but the author index would
+  change under anyone reading it. What the pipeline does guarantee is that no *added* row
+  introduces or widens such a split: `validate_additions.py` folds an added author onto the
+  spelling the corpus already uses, choosing the majority spelling where the corpus itself is
+  inconsistent.
 - Coverage is partial. Many lines in this corpus circulate only on aggregator sites and have
   no traceable origin; those keep `[]`. Lines that citation trackers flag as misattributed
   also keep `[]` (the finding is in the evidence file).
