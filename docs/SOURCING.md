@@ -229,13 +229,18 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | web-search agents (sourced) | 12,201 |
 | web-search agents (misattributed, kept as `[]`) | 664 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
-| discovery phase: quotes added, each arriving with a first-hand source | 1,282 |
+| deep-search batches (batch_w001 to batch_w003) over already-unsourced classical quotes | 96 |
+| discovery phase: quotes added, each arriving with a first-hand source | 1,592 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **14,369 of 40,551 (35.4%)** |
+| **lines with at least one source** | **14,775 of 40,861 (36.2%)** |
 
-Every line the discovery phase added carries a source, so the unsourced count does not move:
-it stays at 26,182, the lines searched without a citation being found. The percentage rises
-because the denominator grew with lines that were sourced before they were ever added.
+The discovery phase moves the percentage without moving the unsourced count, because every
+line it adds already carries a source: only the denominator grows. The deep-search batches are
+the ones that move the unsourced count, since they re-search lines the corpus already held -
+26,182 down to 26,086 so far - and they also produce findings that are not sources: 49 quotes
+newly documented as misattributed, which keep `[]` as the strict policy requires. Those sit in
+`sourcing/evidence/web_deep_search.jsonl` alongside the 365 the deeper search still could not
+place.
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
 0227, plus eleven "b" recovery batches for the remainders of batches killed mid-run, plus one

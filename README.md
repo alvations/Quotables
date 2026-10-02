@@ -10,7 +10,7 @@ A Corpus of Quotes.
  - 40,861 quotes with
  - 1,066,372 words from
  - 3,488 people
- - 14,679 quotes (35.9%) carry a verified first-hand source; 26,182 (64.1%) do not:
+ - 14,775 quotes (36.2%) carry a verified first-hand source; 26,086 (63.8%) do not:
    they were searched without finding one, and 664 of them are recorded as misattributed
    or apocryphal (see docs/SOURCING.md; audit trail in sourcing/audit/)
 

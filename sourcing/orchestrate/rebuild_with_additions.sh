@@ -9,6 +9,14 @@ set -e
 cd "$(git rev-parse --show-toplevel)"
 BASE=$(python3 -c "import json;print(json.load(open('sourcing/discovery_state.json'))['corpus_base_commit'])")
 git show "$BASE:author-quote.txt" > /tmp/corpus_base.txt
+# Deep-search batches (batch_wNNN) re-source lines that are ALREADY in the corpus, so their
+# findings go in before the additions are appended. apply_evidence.py adds to the column
+# rather than rebuilding it, which is what keeps the additions' own sources intact.
+if [ -s sourcing/evidence/web_deep_search.jsonl ]; then
+  python3 sourcing/apply_evidence.py /tmp/corpus_base.txt /tmp/corpus_base_deep.txt \
+          sourcing/evidence/web_deep_search.jsonl
+  mv /tmp/corpus_base_deep.txt /tmp/corpus_base.txt
+fi
 # Children return rows twice over: a git push to sourcing/additions/, and a text relay that
 # this session writes to sourcing/relay/. The git push is authoritative where it exists - it
 # is the child's own latest state - so a relay file is only read for a batch that never
