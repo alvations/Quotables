@@ -43,12 +43,39 @@ def key(s):
     return " ".join(norm(s))
 
 
+def canonical_author(name, corpus_authors, added_authors):
+    """Spell an added quote's author the way the corpus already spells them.
+
+    Agents write "W. B. Yeats" where the corpus has "W.B. Yeats", and one wrote "Vaclav Havel"
+    where another wrote "Václav Havel". Left alone each variant becomes a separate author, which
+    quietly fragments the author index and makes per-author counts wrong. So: if the name folds
+    to one the corpus already uses, adopt the corpus spelling; otherwise pick one form for the
+    whole run, preferring the one that kept its diacritics, since that is the correct spelling
+    rather than an ASCII flattening of it.
+
+    Variants that were already in the corpus before this work (20 of them, e.g. "C. S. Lewis"
+    vs "C.S. Lewis") are left exactly as they are. They are the project's own data, and
+    silently rewriting an author's name across the file is not this script's business.
+    """
+    k = key(name)
+    if k in corpus_authors:
+        return corpus_authors[k]
+    if k in added_authors:
+        return added_authors[k]
+    return name
+
+
 corpus_path, out_path, ledger_path = sys.argv[1:4]
 rows = [l.rstrip("\n").split("\t") for l in open(corpus_path, encoding="utf8")]
 have_pair = {(key(a), key(q)) for a, q, _ in rows}
 have_quote = {key(q) for _, q, _ in rows}
+# first spelling wins per folded key, so the corpus's own form is the one adopted
+corpus_authors = {}
+for a, _, _ in rows:
+    corpus_authors.setdefault(key(a), a)
 
 accepted, ledger, seen = [], [], set()
+added_authors, renamed = {}, 0
 for path in sys.argv[4:]:
     batch = path.rsplit("/", 1)[-1].replace(".jsonl", "")
     for line in open(path, encoding="utf8"):
@@ -60,6 +87,16 @@ for path in sys.argv[4:]:
         except json.JSONDecodeError:
             ledger.append((batch, "", "", "rejected", "malformed JSON")); continue
         a = (r.get("author") or "").strip()
+        if a:
+            canon = canonical_author(a, corpus_authors, added_authors)
+            if canon != a:
+                renamed += 1
+                a = canon
+            # prefer the accented spelling as this run's canonical form
+            prev = added_authors.get(key(a))
+            if prev is None or (prev == unicodedata.normalize("NFKD", prev)
+                                .encode("ascii", "ignore").decode() and a != prev):
+                added_authors[key(a)] = a
         q = re.sub(r"\s+", " ", (r.get("quote") or "")).strip()
         srcs = [s.strip() for s in (r.get("sources") or []) if s and s.strip()]
         ev = [e for e in (r.get("evidence") or []) if e and e.strip()]
@@ -114,3 +151,5 @@ with open("sourcing/audit/added_quotes.jsonl", "w", encoding="utf8") as f:
 rej = sum(1 for r in ledger if r[3] == "rejected")
 print(f"{len(accepted)} accepted, {rej} rejected; corpus {len(rows)} -> {len(rows)+len(accepted)}",
       file=sys.stderr)
+if renamed:
+    print(f"{renamed} author names respelled to match the corpus's existing form", file=sys.stderr)
