@@ -103,7 +103,10 @@ with open(ledger_path, "w", encoding="utf8") as f:
     for row in ledger:
         f.write("\t".join(str(x) for x in row) + "\n")
 
-with open("sourcing/evidence/added_quotes.jsonl", "w", encoding="utf8") as f:
+# NOT under sourcing/evidence/: build_column.py globs that directory and expects every record
+# to carry a "line" number. These records are keyed by author and quote instead, so a copy left
+# in evidence/ makes the whole corpus rebuild fail.
+with open("sourcing/audit/added_quotes.jsonl", "w", encoding="utf8") as f:
     for a, q, srcs, ev, b in accepted:
         f.write(json.dumps({"author": a, "quote": q, "sources": srcs, "evidence": ev,
                             "batch": b, "how": "discovery"}, ensure_ascii=False) + "\n")
