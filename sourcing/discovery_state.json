@@ -12,7 +12,9 @@
   "batch_d10": "session_01KoY1y5bkeGhF5LBku4MC5u",
   "batch_w001": "session_01RVDjBSd7oZ5Lj9DHBNQ1mW"
  },
- "received": [],
+ "received": [
+  "batch_d02"
+ ],
  "archived": [],
  "failed": {},
  "categories": {

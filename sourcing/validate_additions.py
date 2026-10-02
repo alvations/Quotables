@@ -8,7 +8,11 @@ with a real citation attached is worse than no quote at all.
 
 A candidate is rejected unless ALL of these hold:
   * author, quote and >=1 source string are present and non-empty
-  * the quote is 20..400 characters, has >=4 words, and carries no control characters
+  * the quote is 20..600 characters, has >=4 words, and carries no control characters
+    (600 is just above the longest quote already in the corpus, 538; an earlier 400 was
+    stricter than the data and threw out Barbara Jordan's "We the people" passage. The
+    20-character floor is deliberately stricter than the corpus minimum of 9: a very short
+    new line is both hard to attribute and likely to be generic.)
   * at least one evidence URL is present and NONE of the evidence URLs are aggregators
   * the source string names a work, not a URL, and does not merely repeat the author's name
   * it is not already in the corpus (normalised author+quote, and normalised quote alone)
@@ -68,8 +72,8 @@ for path in sys.argv[4:]:
             reject("missing author, quote or source"); continue
         if CONTROL.search(a) or CONTROL.search(q) or any(CONTROL.search(s) for s in srcs):
             reject("control character in a field"); continue
-        if not (20 <= len(q) <= 400) or len(q.split()) < 4:
-            reject(f"quote length {len(q)} chars / {len(q.split())} words outside 20-400 and >=4"); continue
+        if not (20 <= len(q) <= 600) or len(q.split()) < 4:
+            reject(f"quote length {len(q)} chars / {len(q.split())} words outside 20-600 and >=4"); continue
         if not urls:
             reject("no evidence URL"); continue
         if all(AGGREGATOR.search(u) for u in urls):
