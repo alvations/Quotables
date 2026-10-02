@@ -248,18 +248,23 @@ the run stopped.
   them with a cost. The ledger carries a reconciliation record for each session whose real cost
   was only readable after it finished, so a session may appear more than once: the last record
   for a session is the authoritative one.
-- The corpus finished at **41,943 lines, 16,264 of them sourced (38.8%), covering 3,785
-  people**, with 25,679 lines still unsourced and 764 quotations documented as misattributed
+- The corpus finished at **41,943 lines, 16,366 of them sourced (39.0%), covering 3,785
+  people**, with 25,577 lines still unsourced and 772 quotations documented as misattributed
   and therefore deliberately left with `[]`.
 - The discovery phase contributed **2,674 added lines**, each one arriving with a first-hand
   source; 84 of them were additionally confirmed verbatim in public-domain full text.
 - The deep-search batches (`batch_w001` to `w016`) re-searched lines the corpus already held:
-  **503 gained a source, 292 were documented as misattributions, 1,193 could not be placed**,
+  **605 gained a source, 318 were documented as misattributions, 1,340 could not be placed**,
   and 164 were never reached - their ids are in `unsearched_deep_search.txt`, not silently
   counted as searched.
 - `verify_corpus.py` is the gate the rebuild runs before it is allowed to replace
   `author-quote.txt`, so the file on the branch satisfies every invariant this documentation
   claims for it.
+
+The last 235 of those deep-search rows arrived after the run had been wound up, as six relay
+instalments sitting in the notification queue from children that were archived before they
+could push. They are in `relay_payloads/` verbatim beside the rows transcribed from them,
+which is the reason that directory exists.
 
 Two decisions were left open for the repository's owner, because both would move line numbers
 or source attributions that the evidence files address by line:
