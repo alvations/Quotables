@@ -39,7 +39,15 @@
   "batch_d10",
   "batch_w001"
  ],
- "archived": [],
+ "archived": [
+  "batch_d02",
+  "batch_d03",
+  "batch_d05",
+  "batch_d06",
+  "batch_d09",
+  "batch_d10",
+  "batch_w001"
+ ],
  "failed": {},
  "categories": {
   "batch_d01": "philosophers and political theorists",
