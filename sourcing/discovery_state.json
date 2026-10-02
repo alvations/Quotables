@@ -26,7 +26,12 @@
   "batch_d21": "session_01HkZBJtCWNBUJjJhd7CWsXQ",
   "batch_d22": "session_01J7BFAUuPMbZYs8EvWkRanG",
   "batch_d23": "session_019ZWs7ZXsPUQ2Nd9U9FDgTm",
-  "batch_d24": "session_01DMiV6aoVbC5F9Lzvd6zTod"
+  "batch_d24": "session_01DMiV6aoVbC5F9Lzvd6zTod",
+  "batch_d25": "session_01AMVy1Futf2ehdmLCTA4UTS",
+  "batch_d26": "session_011ueTvSJ6mgA3rxrYahp42g",
+  "batch_d27": "session_01Eqfa2hTwq2ebegFpScusB1",
+  "batch_w004": "session_01QVsdPbW2sxGzpHWAsCUDNz",
+  "batch_w005": "session_01Bmvm7GPrtunMNxXTpYyBwD"
  },
  "received": [
   "batch_d01",
@@ -76,7 +81,12 @@
   "batch_d21": "aviators, astronauts and space-programme figures",
   "batch_d22": "comedians, humorists and satirists",
   "batch_d23": "suffragists, feminist writers and women's-rights campaigners",
-  "batch_d24": "writers, thinkers and leaders of Africa, Asia, the Middle East and Latin America"
+  "batch_d24": "writers, thinkers and leaders of Africa, Asia, the Middle East and Latin America",
+  "batch_d25": "labour leaders, abolitionists and social reformers",
+  "batch_d26": "dancers, choreographers, photographers and film directors",
+  "batch_d27": "educators, psychologists and anthropologists",
+  "batch_w004": "deeper web pass, classical unsourced",
+  "batch_w005": "deeper web pass, classical unsourced"
  },
  "corpus_base_commit": "1bcfb4e",
  "note_return_channels": "Children's git pushes to sourcing/additions/ have carried every row so far, checked against the text relay rather than assumed: each batch's newest relayed authors were already present in its pushed file. The relay stays on as the fallback, since in earlier runs a permission classifier refused git in children and the relay was the only channel that worked.",
