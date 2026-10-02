@@ -13,7 +13,12 @@
   "batch_w001": "session_01RVDjBSd7oZ5Lj9DHBNQ1mW"
  },
  "received": [
-  "batch_d02"
+  "batch_d01",
+  "batch_d02",
+  "batch_d03",
+  "batch_d05",
+  "batch_d09",
+  "batch_d10"
  ],
  "archived": [],
  "failed": {},
@@ -29,5 +34,6 @@
   "batch_d09": "film, television, theatre, music",
   "batch_d10": "athletes, explorers, business, technology",
   "batch_w001": "deeper web pass over already-unsourced classical quotes"
- }
+ },
+ "corpus_base_commit": "1bcfb4e"
 }

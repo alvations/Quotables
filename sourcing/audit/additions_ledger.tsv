@@ -1,4 +1,16 @@
 batch	author	quote	verdict	reason_or_source
+batch_d01	John Rawls	Justice is the first virtue of social institutions, as truth is of systems of thought.	accepted	A Theory of Justice (1971), opening sentence
+batch_d01	John Rawls	A theory however elegant and economical must be rejected or revised if it is untrue; likewise laws and institutions no m	accepted	A Theory of Justice (1971)
+batch_d01	John Rawls	Being first virtues of human activities, truth and justice are uncompromising.	accepted	A Theory of Justice (1971)
+batch_d01	Hannah Arendt	The sad truth is that most evil is done by people who never make up their minds to be good or evil.	accepted	The Life of the Mind (1978), "Thinking"
+batch_d01	Hannah Arendt	The fearsome, word-and-thought-defying banality of evil.	accepted	Eichmann in Jerusalem (1963), ch. 15
+batch_d01	Hannah Arendt	There are no dangerous thoughts, thinking itself is dangerous.	accepted	"Thinking and Moral Considerations: A Lecture", Social Research, Vol. 38, No. 3 (Autumn 1971), p. 435
+batch_d01	Hannah Arendt	Man cannot be free if he does not know that he is subject to necessity, because his freedom is always won in his never w	accepted	The Human Condition (1958), part 3, chapter 16
+batch_d01	Hannah Arendt	If a given science accidentally reached its goal, this would by no means stop the workers in the field, who would be dri	accepted	The Life of the Mind, p. 55
+batch_d01	Hannah Arendt	The defiance of established authority, religious and secular, social and political, as a world-wide phenomenon may well 	accepted	Crises of the Republic, "Civil Disobedience"
+batch_d01	Simone Weil	Attachment is a manufacturer of illusions and whoever wants reality ought to be detached.	accepted	Gravity and Grace (1947)
+batch_d01	Simone Weil	Human misery would be intolerable if it were not diluted in time. We have to prevent it from being diluted in order that	accepted	Gravity and Grace (1947)
+batch_d01	Simone Weil	Imaginary evil is romantic and varied; real evil is gloomy, monotonous, barren, boring. Imaginary good is boring; real g	accepted	Gravity and Grace (1947)
 batch_d02	Sandra Day O'Connor	I do not believe it is the function of the judiciary to step in and change the law because the times have changed. I do 	accepted	The Washington Post (1981), 10 September 1981
 batch_d02	Sandra Day O'Connor	The proper role of the judiciary is one of interpreting and applying the law, not making it.	accepted	Testimony at her confirmation hearing, as reported in The New York Times (1984), 23 February 1984
 batch_d02	Sandra Day O'Connor	It is difficult to discern a serious threat to religious liberty from a room of silent, thoughtful schoolchildren.	accepted	Wallace v. Jaffree, 472 U.S. 38 (1985), concurring opinion
@@ -17,3 +29,133 @@ batch_d02	Louis D. Brandeis	The intensity and complexity of life, attendant upon
 batch_d02	Louis D. Brandeis	What are the American ideals? They are the development of the individual for his own and the common good; the developmen	accepted	True Americanism (1915)
 batch_d02	Ruth Bader Ginsburg	In sum, the Court's conclusion that a constitutionally adequate recount is impractical is a prophecy the Court's own jud	accepted	Bush v. Gore, 531 U.S. 98 (2000), dissenting opinion
 batch_d02	Ruth Bader Ginsburg	Throwing out preclearance when it has worked and is continuing to work to stop discriminatory changes is like throwing a	accepted	Shelby County v. Holder, 570 U.S. 529 (2013), dissenting opinion
+batch_d02	Robert H. Jackson	The very purpose of a Bill of Rights was to withdraw certain subjects from the vicissitudes of political controversy, to	accepted	West Virginia State Board of Education v. Barnette, 319 U.S. 624 (1943), at 638
+batch_d02	Robert H. Jackson	We set up government by consent of the governed, and the Bill of Rights denies those in power any legal opportunity to c	accepted	West Virginia State Board of Education v. Barnette, 319 U.S. 624 (1943), at 641
+batch_d02	Earl Warren	We conclude that, in the field of public education, the doctrine of 'separate but equal' has no place. Separate educatio	accepted	Brown v. Board of Education, 347 U.S. 483 (1954), opinion of the Court
+batch_d02	Earl Warren	In these days, it is doubtful that any child may reasonably be expected to succeed in life if he is denied the opportuni	accepted	Brown v. Board of Education, 347 U.S. 483 (1954), opinion of the Court
+batch_d02	Robert F. Kennedy	This is a Day of Affirmation, a celebration of liberty. We stand here in the name of freedom. At the heart of that Weste	accepted	Day of Affirmation Address, University of Cape Town (1966), 6 June 1966; Congressional Record, vol. 112, p. 12430
+batch_d02	Robert F. Kennedy	The essential humanity of men can be protected and preserved only where government must answer - not just to the wealthy	accepted	Day of Affirmation Address, University of Cape Town (1966), 6 June 1966
+batch_d02	Robert F. Kennedy	We must recognize the full human equality of all of our people before God, before the law, and in the councils of govern	accepted	Day of Affirmation Address, University of Cape Town (1966), 6 June 1966
+batch_d02	Adlai Stevenson	Words calculated to catch everyone may catch no one	accepted	Address to the Democratic National Convention, Chicago, Illinois (1952), 21 July 1952; published in Speeches of Adlai Stevenson (1952)
+batch_d02	Shirley Chisholm	I was well on the way to forming my present attitude toward politics as it is practiced in the United States; it is a be	accepted	Unbought and Unbossed (1970)
+batch_d02	Shirley Chisholm	Congress seems drugged and inert most of the time. Even when the problems it ignores build up to crises and erupt in str	accepted	Unbought and Unbossed (1970)
+batch_d02	Shirley Chisholm	I don't measure America by its achievement but by its potential.	accepted	Unbought and Unbossed (1970)
+batch_d02	Shirley Chisholm	When I wrote my campaign slogan, 'Unbossed and Unbought,' it was an expression of what I believe I was and what I want t	accepted	Unbought and Unbossed (1970)
+batch_d02	Ulysses S. Grant	For the present, and so long as there are living witnesses of the great war of sections, there will be people who will n	accepted	Personal Memoirs of General U. S. Grant (1885), Ch. 12
+batch_d02	Ulysses S. Grant	The right of revolution is an inherent one. When people are oppressed by their government, it is a natural right they en	accepted	Personal Memoirs of General U. S. Grant (1885), Ch. 16
+batch_d02	Ulysses S. Grant	The Southern rebellion was largely the outgrowth of the Mexican war. Nations, like individuals, are punished for their t	accepted	Personal Memoirs of General U. S. Grant (1885), Ch. 3
+batch_d02	Learned Hand	The spirit of liberty is the spirit which is not too sure that it is right; the spirit of liberty is the spirit which se	accepted	Speech at the 'I Am an American Day' ceremony, Central Park, New York City (1944), 21 May 1944; published in The Spirit of Liberty, 3rd edition (1960), ed. Irving Dilliard, p. 190
+batch_d02	Learned Hand	Liberty lies in the hearts of men and women; when it dies there, no constitution, no law, no court can save it	accepted	Speech at the 'I Am an American Day' ceremony, Central Park, New York City (1944), 21 May 1944; published in The Spirit of Liberty, 3rd edition (1960), ed. Irving Dilliard, p. 190
+batch_d02	Learned Hand	It is not the ruthless, the unbridled will; it is not the freedom to do as one likes. That is the denial of liberty and 	accepted	Speech at the 'I Am an American Day' ceremony, Central Park, New York City (1944), 21 May 1944; published in The Spirit of Liberty, 3rd edition (1960), ed. Irving Dilliard, p. 190
+batch_d03	Jawaharlal Nehru	Long years ago, we made a tryst with destiny; and now the time comes when we shall redeem our pledge, not wholly or in f	accepted	Tryst with Destiny, speech to the Indian Constituent Assembly, Parliament House, New Delhi (14 August 1947)
+batch_d03	Jawaharlal Nehru	At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom.	accepted	Tryst with Destiny, speech to the Indian Constituent Assembly, Parliament House, New Delhi (14 August 1947)
+batch_d03	Jawaharlal Nehru	A moment comes, which comes but rarely in history, when we step out from the old to the new -- when an age ends, and whe	accepted	Tryst with Destiny, speech to the Indian Constituent Assembly, Parliament House, New Delhi (14 August 1947)
+batch_d03	Jawaharlal Nehru	It is fitting that at this solemn moment we take the pledge of dedication to the service of India, and her people, and t	accepted	Tryst with Destiny, speech to the Indian Constituent Assembly, Parliament House, New Delhi (14 August 1947)
+batch_d03	Václav Havel	Anyone who takes himself too seriously always runs the risk of looking ridiculous; anyone who can consistently laugh at 	accepted	Disturbing the Peace (1986)
+batch_d03	Václav Havel	Hope is definitely not the same thing as optimism. It is not the conviction that something will turn out well, but the c	accepted	Disturbing the Peace (1986)
+batch_d03	Václav Havel	Modern man must descend the spiral of his own absurdity to the lowest point; only then can he look beyond it.	accepted	Disturbing the Peace (1986)
+batch_d03	Václav Havel	If the world is to change for the better it must start with a change in human consciousness, in the very humanness of mo	accepted	Disturbing the Peace (1986)
+batch_d03	Václav Havel	Human beings are compelled to live within a lie, but they can be compelled to do so only because they are in fact capabl	accepted	The Power of the Powerless (1978), essay
+batch_d03	Václav Havel	The worst thing is that we live in a contaminated moral environment. We fell morally ill because we became used to sayin	accepted	New Year's Address to the Nation (1 January 1990)
+batch_d03	Václav Havel	We had all become used to the totalitarian system and accepted it as an unchangeable fact and thus helped to perpetuate 	accepted	New Year's Address to the Nation (1 January 1990)
+batch_d03	Nelson Mandela	During my lifetime I have dedicated my life to this struggle of the African people. I have fought against white dominati	accepted	I Am Prepared to Die, statement from the dock at the opening of the defence case, Rivonia Trial, Pretoria Supreme Court (20 April 1964)
+batch_d03	Lee Kuan Yew	If Singapore is a nanny state, then I am proud to have fostered one.	accepted	From Third World to First: The Singapore Story, 1965-2000 (2000)
+batch_d03	Charles de Gaulle	Believe me, I speak to you with full knowledge of the facts and tell you that nothing is lost for France. The same means	accepted	Appeal of 18 June (Appel du 18 juin), BBC radio broadcast from London (18 June 1940)
+batch_d03	Charles de Gaulle	Whatever happens, the flame of the French resistance must not be extinguished and will not be extinguished. Tomorrow, as	accepted	Appeal of 18 June (Appel du 18 juin), BBC radio broadcast from London (18 June 1940)
+batch_d03	Charles de Gaulle	All my life, I have had a certain idea of France	accepted	Mémoires de guerre (War Memoirs), opening words
+batch_d03	Charles de Gaulle	France cannot be France without greatness	accepted	Mémoires de guerre (War Memoirs)
+batch_d03	Charles de Gaulle	Difficulty attracts a man of character, for it is by embracing it that he fulfills himself	accepted	Mémoires de guerre (War Memoirs)
+batch_d03	Kwame Nkrumah	Capitalism is too complicated a system for a newly independent nation. Hence the need for a socialistic society.	accepted	Ghana: The Autobiography of Kwame Nkrumah (1957)
+batch_d03	Kwame Nkrumah	African states must unite or sell themselves out to imperialist and colonialist exploiters for a mess of pottage.	accepted	Handbook of Revolutionary Warfare (1968)
+batch_d03	Mahatma Gandhi	We were one nation before they came to India. One thought inspired us. Our mode of life was the same. It was because we 	accepted	Hind Swaraj (1909)
+batch_d03	Mahatma Gandhi	Civilization is that mode of conduct which points out to man the path of duty. Performance of duty and observance of mor	accepted	Hind Swaraj (1909)
+batch_d03	Mahatma Gandhi	Good government is no substitute for self-government.	accepted	Young India
+batch_d03	Mahatma Gandhi	Politics without principle, wealth without work, pleasure without conscience, knowledge without character, commerce with	accepted	Young India, the Seven Social Sins
+batch_d03	Mikhail Gorbachev	If the Russian word "perestroika" has easily entered the international lexicon, this is due to more than just interest i	accepted	Perestroika: New Thinking for Our Country and the World (1987)
+batch_d03	Mikhail Gorbachev	The essence of perestroika lies in the fact that it unites socialism with democracy and revives the Leninist concept of 	accepted	Perestroika: New Thinking for Our Country and the World (1987)
+batch_d03	Mikhail Gorbachev	For all the contradictions of the present-day world, for all the diversity of social and political systems in it, and fo	accepted	Perestroika: New Thinking for Our Country and the World (1987)
+batch_d03	Mustafa Kemal Atatürk	O Turkish child of future generations! As you see, even under these circumstances and conditions, it is your duty to sav	accepted	Address to Turkish Youth, closing of the Nutuk (20 October 1927)
+batch_d03	Mustafa Kemal Atatürk	You are the oldest democracy of the New World. We are the youngest democracy of the Old World. You, the great democracy 	accepted	Remarks to the American Ambassador (1927)
+batch_d03	Mao Zedong	A revolution is an insurrection, an act of violence by which one class overthrows another	accepted	Report on an Investigation of the Peasant Movement in Hunan (March 1927), Selected Works, Vol. I, p. 28
+batch_d03	Zhou Enlai	All diplomacy is a continuation of war by other means.	accepted	Saturday Evening Post (27 March 1954)
+batch_d03	Sun Yat-sen	The Chinese people have only family and clan solidarity; they do not have national spirit...they are just a heap of loos	accepted	China as a Heap of Loose Sand, lecture (1924)
+batch_d03	Sun Yat-sen	China is now suffering from poverty, not from unequal distribution of wealth. Where there are inequalities of wealth, th	accepted	Capital and the State, lecture (1924)
+batch_d05	Chinua Achebe	Proverbs are the palm-oil with which words are eaten.	accepted	Things Fall Apart (1958), Chapter 1
+batch_d05	Chinua Achebe	When the moon is shining the cripple becomes hungry for a walk.	accepted	Things Fall Apart (1958), Chapter 2
+batch_d05	Chinua Achebe	You will have what is good for you and I will have what is good for me. Let the kite perch and let the egret perch too. 	accepted	Things Fall Apart (1958), Chapter 3
+batch_d05	Chinua Achebe	A proud heart can survive general failure because such a failure does not prick its pride. It is more difficult and more	accepted	Things Fall Apart (1958), Chapter 3
+batch_d05	Chinua Achebe	The white man is very clever. He came quietly with his religion. We were amused at his foolishness and allowed him to st	accepted	Things Fall Apart (1958), Chapter 20
+batch_d05	Chinua Achebe	No matter how prosperous a man was, if he was unable to rule his women and his children (and especially his women) he wa	accepted	Things Fall Apart (1958), Chapter 7
+batch_d05	Ursula K. Le Guin	The only thing that makes life possible is permanent, intolerable uncertainty: not knowing what comes next.	accepted	The Left Hand of Darkness (1969), Chapter 5
+batch_d05	Ursula K. Le Guin	If civilization has an opposite, it is war.	accepted	The Left Hand of Darkness (1969), Chapter 8
+batch_d05	Ursula K. Le Guin	Light is the left hand of darkness and darkness the right hand of light. Two are one, life and death, lying together lik	accepted	The Left Hand of Darkness (1969), Chapter 16
+batch_d05	Ursula K. Le Guin	To make a thief, make an owner; to create crime, create laws.	accepted	The Dispossessed (1974), Chapter 5
+batch_d05	Ursula K. Le Guin	You cannot buy the Revolution. You cannot make the Revolution. You can only be the Revolution. It is in your spirit or, 	accepted	The Dispossessed (1974), Chapter 9
+batch_d05	Ursula K. Le Guin	The sunlights differ, but there is only one darkness.	accepted	The Dispossessed (1974), Chapter 13
+batch_d05	Toni Morrison	Like any artist with no art form, she became dangerous.	accepted	Sula (1973)
+batch_d05	Toni Morrison	It was a fine cry — loud and long — but it had no bottom and it had no top, just circles and circles of sorrow.	accepted	Sula (1973)
+batch_d05	Toni Morrison	In that place, where they tore the nightshade and blackberry patches from their roots to make room for the Medallion Cit	accepted	Sula (1973), opening lines
+batch_d05	Toni Morrison	What difference do it make if the thing you scared of is real or not?	accepted	Song of Solomon (1977)
+batch_d05	Toni Morrison	Wanna fly, you got to give up the shit that weighs you down.	accepted	Song of Solomon (1977)
+batch_d05	Toni Morrison	124 was spiteful. Full of a baby's venom.	accepted	Beloved (1987), opening lines
+batch_d05	James Baldwin	All over Harlem, Negro boys and girls are growing into stunted maturity, trying desperately to find a place to stand; an	accepted	Notes of a Native Son (1955)
+batch_d05	James Baldwin	One writes out of one thing only — one's own experience. Everything depends on how relentlessly one forces from this exp	accepted	Notes of a Native Son (1955)
+batch_d05	James Baldwin	Whatever white people do not know about Negroes reveals, precisely and inexorably, what they do not know about themselve	accepted	The Fire Next Time (1963)
+batch_d05	Jorge Luis Borges	Every novel is an ideal plane inserted into the realm of reality.	accepted	"Partial Magic in the Quixote", in Labyrinths (1964)
+batch_d05	Jane Austen	A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony, in a moment.	accepted	Pride and Prejudice (1813), Vol. 1, Ch. 6
+batch_d05	Jane Austen	There is a stubbornness about me that never can bear to be frightened at the will of others. My courage always rises at 	accepted	Pride and Prejudice (1813)
+batch_d05	Jane Austen	You pierce my soul. I am half agony, half hope.	accepted	Persuasion (1817), Ch. 23
+batch_d05	Jane Austen	Vanity was the beginning and the end of Sir Walter Elliot's character.	accepted	Persuasion (1817), Ch. 1
+batch_d05	Jane Austen	Where shall we see a better daughter, or a kinder sister, or a truer friend?	accepted	Emma (1815), Vol. I, Ch. 5
+batch_d05	Leo Tolstoy	Seize the moments of happiness, love and be loved! That is the only reality in the world, all else is folly.	accepted	War and Peace (1869)
+batch_d05	Leo Tolstoy	Everything comes in time to him who knows how to wait.	accepted	War and Peace (1869)
+batch_d05	Leo Tolstoy	The strongest of all warriors are these two — Time and Patience.	accepted	War and Peace (1869), Book X, Ch. 16
+batch_d05	Leo Tolstoy	Pure and complete sorrow is as impossible as pure and complete joy.	accepted	War and Peace (1869), Book XV, Ch. 1
+batch_d05	Leo Tolstoy	War is not a courtesy but the most horrible thing in life.	accepted	War and Peace (1869), Book X, Ch. 25
+batch_d05	Leo Tolstoy	He stepped down, trying not to look long at her, as if she were the sun.	accepted	Anna Karenina (1878), Part I, Ch. 9
+batch_d05	Haruki Murakami	And once the storm is over you won't remember how you made it through, how you managed to survive.	accepted	Kafka on the Shore (2002)
+batch_d05	Haruki Murakami	Sometimes fate is like a small sandstorm that keeps changing directions. You change direction but the sandstorm chases y	accepted	Kafka on the Shore (2002)
+batch_d05	Haruki Murakami	If you're in pitch blackness, all you can do is sit tight until your eyes get used to the dark.	accepted	Norwegian Wood (1987)
+batch_d05	Haruki Murakami	But who can say what's best? That's why you need to grab whatever chance you have of happiness where you find it, and no	accepted	Norwegian Wood (1987)
+batch_d05	Haruki Murakami	Money had no name of course. And if it did have a name, it would no longer be money. What gave money its true meaning wa	accepted	The Wind-Up Bird Chronicle (1994)
+batch_d05	Virginia Woolf	A woman must have money and a room of her own if she is to write fiction.	accepted	A Room of One's Own (1929), Ch. 1, p. 4
+batch_d05	Virginia Woolf	Fiction is like a spider's web, attached ever so lightly perhaps, but still attached to life at all four corners.	accepted	A Room of One's Own (1929), Ch. 3, pp. 43-44
+batch_d05	Virginia Woolf	Mrs Dalloway said she would buy the flowers herself.	accepted	Mrs Dalloway (1925), opening line
+batch_d05	Virginia Woolf	It was enemies one wanted, not friends.	accepted	Mrs Dalloway (1925)
+batch_d05	Virginia Woolf	A light here required a shadow there.	accepted	To the Lighthouse (1927), Part I, Ch. 9
+batch_d05	Virginia Woolf	There were the eternal problems: suffering; death; the poor.	accepted	To the Lighthouse (1927), Part I, Ch. 10
+batch_d05	Virginia Woolf	Who knows what we are, what we feel? Who knows even at the moment of intimacy, This is knowledge?	accepted	To the Lighthouse (1927), Part III, Ch. 5
+batch_d09	Akira Kurosawa	Although human beings are incapable of talking about themselves with total honesty, it is much harder to avoid the truth	accepted	Something Like an Autobiography (1982), trans. Audie E. Bock; on the making of Rashomon
+batch_d09	Akira Kurosawa	There is nothing that says more about its creator than the work itself.	accepted	Something Like an Autobiography (1982), trans. Audie E. Bock
+batch_d09	Akira Kurosawa	You say that you can't understand this script at all, but that is because the human heart itself is impossible to unders	accepted	Something Like an Autobiography (1982), trans. Audie E. Bock; on Rashomon
+batch_d09	Hayao Miyazaki	We depict hatred, but it is to depict that there are more important things. We depict a curse, to depict the joy of libe	accepted	Princess Mononoke project proposal (April 1995); reprinted in Starting Point: 1979-1996
+batch_d09	Duke Ellington	Roaming through the jungle of 'oohs' and 'ahs,' searching for a more agreeable noise, I live a life of primitivity with 	accepted	Music Is My Mistress (1973)
+batch_d09	Duke Ellington	I loved and respected Louis Armstrong. He was born poor, died rich, and never hurt anyone along the way.	accepted	Music Is My Mistress (1973), p. 236
+batch_d09	Nina Simone	What kept me sane was knowing that things would change, and it was a question of keeping myself together until they did.	accepted	I Put a Spell on You: The Autobiography of Nina Simone (1991)
+batch_d09	Nina Simone	This is the world you have made yourself, now you have to live in it.	accepted	I Put a Spell on You: The Autobiography of Nina Simone (1991)
+batch_d09	Andrei Tarkovsky	The allotted function of art is not, as is often assumed, to put across ideas, to propagate thoughts, to serve as an exa	accepted	Sculpting in Time: Reflections on the Cinema (1986), trans. Kitty Hunter-Blair
+batch_d09	Andrei Tarkovsky	Art is realistic when it strives to express an ethical ideal. Realism is striving for truth, and truth is always beautif	accepted	Sculpting in Time: Reflections on the Cinema (1986), trans. Kitty Hunter-Blair
+batch_d09	Andrei Tarkovsky	Art is born and takes hold wherever there is a timeless and insatiable longing for the spiritual, for the ideal: that lo	accepted	Sculpting in Time: Reflections on the Cinema (1986), trans. Kitty Hunter-Blair
+batch_d09	Ingmar Bergman	When film is not a document, it is dream. That is why Tarkovsky is the greatest of them all. He moves with such naturaln	accepted	Laterna Magica (1987); The Magic Lantern: An Autobiography (1988), trans. Joan Tate
+batch_d09	Ingmar Bergman	Film has dream, film has music. No form of art goes beyond ordinary consciousness as film does, straight to our emotions	accepted	Laterna Magica (1987); The Magic Lantern: An Autobiography (1988), trans. Joan Tate
+batch_d09	Ingmar Bergman	I'm planning, you see, to try to confine myself to the truth. That's hard for an old, inveterate fantasy martyr and liar	accepted	Laterna Magica (1987); The Magic Lantern: An Autobiography (1988), trans. Joan Tate
+batch_d09	Luis Buñuel	You have to begin to lose your memory, if only in bits and pieces, to realize that memory is what makes our lives. Life 	accepted	Mon dernier soupir (1982); My Last Breath / My Last Sigh (1983), chapter on memory
+batch_d10	Edsger W. Dijkstra	The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the progr	accepted	The Humble Programmer (1972), ACM Turing Award lecture
+batch_d10	Edsger W. Dijkstra	Program testing can be used to show the presence of bugs, but never to show their absence!	accepted	Notes on Structured Programming (1970), EWD249, section 3 'On the Reliability of Mechanisms'
+batch_d10	Edsger W. Dijkstra	Those who want really reliable software will discover that they must find means of avoiding the majority of bugs to star	accepted	The Humble Programmer (1972), ACM Turing Award lecture
+batch_d10	Friedrich Hayek	The curious task of economics is to demonstrate to men how little they really know about what they imagine they can desi	accepted	The Fatal Conceit: The Errors of Socialism (1988)
+batch_d10	Friedrich Hayek	The more the state 'plans' the more difficult planning becomes for the individual.	accepted	The Road to Serfdom (1944)
+batch_d10	Friedrich Hayek	To be controlled in our economic pursuits means to be always controlled unless we declare our specific purpose. Or, sinc	accepted	The Road to Serfdom (1944)
+batch_d10	Friedrich Hayek	To understand our civilisation, one must appreciate that the extended order resulted not from human design or intention 	accepted	The Fatal Conceit: The Errors of Socialism (1988)
+batch_d10	John Maynard Keynes	There is no subtler, no surer means of overturning the existing basis of society than to debauch the currency. The proce	accepted	The Economic Consequences of the Peace (1919), Ch. VI
+batch_d10	Ernest Shackleton	The floe has been a good friend to us, but it is reaching the end of its journey, and it is liable at any time now to br	accepted	South (1919), diary entry during the drift toward Elephant Island
+batch_d10	Peter Drucker	A man should never be appointed into a managerial position if his vision focuses on people's weaknesses rather than on t	accepted	The Practice of Management (1954), p. 157
+batch_d10	Peter Drucker	The better a man is, the more mistakes will he make - for the more new things he will try. I would never promote a man i	accepted	The Practice of Management (1954), p. 147
+batch_d10	Peter Drucker	The fundamental reality for every worker, from sweeper to executive vice-president, is the eight hours or so that he spe	accepted	The Practice of Management (1954), p. 327
+batch_d10	Peter Drucker	Morale in an organization does not mean that 'people get along together'; the test is performance not conformance.	accepted	The Effective Executive (1966)
+batch_d10	Peter Drucker	There is only one valid definition of a business purpose: to create a customer.	accepted	The Practice of Management (1954)
+batch_d10	Warren Buffett	When we own portions of outstanding businesses with outstanding managements, our favorite holding period is forever.	accepted	Berkshire Hathaway Chairman's Letter (1988)
+batch_d10	Warren Buffett	After 25 years of buying and supervising a great variety of businesses, Charlie and I have not learned how to solve diff	accepted	Berkshire Hathaway Chairman's Letter (1989)
+batch_d10	Warren Buffett	The most common cause of low prices is pessimism - sometimes pervasive, sometimes specific to a company or industry. We 	accepted	Berkshire Hathaway Chairman's Letter (1990)
+batch_d10	Muhammad Ali	I hated every minute of it. But I said to myself, 'Suffer now, and live the rest of your life as a champion'	accepted	Newsweek (25 September 1978), 'Ali: Born Again!' by Pete Axthelm and Peter Bonventre
+batch_d10	Muhammad Ali	I am America; I am the part you won't recognize. But, get used to me	accepted	The Greatest: My Own Story (1975)
