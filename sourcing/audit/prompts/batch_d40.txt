@@ -1,0 +1,107 @@
+You are finding notable quotations to ADD to a corpus. Batch name: batch_d40. Work autonomously; nobody will answer questions.
+
+Your category: **journalists, war correspondents and photojournalists**
+
+## The one rule that matters
+Both the quote text AND its citation must be read off the same page you found. Never type a
+quote from memory and then go looking for a citation to attach to it. A misquote carrying a
+real-looking source is worse for this corpus than no quote at all, and that is the single
+failure this batch exists to avoid. If you cannot see the wording on a citation-tracking page,
+do not report the quote.
+
+Copy the wording exactly as that page gives it - spelling, punctuation and all. Do not tidy it,
+modernise it, shorten it or join two sentences that the page shows separately.
+
+## Goal
+Find **60 quotations** in your category that each come with a FIRST-HAND source: the specific
+book, essay, poem, play (act/scene), speech, letter, article, interview or recorded remark in
+which that person originally wrote or said it. Quality beats quantity - 25 solid rows are a
+better result than 60 shaky ones, and shaky ones will be thrown out anyway.
+
+Prefer quotes that are genuinely notable: lines that are quoted, anthologised or discussed,
+not obscure sentences you happened to find. But notability never substitutes for a citation.
+
+## Do not duplicate what is already there
+The corpus already holds 39,269 quotes. Clone it and check before reporting:
+  git clone --depth 1 --branch quote-sources-column https://github.com/alvations/Quotables /home/user/quotables-corpus
+Column 1 is the author, column 2 the quote. Compare case-insensitively with punctuation
+stripped. A duplicate is discarded on ingest, so checking saves your own effort.
+
+## Tools and budget
+- Use the WebSearch tool only. Do NOT use WebFetch: the egress proxy blocks wikiquote.org,
+  archive.org, gutenberg.org and books.google.com, so a fetch will fail. WebSearch works, and
+  its result snippets are what you read the wording and the citation from.
+- At most 400 searches. A productive search names a person and asks for sourced quotations,
+  e.g. `Hannah Arendt wikiquote sourced "The Human Condition"` or
+  `"<distinctive fragment>" site:quoteinvestigator.com`.
+- Work person by person through your category rather than topic by topic; a single sourced
+  Wikiquote page often yields several usable rows at once, each with its own work cited.
+
+## What counts as evidence
+A citation-tracking reference that names a specific work: Wikiquote's sourced/"Quotes" sections
+with the work cited, Quote Investigator, wist.info, Wikipedia with a footnote, Oxford/Yale
+dictionaries of quotations, Bartlett's, Bartleby, a publisher's or library catalogue page, a
+Google Books snippet showing the line inside a named book, the original periodical, or the
+transcript or recording of a speech or interview.
+
+Aggregator sites - BrainyQuote, AZQuotes, Goodreads, QuoteFancy, Pinterest, QuotePark,
+LibQuotes, QuotationsPage, quote blogs - are NEVER evidence, **even when they name a book**.
+Rows whose evidence URLs are all aggregators are discarded automatically on ingest, so
+reporting one only wastes your work.
+
+Wikiquote's "Unsourced", "Attributed", "Disputed" and "Misattributed" sections are NOT sources.
+Skip those lines entirely; do not report them as sourced, and do not report them at all.
+
+## Result format
+One JSON object per quote, one per line (JSONL):
+{"author": "<name as commonly written, e.g. Hannah Arendt>", "quote": "<exact wording from the citing page>", "sources": ["<Title of work> (<year>), <locator>"], "evidence": ["<URL> - what the page showed"], "queries": ["<query>"]}
+
+- `author`: the person's usual English name, no titles or dates.
+- `sources`: work title, year of first publication when known, and a locator (chapter,
+  act/scene, section, page, date) when the citing page gives one. Omit the author's name from
+  inside the string. Never invent a title, year or locator - leave out what you did not see.
+- `evidence`: at least one real URL you actually saw in the results, with a one-line note of
+  what it showed. A row with no evidence URL is discarded.
+
+## Returning the results (essential)
+Keep results in `results.jsonl`, appending after EVERY row, so nothing is held in memory.
+Do NOT publish an artifact: the artifact quota is exhausted. Flush your work outward often -
+anything still only inside this container when a usage limit stops you is lost.
+
+**Channel 1, git (try this first, after every 15 rows).** In the clone you already made:
+    cd /home/user/quotables-corpus
+    git checkout quote-sources-column
+    mkdir -p sourcing/additions
+    cp /home/user/results.jsonl sourcing/additions/batch_d40.jsonl
+    git -c user.name=alvations -c user.email=alvations@gmail.com add sourcing/additions/batch_d40.jsonl
+    git -c user.name=alvations -c user.email=alvations@gmail.com commit -q -m "Additions: batch_d40 (journalists, war correspondents and photojournalists)"
+    git pull --rebase -q origin quote-sources-column && git push -q origin quote-sources-column
+Commit as alvations exactly as shown, with no other trailers. If a push is rejected because
+the branch moved, `git pull --rebase` and push again. If your permission system refuses `git
+add`, `git commit`, `git config` or `git push`, do not fight it and do not ask - go straight to
+channel 2 and keep using it for the rest of the run.
+
+**Channel 2, text relay (a fallback, and a receipt).** The relay exists because a push can be
+refused and a container can die, not to duplicate work the push already did. So after every 15
+rows, and again when finished, call the `create_trigger` tool of the remote-session MCP server
+with:
+  name: "additions batch_d40 part <k>"
+  persistent_session_id: "session_018SonTZr2inCLhXqzcif71w"
+  run_once_at: an RFC3339 UTC time 2 minutes in the future (`date -u +%Y-%m-%dT%H:%M:%SZ`)
+  initiation: "human_schedule"
+  prompt: *If the push for those rows succeeded*, ONLY the single line
+          "ADDITIONS batch_d40 PART <k> PUSHED rows=<n> total=<t> head=<the commit sha>".
+          That is a receipt: it tells the orchestrator the rows are in the repository and
+          nothing needs transcribing.
+          *If the push did NOT succeed* - refused by your permission system, rejected and
+          still failing after a pull and retry, or not attempted because git is unavailable -
+          then the literal text "ADDITIONS batch_d40 PART <k> NOT PUSHED" then a newline, then
+          those rows re-serialised compactly, one per line, via
+          `json.dumps(obj, separators=(",",":"), ensure_ascii=False)`.
+Do not send the rows when the push worked: the orchestrator reads every relay message by hand,
+and a batch that pastes rows it has already pushed costs that reading for nothing. Do send them
+the moment a push fails, because then the relay is the only copy that leaves this container.
+If create_trigger fails, retry after 30s, then after 60s.
+
+Your final reply must be the single line "ADDITIONS batch_d40 done rows=<n>". Do not paste the
+JSONL into the reply.

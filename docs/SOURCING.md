@@ -229,7 +229,7 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | web-search agents (sourced) | 12,201 |
 | web-search agents (misattributed, kept as `[]`) | 750 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
-| deep-search batches (batch_w001 to w005) over already-unsourced classical quotes | 411 |
+| deep-search batches (batch_w001 to w010) over already-unsourced classical quotes | 411 |
 | discovery phase: quotes added, each arriving with a first-hand source | 2,282 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
 | **lines with at least one source** | **15,780 of 41,551 (38.0%)** |
