@@ -1,0 +1,31 @@
+{
+ "dispatched": {
+  "batch_d01": "session_01DnafzC5DfyD9Yor4vqCs2m",
+  "batch_d02": "session_011DF1Sgy5Vyk13BdjfoD1xq",
+  "batch_d03": "session_01WkaMPytKAUiF3PpNuznkGD",
+  "batch_d04": "session_01EZX3DDBKcdhih9MGoHKDny",
+  "batch_d05": "session_016bfHSqLG8TJsrTgHu2hNgS",
+  "batch_d06": "session_018rgHCEXCHpDHVjGpwWJ6UF",
+  "batch_d07": "session_01SMAfdNSxFoU8kETuM9fbb9",
+  "batch_d08": "session_01Gkskbp22HYkKL4Qt4zC48o",
+  "batch_d09": "session_01J7KfQWfHpm8tbLGgJ173wc",
+  "batch_d10": "session_01KoY1y5bkeGhF5LBku4MC5u",
+  "batch_w001": "session_01RVDjBSd7oZ5Lj9DHBNQ1mW"
+ },
+ "received": [],
+ "archived": [],
+ "failed": {},
+ "categories": {
+  "batch_d01": "philosophers and political theorists",
+  "batch_d02": "US political figures",
+  "batch_d03": "world leaders outside the US",
+  "batch_d04": "scientists and inventors",
+  "batch_d05": "novelists",
+  "batch_d06": "poets and dramatists",
+  "batch_d07": "essayists, journalists, historians, critics",
+  "batch_d08": "civil rights, activists, religious figures",
+  "batch_d09": "film, television, theatre, music",
+  "batch_d10": "athletes, explorers, business, technology",
+  "batch_w001": "deeper web pass over already-unsourced classical quotes"
+ }
+}
