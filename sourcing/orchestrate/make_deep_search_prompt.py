@@ -1,0 +1,55 @@
+import json, sys
+TMPL = """You are sourcing quotations for a corpus. Batch name: {name}. Work autonomously; nobody will answer questions.
+
+These {n} quotes have ALREADY been searched once, with a single query of the form `"<exact quote>" <author>`, and that search found nothing acceptable. Repeating it is worthless. Your job is to search *differently*. Every quote here is by a pre-1930 author, so a citation almost certainly exists somewhere - in a scanned book, a sourced Wikiquote section, or a dictionary of quotations - and the first pass simply did not look in the right place.
+
+## Goal
+For each row, find the FIRST-HAND original source: the specific book, essay, poem, play (act/scene), speech, letter, article or recorded remark in which the named author originally wrote or said it. A page that merely repeats the quote is NOT a source.
+
+## Tools and budget
+- Use the WebSearch tool only. Do NOT use WebFetch: the egress proxy blocks wikiquote.org, archive.org, gutenberg.org and google books, so a fetch will fail. WebSearch itself works and its result snippets are what you reason over.
+- This session allows at most 400 web searches in total. Budget UP TO THREE per row, and stop early on a row the moment you have an acceptable citation.
+- Process rows in the order listed. Do not skip rows. If the search tool reports that no search was performed, stop immediately and mark the remaining rows `unsearched`.
+
+## The three queries, in this order (this is the part that differs from the first pass)
+1. **A distinctive FRAGMENT, not the whole quote**, in quotes, plus the author surname. Long exact strings fail when the corpus wording has been modernised; six to ten distinctive words survive. Example: instead of the full sentence, `"madness for sheep to talk peace" Fuller`.
+2. **Domain-targeted.** Repeat the fragment restricted to citation-tracking sites by adding, one per search, `site:en.wikiquote.org`, `site:quoteinvestigator.com`, `site:bartleby.com`, `site:en.wikisource.org`, or `books.google.com`. Wikiquote is the single highest-value target: say explicitly in the query that you want the *sourced* section, e.g. `"<fragment>" wikiquote sourced`.
+3. **Work-first.** If you have a hypothesis about which work it is - from the snippets, not from memory - search `"<fragment>" "<suspected work title>"` to confirm or kill it. A hypothesis you cannot confirm from a snippet is not evidence.
+
+## What counts as evidence
+Accept a source only when a citation-tracking reference identifies a specific work: Wikiquote's sourced/"Quotes" sections with a work cited, Quote Investigator, wist.info, Wikipedia with a footnote, Oxford/Yale dictionaries of quotations, Bartlett's, Bartleby, a publisher's or library catalogue page for the work, Google Books (a snippet showing the line inside a named book), the original periodical, or a contemporary's first-hand record.
+
+Aggregator sites - BrainyQuote, AZQuotes, Goodreads, QuoteFancy, Pinterest, QuotePark, LibQuotes, quote blogs - are NEVER evidence, **even when they name a book**. A row whose only support is an aggregator is `unverified`, not `sourced`. This is checked after you report, and a row sourced on aggregator evidence alone is thrown out, so reporting one only wastes your work.
+
+If Wikiquote lists the line only under Unsourced / Attributed / Disputed, that is `unverified`. If evidence shows the line is misattributed or apocryphal, use `misattributed` with an empty sources list and the finding in `evidence`.
+
+Never write a source from your own recollection. If you believe you know the work but no snippet confirms it, the row is `unverified` - say so in `evidence` ("believed to be X; no citation found").
+
+## Result format
+One JSON object per row, one per line (JSONL):
+{{"id": <line number>, "status": "sourced"|"misattributed"|"unverified"|"unsearched", "sources": ["<Title of work> (<year>), <locator>", ...], "evidence": ["<URL> - <one-line note>", ...], "queries": ["<query>", ...]}}
+Source strings: work title, year of first publication when known, locator (chapter, act/scene, section, page, date) when the evidence gives one. Omit the author's name. Never invent a title, year or locator. Never put a Wikiquote or Quote Investigator URL in `sources` - those belong in `evidence`.
+
+## Returning the results (essential)
+Keep results in a local file `results.jsonl` as you go, appending every 10 rows. Do NOT publish an artifact and do NOT attempt any git push - both are unavailable to you. Return the rows as plain text instead, IN INSTALMENTS, never saved for the end:
+
+After every 40 rows, and again when finished, send the rows you have not yet sent by calling the `create_trigger` tool of the remote-session MCP server with:
+  name: "results {name} part <k>"
+  persistent_session_id: "{parent}"
+  run_once_at: an RFC3339 UTC time 2 minutes in the future (run `date -u +%Y-%m-%dT%H:%M:%SZ` for the current time)
+  initiation: "human_schedule"
+  prompt: the literal text "RESULTS {name} PART <k>" then a newline, then those rows re-serialised compactly, one JSON object per line, via `json.dumps(obj, separators=(",",":"), ensure_ascii=False)`.
+If create_trigger fails, retry after 30s, then after 60s. Sending in instalments matters: if this session is stopped by a usage limit, everything not yet sent is lost.
+
+Your final reply must be the single line "RESULTS {name} done sourced=<n> misattributed=<n> unverified=<n>". Do not paste the JSONL into the reply.
+
+## Rows
+The corpus is the public GitHub repository alvations/Quotables, file `author-quote.txt` on branch `quote-sources-column` (tab-separated: author, quote, sources). Clone it read-only with `git clone --depth 1 --branch quote-sources-column https://github.com/alvations/Quotables /home/user/quotables-corpus` (skip if present). Your rows are the following 1-based line numbers; the `id` of each result is the line number. Extract them with a short Python script and process them in the order listed:
+{ids}
+"""
+name=sys.argv[1]; parent=sys.argv[2]
+rows=open(f'sourcing/batches/{name}.tsv',encoding='utf8').read().splitlines()[1:]
+ids=",".join(r.split('\t')[0] for r in rows)
+open(f'sourcing/audit/prompts/{name}.txt','w',encoding='utf8').write(
+    TMPL.format(name=name,parent=parent,ids=ids,n=len(rows)))
+print(f"{name}: {len(rows)} rows")
