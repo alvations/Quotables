@@ -58,5 +58,6 @@
   "batch_w002": "deeper web pass, classical unsourced",
   "batch_w003": "deeper web pass, classical unsourced"
  },
- "corpus_base_commit": "1bcfb4e"
+ "corpus_base_commit": "1bcfb4e",
+ "note_return_channels": "Children's git pushes to sourcing/additions/ have carried every row so far, checked against the text relay rather than assumed: each batch's newest relayed authors were already present in its pushed file. The relay stays on as the fallback, since in earlier runs a permission classifier refused git in children and the relay was the only channel that worked."
 }
