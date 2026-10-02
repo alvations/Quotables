@@ -1,0 +1,225 @@
+pg_id	work	added_row	verdict	score
+3420	A Vindication of the Rights of Woman	38	located	100
+3420	A Vindication of the Rights of Woman	39	located	100
+3420	A Vindication of the Rights of Woman	40	located	100
+3420	A Vindication of the Rights of Woman	41	located	100
+3420	A Vindication of the Rights of Woman	42	located	100
+3420	A Vindication of the Rights of Woman	43	located	100
+3420	A Vindication of the Rights of Woman	44	located	97
+3420	A Vindication of the Rights of Woman	981	located	100
+3420	A Vindication of the Rights of Woman	982	located	100
+833	The Theory of the Leisure Class	475	located	98
+833	The Theory of the Leisure Class	476	located	100
+833	The Theory of the Leisure Class	477	located	99
+833	The Theory of the Leisure Class	478	located	100
+833	The Theory of the Leisure Class	479	located	100
+833	The Theory of the Leisure Class	758	located	100
+833	The Theory of the Leisure Class	759	located	100
+9662	An Enquiry Concerning Human Understanding	47	located	100
+9662	An Enquiry Concerning Human Understanding	48	located	100
+9662	An Enquiry Concerning Human Understanding	49	located	100
+9662	An Enquiry Concerning Human Understanding	50	located	100
+9662	An Enquiry Concerning Human Understanding	51	located	100
+9662	An Enquiry Concerning Human Understanding	52	below-threshold	55
+9662	An Enquiry Concerning Human Understanding	53	below-threshold	59
+2600	War and Peace	228	located	100
+2600	War and Peace	229	located	100
+2600	War and Peace	230	below-threshold	62
+2600	War and Peace	231	located	100
+2600	War and Peace	232	located	96
+2600	War and Peace	233	below-threshold	65
+4239	An Essay on the Principle of Population	797	located	100
+4239	An Essay on the Principle of Population	798	located	100
+4239	An Essay on the Principle of Population	799	located	100
+4239	An Essay on the Principle of Population	800	located	100
+4239	An Essay on the Principle of Population	801	located	99
+541	The Age of Innocence	280	below-threshold	53
+541	The Age of Innocence	281	below-threshold	54
+541	The Age of Innocence	282	below-threshold	51
+541	The Age of Innocence	283	located	100
+541	The Age of Innocence	284	located	100
+541	The Age of Innocence	285	located	100
+541	The Age of Innocence	286	located	100
+34901	On Liberty	17	located	99
+34901	On Liberty	18	located	100
+34901	On Liberty	19	located	100
+34901	On Liberty	20	located	100
+34901	On Liberty	21	below-threshold	50
+34901	On Liberty	22	below-threshold	56
+34901	On Liberty	422	below-threshold	46
+34901	On Liberty	789	below-threshold	50
+34901	On Liberty	790	below-threshold	54
+13529	The Influence of Sea Power Upon History, 1660-1783	705	below-threshold	50
+13529	The Influence of Sea Power Upon History, 1660-1783	706	no-shingle-match	
+13529	The Influence of Sea Power Upon History, 1660-1783	707	below-threshold	48
+1039	Missionary Travels and Researches in South Africa	715	located	99
+1039	Missionary Travels and Researches in South Africa	716	located	99
+1039	Missionary Travels and Researches in South Africa	717	located	100
+284	The House of Mirth	280	located	100
+284	The House of Mirth	281	located	100
+284	The House of Mirth	282	located	100
+284	The House of Mirth	283	below-threshold	53
+284	The House of Mirth	284	below-threshold	56
+284	The House of Mirth	285	below-threshold	67
+284	The House of Mirth	286	below-threshold	47
+44800	The Law	804	below-threshold	45
+44800	The Law	805	below-threshold	66
+44800	The Law	806	below-threshold	84
+44800	The Law	807	no-shingle-match	
+7213	My Life and Work	512	located	98
+7213	My Life and Work	513	located	100
+7213	My Life and Work	514	located	100
+7213	My Life and Work	791	below-threshold	52
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	58	below-threshold	53
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	107	below-threshold	50
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	108	below-threshold	50
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	109	below-threshold	57
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	110	below-threshold	52
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	111	below-threshold	48
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	464	below-threshold	49
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	465	below-threshold	48
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	756	located	100
+3300	An Inquiry into the Nature and Causes of the Wealth of Nations	757	located	99
+4705	A Treatise of Human Nature	47	below-threshold	55
+4705	A Treatise of Human Nature	48	no-shingle-match	
+4705	A Treatise of Human Nature	49	below-threshold	61
+4705	A Treatise of Human Nature	50	below-threshold	55
+4705	A Treatise of Human Nature	51	below-threshold	51
+4705	A Treatise of Human Nature	52	located	100
+4705	A Treatise of Human Nature	53	located	99
+2162	Anarchism and Other Essays	54	located	100
+2162	Anarchism and Other Essays	55	located	100
+2162	Anarchism and Other Essays	56	below-threshold	50
+2162	Anarchism and Other Essays	57	below-threshold	50
+60315	My Disillusionment in Russia	54	below-threshold	49
+60315	My Disillusionment in Russia	55	below-threshold	52
+60315	My Disillusionment in Russia	56	below-threshold	50
+60315	My Disillusionment in Russia	57	below-threshold	48
+7849	The Trial	252	below-threshold	51
+7849	The Trial	253	below-threshold	76
+7849	The Trial	254	below-threshold	50
+7849	The Trial	255	below-threshold	56
+7849	The Trial	256	below-threshold	52
+550	Silas Marner	267	below-threshold	51
+550	Silas Marner	268	located	100
+550	Silas Marner	269	located	100
+105	Persuasion	223	below-threshold	50
+105	Persuasion	224	below-threshold	51
+105	Persuasion	225	located	100
+105	Persuasion	226	located	100
+105	Persuasion	227	below-threshold	54
+1342	Pride and Prejudice	223	located	100
+1342	Pride and Prejudice	224	located	100
+1342	Pride and Prejudice	225	no-shingle-match	
+1342	Pride and Prejudice	226	below-threshold	52
+1342	Pride and Prejudice	227	no-shingle-match	
+11224	Utilitarianism	17	below-threshold	48
+11224	Utilitarianism	18	below-threshold	53
+11224	Utilitarianism	19	below-threshold	51
+11224	Utilitarianism	20	below-threshold	50
+11224	Utilitarianism	21	located	100
+11224	Utilitarianism	22	located	100
+11224	Utilitarianism	422	below-threshold	47
+11224	Utilitarianism	789	below-threshold	49
+11224	Utilitarianism	790	below-threshold	52
+3414	The South Pole; an account of the Norwegian Antarctic expedition in the "Fram," 1910-1912 — Volume 1	490	located	100
+3414	The South Pole; an account of the Norwegian Antarctic expedition in the "Fram," 1910-1912 — Volume 1	491	below-threshold	54
+3207	Leviathan	28	located	95
+3207	Leviathan	29	located	94
+63107	Mrs Dalloway in Bond Street	239	no-shingle-match	
+63107	Mrs Dalloway in Bond Street	240	no-shingle-match	
+63107	Mrs Dalloway in Bond Street	241	located	94
+63107	Mrs Dalloway in Bond Street	242	no-shingle-match	
+63107	Mrs Dalloway in Bond Street	243	no-shingle-match	
+63107	Mrs Dalloway in Bond Street	244	no-shingle-match	
+63107	Mrs Dalloway in Bond Street	245	no-shingle-match	
+30802	Commentaries on the Laws of England, Book the First	884	below-threshold	64
+30802	Commentaries on the Laws of England, Book the First	885	located	100
+17976	Autobiography of Andrew Carnegie	499	below-threshold	50
+17976	Autobiography of Andrew Carnegie	500	below-threshold	48
+17976	Autobiography of Andrew Carnegie	501	below-threshold	49
+17976	Autobiography of Andrew Carnegie	502	below-threshold	60
+17976	Autobiography of Andrew Carnegie	503	located	100
+61741	A Voice from the South	989	located	100
+13415	The Lady with the Dog and Other Stories	279	below-threshold	62
+3760	Sybil, Or, The Two Nations	187	no-shingle-match	
+3760	Sybil, Or, The Two Nations	188	no-shingle-match	
+3760	Sybil, Or, The Two Nations	189	below-threshold	83
+3760	Sybil, Or, The Two Nations	190	below-threshold	46
+5200	Metamorphosis	252	below-threshold	75
+5200	Metamorphosis	253	below-threshold	52
+5200	Metamorphosis	254	no-shingle-match	
+5200	Metamorphosis	255	no-shingle-match	
+5200	Metamorphosis	256	no-shingle-match	
+6688	The Mill on the Floss	267	located	100
+6688	The Mill on the Floss	268	below-threshold	50
+6688	The Mill on the Floss	269	below-threshold	49
+1408	The Natural History of Selborne	557	below-threshold	50
+1408	The Natural History of Selborne	558	no-shingle-match	
+1408	The Natural History of Selborne	559	below-threshold	49
+1408	The Natural History of Selborne	560	below-threshold	58
+1408	The Natural History of Selborne	561	below-threshold	59
+1408	The Natural History of Selborne	562	below-threshold	49
+1408	The Natural History of Selborne	563	below-threshold	50
+1408	The Natural History of Selborne	564	below-threshold	47
+1408	The Natural History of Selborne	619	located	95
+4280	The Critique of Pure Reason	37	below-threshold	59
+24650	The Gentle Art of Making Enemies	643	no-shingle-match	
+158	Emma	223	below-threshold	50
+158	Emma	224	below-threshold	52
+158	Emma	225	below-threshold	50
+158	Emma	226	below-threshold	52
+158	Emma	227	located	100
+65278	A Tract on Monetary Reform	439	below-threshold	48
+65278	A Tract on Monetary Reform	763	below-threshold	51
+65278	A Tract on Monetary Reform	764	no-shingle-match	
+65278	A Tract on Monetary Reform	765	located	100
+65278	A Tract on Monetary Reform	766	located	100
+15776	The Economic Consequences of the Peace	439	no-shingle-match	
+15776	The Economic Consequences of the Peace	763	no-shingle-match	
+15776	The Economic Consequences of the Peace	764	no-shingle-match	
+15776	The Economic Consequences of the Peace	765	no-shingle-match	
+15776	The Economic Consequences of the Peace	766	no-shingle-match	
+60749	A Thousand-Mile Walk to the Gulf	583	below-threshold	46
+60749	A Thousand-Mile Walk to the Gulf	584	located	100
+60929	Our National Parks	583	located	100
+60929	Our National Parks	584	no-shingle-match	
+35898	The Seven Lamps of Architecture	644	located	100
+1399	Anna Karenina	228	below-threshold	58
+1399	Anna Karenina	229	below-threshold	56
+1399	Anna Karenina	230	no-shingle-match	
+1399	Anna Karenina	231	below-threshold	59
+1399	Anna Karenina	232	below-threshold	66
+1399	Anna Karenina	233	below-threshold	65
+46915	A Treatise on Painting	670	below-threshold	50
+57819	Other People's Money, and How the Bankers Use It	81	located	100
+57819	Other People's Money, and How the Bankers Use It	82	below-threshold	51
+57819	Other People's Money, and How the Bankers Use It	83	no-shingle-match	
+57819	Other People's Money, and How the Bankers Use It	84	below-threshold	52
+57819	Other People's Money, and How the Bankers Use It	860	no-shingle-match	
+57819	Other People's Money, and How the Bankers Use It	861	no-shingle-match	
+57819	Other People's Money, and How the Bankers Use It	862	below-threshold	48
+57819	Other People's Money, and How the Bankers Use It	863	below-threshold	48
+37368	The Right to Privacy	81	below-threshold	48
+37368	The Right to Privacy	82	no-shingle-match	
+37368	The Right to Privacy	83	located	100
+37368	The Right to Privacy	84	below-threshold	51
+37368	The Right to Privacy	860	no-shingle-match	
+37368	The Right to Privacy	861	no-shingle-match	
+37368	The Right to Privacy	862	below-threshold	49
+37368	The Right to Privacy	863	below-threshold	48
+8660	Woman and the New Race	996	located	100
+2449	The Common Law	126	below-threshold	60
+2449	The Common Law	127	below-threshold	62
+2449	The Common Law	128	below-threshold	49
+2449	The Common Law	851	below-threshold	85
+2449	The Common Law	852	below-threshold	53
+2449	The Common Law	853	below-threshold	68
+2449	The Common Law	854	no-shingle-match	
+2449	The Common Law	855	no-shingle-match	
+2449	The Common Law	856	below-threshold	48
+2449	The Common Law	857	no-shingle-match	
+2449	The Common Law	858	below-threshold	49
+2449	The Common Law	859	below-threshold	52
+6340	Literary Lapses	965	located	100
+5321	Concerning the Spiritual in Art	640	located	97

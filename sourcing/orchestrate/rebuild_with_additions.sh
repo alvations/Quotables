@@ -9,8 +9,16 @@ set -e
 cd "$(git rev-parse --show-toplevel)"
 BASE=$(python3 -c "import json;print(json.load(open('sourcing/discovery_state.json'))['corpus_base_commit'])")
 git show "$BASE:author-quote.txt" > /tmp/corpus_base.txt
-python3 sourcing/validate_additions.py /tmp/corpus_base.txt /tmp/corpus_new.txt \
+python3 sourcing/validate_additions.py /tmp/corpus_base.txt /tmp/corpus_staged.txt \
         sourcing/audit/additions_ledger.tsv sourcing/additions/*.jsonl
+# Where a public-domain text was read and the quote found in it, that confirmation is folded
+# in alongside the row's citation. It lives in its own ledger so the rebuild stays idempotent.
+if [ -s sourcing/audit/fulltext_corroboration.tsv ]; then
+  python3 sourcing/apply_corroboration.py /tmp/corpus_staged.txt \
+          sourcing/audit/fulltext_corroboration.tsv /tmp/corpus_new.txt
+else
+  cp /tmp/corpus_staged.txt /tmp/corpus_new.txt
+fi
 python3 - <<'PY'
 import json
 n=s=0
