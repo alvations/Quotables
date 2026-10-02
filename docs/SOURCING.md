@@ -227,19 +227,19 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | verbatim location in Gutenberg full texts, first pass (94 works + Shakespeare) | 561 (539 found by no other step) |
 | verbatim location in Gutenberg full texts, second and third passes (3,631 works, 316 authors) | 1,296 (228 found by no other step) |
 | web-search agents (sourced) | 12,201 |
-| web-search agents (misattributed, kept as `[]`) | 752 |
+| web-search agents (misattributed, kept as `[]`) | 762 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
-| deep-search batches (batch_w001 to w010) over already-unsourced classical quotes | 418 |
-| discovery phase: quotes added, each arriving with a first-hand source | 2,351 |
+| deep-search batches (batch_w001 to w010) over already-unsourced classical quotes | 464 |
+| discovery phase: quotes added, each arriving with a first-hand source | 2,523 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **15,856 of 41,620 (38.1%)** |
+| **lines with at least one source** | **16,074 of 41,792 (38.5%)** |
 
 The discovery phase moves the percentage without moving the unsourced count, because every
 line it adds already carries a source: only the denominator grows. The deep-search batches are
 the ones that move the unsourced count, since they re-search lines the corpus already held -
-26,182 down to 25,764 so far - and they also produce findings that are not sources: 238 quotes
+26,182 down to 25,718 so far - and they also produce findings that are not sources: 277 quotes
 newly documented as misattributed, which keep `[]` as the strict policy requires. Those sit in
-`sourcing/evidence/web_deep_search.jsonl` alongside the 957 the deeper search still could not
+`sourcing/evidence/web_deep_search.jsonl` alongside the 1,097 the deeper search still could not
 place.
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
@@ -420,6 +420,16 @@ repoint thousands of citations. A duplicate involving an *added* line does fail,
 
 ## Known limits
 
+- Twelve people are spelled two ways in the corpus, each an accented form against an ASCII
+  flattening of it - Molière/Moliere, Čapek/Capek, Buñuel/Bunuel, Machiavelli with and
+  without the grave, and so on. Every one of those pairs was in the file before this project
+  began, and both spellings carry quotes. They are left alone: rewriting an author's name
+  across the corpus is a decision for whoever owns the data, not for a sourcing pass, and the
+  line numbers in `sourcing/evidence/` would survive a rename but the author index would
+  change under anyone reading it. What the pipeline does guarantee is that no *added* row
+  introduces or widens such a split: `validate_additions.py` folds an added author onto the
+  spelling the corpus already uses, choosing the majority spelling where the corpus itself is
+  inconsistent.
 - Coverage is partial. Many lines in this corpus circulate only on aggregator sites and have
   no traceable origin; those keep `[]`. Lines that citation trackers flag as misattributed
   also keep `[]` (the finding is in the evidence file).
