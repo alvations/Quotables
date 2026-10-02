@@ -11,6 +11,14 @@
 # intuition, and picking the wrong side silently discards a child's finished research.
 set -e
 cd "$(git rev-parse --show-toplevel)"
+# A dirty tree makes `git rebase` refuse before it starts, and the conflict loop below then
+# finds nothing to resolve and `rebase --continue` reports "No rebase in progress" - which
+# reads like a conflict-resolution bug rather than what it is. Say so plainly instead.
+if ! git diff-index --quiet HEAD --; then
+  echo "sync_additions: commit or stash first - the working tree has uncommitted changes:" >&2
+  git status --porcelain >&2
+  exit 1
+fi
 git fetch -q origin quote-sources-column
 if ! git rebase -q origin/quote-sources-column 2>/dev/null; then
   while read -r f; do
