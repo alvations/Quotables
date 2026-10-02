@@ -220,6 +220,21 @@ batch_d04	Henri Poincaré	The scientist does not study nature because it is usef
 batch_d04	Francis Crick	The Astonishing Hypothesis is that "You," your joys and your sorrows, your memories and your ambitions, your sense of id	accepted	The Astonishing Hypothesis: The Scientific Search for the Soul (1994), Introduction, p. 3
 batch_d04	Rachel Carson	The "control of nature" is a phrase conceived in arrogance, born of the Neanderthal age of biology and philosophy, when 	accepted	Silent Spring (1962), p. 297
 batch_d04	John von Neumann	If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.	accepted	Keynote remark, first national meeting of the Association for Computing Machinery (1947), as recorded in Franz L. Alt, 'Archaeology of computers: Reminiscences, 1945-1947', Communi
+batch_d04b	Carl Sagan	Every one of us is, in the cosmic perspective, precious. If a human disagrees with you, let him live. In a hundred billi	accepted	Cosmos (1980), p. 339
+batch_d04b	Carl Sagan	To me, it underscores our responsibility to deal more kindly with one another, and to preserve and cherish the pale blue	accepted	Pale Blue Dot: A Vision of the Human Future in Space (1994), p. 8
+batch_d04b	Carl Sagan	Books are patient where we are slow to understand, allow us to go over the hard parts as many times as we wish, and are 	accepted	The Demon-Haunted World: Science as a Candle in the Dark (1995), Ch. 21: The Path to Freedom
+batch_d04b	Niels Bohr	Physics is to be regarded not so much as the study of something a priori given, but rather as the development of methods	accepted	The Unity of Human Knowledge (October 1960)
+batch_d04b	Erwin Schrödinger	The world is given to me only once, not one existing and one perceived. Subject and object are only one. The barrier bet	accepted	Mind and Matter (1958)
+batch_d04b	Erwin Schrödinger	Matter and energy seem granular in structure, and so does 'life', but not so mind.	accepted	Mind and Matter (1958)
+batch_d04b	Peter Medawar	It can be said with complete confidence that any scientist of any age who wants to make important discoveries must study	accepted	Advice to a Young Scientist (1979), Ch. 3: What Shall I Do Research On?
+batch_d04b	Peter Medawar	I believe in 'intelligence,' and I believe also that there are inherited differences in intellectual ability, but I do n	accepted	Advice to a Young Scientist (1979)
+batch_d04b	Rosalind Franklin	Science and everyday life cannot and should not be separated.	accepted	Letter to her father (1940), quoted in Brenda Maddox, Rosalind Franklin: The Dark Lady of DNA (2003), p. 61
+batch_d04b	Santiago Ramón y Cajal	Any man could, if he were so inclined, be the sculptor of his own brain	accepted	Advice for a Young Investigator (1897)
+batch_d04b	Santiago Ramón y Cajal	In summary, there are no small problems. Problems that appear small are large problems that are not understood	accepted	Advice for a Young Investigator (1897)
+batch_d04b	Norbert Wiener	Information is information, not matter or energy. No materialism which does not admit this can survive at the present da	accepted	Cybernetics: Or Control and Communication in the Animal and the Machine (1948)
+batch_d04b	Norbert Wiener	The most fruitful areas for the growth of the sciences were those which had been neglected as a no-man's-land between th	accepted	Cybernetics: Or Control and Communication in the Animal and the Machine (1948)
+batch_d04b	Edsger W. Dijkstra	One moral of the above story is, of course, that we must be very careful when we give advice to younger people; sometime	accepted	The Humble Programmer (1972), EWD340; Communications of the ACM 15 (10), October 1972, pp. 859-866
+batch_d04b	Edsger W. Dijkstra	The major cause [of the software crisis] is that the machines have become several orders of magnitude more powerful! To 	accepted	The Humble Programmer (1972), EWD340; Communications of the ACM 15 (10), October 1972, pp. 859-866
 batch_d05	Chinua Achebe	Proverbs are the palm-oil with which words are eaten.	accepted	Things Fall Apart (1958), Chapter 1
 batch_d05	Chinua Achebe	When the moon is shining the cripple becomes hungry for a walk.	accepted	Things Fall Apart (1958), Chapter 2
 batch_d05	Chinua Achebe	You will have what is good for you and I will have what is good for me. Let the kite perch and let the egret perch too. 	accepted	Things Fall Apart (1958), Chapter 3
@@ -1533,6 +1548,36 @@ batch_d28	Michael Pollan	Nutrition science is where surgery was in about 1650, y
 batch_d28	Masanobu Fukuoka	The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings.	accepted	The One-Straw Revolution (1975)
 batch_d28	Eric Gill	Art is skill, that is the first meaning of the word.	accepted	Art Nonsense and Other Essays (1929)
 batch_d28	Eric Gill	The industrialist workman is often simply as a rabbit in a trap; the artist is often as a man nailed to a cross.	accepted	Art Nonsense and Other Essays (1929)
+batch_d28	Vita Sackville-West	I have come to the conclusion, after many years of sometimes sad experience, that you cannot come to any conclusion at a	accepted	In Your Garden Again (1953), p. 71 of the 2004 edition
+batch_d28	Thomas Carlyle	Blessed is he who has found his work; let him ask no other blessedness.	accepted	Past and Present (1843)
+batch_d28	Gertrude Jekyll	For the love of gardening is a seed that once sown never dies, but always grows and grows to an enduring and ever-increa	accepted	Wood and Garden: Notes and Thoughts, Practical and Critical, of a Working Amateur (Longmans, Green & Company, 1904)
+batch_d28	Gertrude Jekyll	The lesson I have thoroughly learnt, and wish to pass on to others, is to know the enduring happiness that the love of a	accepted	Wood and Garden (1899)
+batch_d28	Alfred Austin	Show me your garden, provided it be your own, and I will tell you what you are like.	accepted	The Garden That I Love (London: Macmillan and Co., 1894)
+batch_d28	Alexander Pope	In laying out a garden, the first and chief thing to be considered is the genius of the place	accepted	Remark of c. 1729, quoted in Joseph Warton, An Essay on the Genius and Writings of Pope, Vol. II (5th edition, London, 1806)
+batch_d28	Robert Burton	Cookery is become an art, a noble science; cooks are gentlemen	accepted	The Anatomy of Melancholy (1621)
+batch_d28	Martial	A cook should double one sense have: for he Should taster for himself and master be,	accepted	Epigrams (c. 80-104 AD), Book XIV, Epistle 220
+batch_d28	Dorothy L. Sayers	No crooked table legs or ill-fitting drawers ever came out of the carpenter's shop at Nazareth. Nor, if they did, could 	accepted	Why Work? (1942)
+batch_d28	Annie Dillard	A schedule is a mock-up of reason and order—willed, faked, and so brought into being; it is a peace and a haven set into	accepted	The Writing Life (1989)
+batch_d28	Annie Dillard	How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doi	accepted	The Writing Life (1989)
+batch_d28	Marco Pierre White	As far as I'm concerned, if someone is paying a huge amount of money to come to your restaurant and eat your food, then 	accepted	The Devil in the Kitchen: The Autobiography (2007)
+batch_d28	Marco Pierre White	Great chefs have three things in common. The first is the understanding that mother nature is the true artist and they a	accepted	Interview in Gourmet Traveller (2008)
+batch_d28	Nigella Lawson	The trouble with modern cooking is that the mood it induces in the cook is one of skin-of-the-teeth efficiency, all bris	accepted	How to be a Domestic Goddess (2000)
+batch_d28	Primo Levi	The bond between a man and his profession is similar to that which ties him to his country; it is just as complex, often	accepted	The Wrench (1978), published in the United States as The Monkey's Wrench
+batch_d28	Primo Levi	Better to err through omission than through commission: better to refrain from steering the fate of others, since it is 	accepted	The Wrench (1978), published in the United States as The Monkey's Wrench
+batch_d28	Primo Levi	Beware of analogies: for millenia they corrupted medicine, and it may be their fault that today's pedagogical systems ar	accepted	The Wrench (1978), published in the United States as The Monkey's Wrench
+batch_d28	Samuel Smiles	Laws, wisely administered, will secure men in the enjoyment of the fruits of their labour, whether of mind or body, at a	accepted	Self-Help (1859)
+batch_d28	Samuel Smiles	Men who are resolved to find a way for themselves will always find opportunities enough; and if they do not lie ready to	accepted	Self-Help (1859)
+batch_d28	Samuel Smiles	The spirit of self-help is the root of all genuine growth in the individual; and, exhibited in the lives of many, it con	accepted	Self-Help (1859)
+batch_d28	Booker T. Washington	At Hampton I not only learned that it was not a disgrace to labour, but learned to love labour, not alone for its financ	accepted	Up from Slavery (1901)
+batch_d28	Isabella Beeton	As with the commander of an army, or the leader of any enterprise, so is it with the mistress of a house.	accepted	The Book of Household Management (1861), opening of the chapter on the mistress of the house
+batch_d28	Henry David Thoreau	We are wont to forget that the sun looks on our cultivated fields and on the prairies and forests without distinction. T	accepted	Walden (1854), "The Bean-Field"
+batch_d28	Jonathan Swift	A carpenter's known by his chips.	accepted	Polite Conversation, Dialogue II
+batch_d28	Walt Whitman	The carpenter dresses his plank—the tongue of his fore-plane whistles its wild ascending lisp.	accepted	Leaves of Grass, Part XV, Stanza 77
+batch_d28	Paul Hymers	It's amazing how many houses are built with the logistical impossibility of bringing a sofa in.	accepted	The New Home Builder, 2nd Edition, p. 38
+batch_d28	Bernard Leach	It seems reasonable to expect that beauty will emerge from a fusion of the individual character and culture of the potte	accepted	A Potter's Book (1940)
+batch_d28	Rudyard Kipling	Oh, Adam was a gardener, and God who made him sees That half a proper gardener's work is done upon his knees, So when yo	accepted	The Glory of the Garden (1911), Stanza 8
+batch_d28	Ralph Waldo Emerson	The first farmer was the first man, and all historic nobility rests on possession and use of land	accepted	Society and Solitude (1870), "Farming"
+batch_d28	Cicero	For of all gainful professions, nothing is better, nothing more pleasing, nothing more delightful, nothing better become	accepted	De Officiis (44 BC), Book 1, section 42, translated by Cyrus R. Edmonds (1873), p. 73
 batch_d29	Edward Sapir	Language is a purely human and non-instinctive method of communicating ideas, emotions, and desires by means of a system	accepted	Language: An Introduction to the Study of Speech (1921), Ch. 1: Introductory: Language Defined
 batch_d29	Edward Sapir	Unfortunately, or luckily, no language is tyrannically consistent. All grammars leak.	accepted	Language: An Introduction to the Study of Speech (1921)
 batch_d29	Edward Sapir	Language is the most massive and inclusive art we know, a mountainous and anonymous work of unconscious generations.	accepted	Language: An Introduction to the Study of Speech (1921)
@@ -1548,6 +1593,37 @@ batch_d29	George Orwell	If thought corrupts language, language can also corrupt 
 batch_d29	George Orwell	Political language — and with variations this is true of all political parties, from Conservatives to Anarchists — is de	accepted	Politics and the English Language (1946), first published in Horizon, April 1946
 batch_d29	George Orwell	The great enemy of clear language is insincerity. When there is a gap between one's real and one's declared aims, one tu	accepted	Politics and the English Language (1946), first published in Horizon, April 1946
 batch_d29	Noah Webster	Language is the expression of ideas, and if the people of one country cannot preserve an identity of ideas they cannot r	accepted	Preface to An American Dictionary of the English Language (1828)
+batch_d29	William Strunk Jr.	Omit needless words.	rejected	quote length 20 chars / 3 words outside 20-600 and >=4
+batch_d29	William Strunk Jr.	Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for t	accepted	The Elements of Style (1918), Rule 17: Omit needless words
+batch_d29	John Dryden	No man is capable of translating poetry, who, besides a genius to that art, is not a master both of his author's languag	accepted	Preface to Ovid's Epistles (1680)
+batch_d29	Vladimir Nabokov	The clumsiest literal translation is a thousand times more useful than the prettiest paraphrase.	accepted	Problems of Translation: Onegin in English (1955)
+batch_d29	Jorge Luis Borges	The original is unfaithful to the translation.	accepted	Sobre el Vathek de William Beckford (1943)
+batch_d29	Walter Benjamin	There is no muse of philosophy, nor is there one of translation.	accepted	The Task of the Translator (1920), translated by Harry Zohn
+batch_d29	George Steiner	Nothing in a language is less translatable than its modes of understatement.	accepted	The Death of Tragedy (1961), Ch. III
+batch_d29	Mark Twain	I heard a Californian student in Heidelberg say, in one of his calmest moods, that he would rather decline two drinks th	accepted	The Awful German Language (1880), Appendix D of A Tramp Abroad
+batch_d29	Mark Twain	In German, a young lady has no sex, while a turnip has. Think what overwrought reverence that shows for the turnip, and 	accepted	The Awful German Language (1880), Appendix D of A Tramp Abroad
+batch_d29	Mark Twain	Every noun has a gender, and there is no sense or system in the distribution; so the gender of each must be learned sepa	accepted	The Awful German Language (1880), Appendix D of A Tramp Abroad
+batch_d29	Mark Twain	Surely there is not another language that is so slipshod and systemless, and so slippery and elusive to the grasp.	accepted	The Awful German Language (1880), Appendix D of A Tramp Abroad
+batch_d29	Max Muller	Language has been called sacred ground, because it is the deposit of thought.	accepted	Lectures on the Science of Language (1861), Lecture I: The Science of Language One of the Physical Sciences
+batch_d29	Max Muller	There are chronicles below her surface; there are sermons in every word.	accepted	Lectures on the Science of Language (1861), Lecture I
+batch_d29	Richard Chenevix Trench	Language is the amber in which a thousand precious and subtle thoughts have been safely embedded and preserved.	accepted	On the Study of Words (1851)
+batch_d29	Richard Chenevix Trench	Many a single word also is itself a concentrated poem, having stores of poetical thought and imagery laid up in it.	accepted	On the Study of Words (1851), Introductory Lecture
+batch_d29	Ambrose Bierce	LEXICOGRAPHER, n. A pestilent fellow who, under the pretense of recording some particular stage in the development of a 	accepted	The Devil's Dictionary (1911); first published as The Cynic's Word Book (1906)
+batch_d29	Ambrose Bierce	DICTIONARY, n. A malevolent literary device for cramping the growth of a language and making it hard and inelastic. This	accepted	The Devil's Dictionary (1911); first published as The Cynic's Word Book (1906)
+batch_d29	Walt Whitman	Slang, profoundly consider'd, is the lawless germinal element, below all words and sentences, and behind all poetry, and	accepted	Slang in America, in Complete Prose Works
+batch_d29	Noam Chomsky	The search for rigorous formulation in linguistics has a much more serious motivation than mere concern for logical nice	accepted	Syntactic Structures (1957)
+batch_d29	Ferdinand de Saussure	Language is a system of signs that express ideas, and is therefore comparable to a system of writing, the alphabet of de	accepted	Course in General Linguistics (1916)
+batch_d29	Ferdinand de Saussure	Thus we may found the science for the study of the life of signs against the background of social life; it would form pa	accepted	Course in General Linguistics (1916)
+batch_d29	Alfred Korzybski	A map is not the territory it represents, but, if correct, it has a similar structure to the territory, which accounts f	accepted	Science and Sanity (1933), Part II, Ch. 4, p. 56
+batch_d29	S. I. Hayakawa	The symbolic process, which makes possible the absurdities of human conduct, also makes possible language and therefore 	accepted	Language in Thought and Action (1949)
+batch_d29	S. I. Hayakawa	Symbols and things symbolized are independent of each other; nevertheless, we all have a way of feeling as if there were	accepted	Language in Thought and Action (1949), section on Language as Symbolism
+batch_d29	S. I. Hayakawa	We are, as human beings, uniquely free to manufacture and manipulate and assign values to our symbols as we please.	accepted	Language in Thought and Action (1949), section on The Symbolic Process
+batch_d29	Umberto Eco	The language of Europe is translation.	accepted	Lecture at the Assises de la Traduction littéraire, Arles (14 November 1993)
+batch_d29	H. W. Fowler	Any one who wishes to become a good writer should endeavour, before he allows himself to be tempted by the more showy qu	accepted	The King's English (1906), Ch. 1: Vocabulary
+batch_d29	H. W. Fowler	Prefer the familiar word to the far-fetched. Prefer the concrete word to the abstract. Prefer the single word to the cir	accepted	The King's English (1906), Ch. 1: Vocabulary
+batch_d29	David Crystal	The only languages that do not change are dead ones.	accepted	Language Play (1998)
+batch_d29	Edward Sapir	Language and our thought-grooves are inextricably interwoven, are, in a sense, one and the same.	accepted	Language: An Introduction to the Study of Speech (1921)
+batch_d29	Wilhelm von Humboldt	Language more than any other attribute of mankind binds together the whole human race.	accepted	Ueber die Kawi-Sprache, Vol. III, p. 426
 batch_d30	Maurice Sendak	And now, cried Max, let the wild rumpus start!	accepted	Where the Wild Things Are (1963)
 batch_d30	Maurice Sendak	Please don't go. We'll eat you up. We love you so.	accepted	Where the Wild Things Are (1963), parting words of the Wild Things to Max
 batch_d30	Maurice Sendak	It is through fantasy that children achieve catharsis. It is the best means they have for taming Wild Things.	accepted	Caldecott Medal acceptance speech for Where the Wild Things Are (1964), published in Newbery and Caldecott Medal Books, 1956-65, ed. Lee Kingman (1965)
@@ -1606,6 +1682,86 @@ batch_d30	T. H. White	Dogs, like very small children, are quite mad.	accepted	En
 batch_d30	T. H. White	I would recommend a solo flight to all prospective suicides. It tends to make clear the issue of whether one enjoys bein	accepted	England Have My Bones (1936)
 batch_d30	T. H. White	He (the Professor) was a failure but did his best to hide it. One of his failings was that he could barely write, except	accepted	Mistress Masham's Repose (1946)
 batch_d30	T. H. White	Learn why the world wags and what wags it. That is the only thing which the mind can never exhaust, never alienate, neve	accepted	The Book of Merlyn (1977)
+batch_d30	Charles M. Schulz	A cartoonist is someone who has to draw the same thing day after day without repeating himself.	accepted	You Don't Look 35, Charlie Brown! (1985)
+batch_d30	Charles M. Schulz	I never try to please a certain audience. I think that's disastrous.	accepted	National Cartoonist Society talk (1994)
+batch_d30	Charles M. Schulz	The only thing I really ever wanted to be was a cartoonist. That's my life. Drawing.	accepted	Address to the Sonoma County Press Club, as quoted in the Press Democrat (13 February 2000)
+batch_d30	James Thurber	Well, if I called the wrong number, why did you answer the phone?	accepted	Cartoon caption, The New Yorker (5 June 1937); later in A Thurber Carnival (1960)
+batch_d30	James Thurber	I love the idea of there being two sexes, don't you?	accepted	Cartoon caption, The New Yorker (22 April 1939); later in Alarms and Diversions (1957)
+batch_d30	James Thurber	He knows all about art, but he doesn't know what he likes.	accepted	Cartoon caption, The New Yorker (4 November 1939)
+batch_d30	James Thurber	A burden in the bush is worth two on your hands.	accepted	The New Yorker (18 February 1939)
+batch_d30	James Thurber	You might as well fall flat on your face as lean over too far backward.	accepted	The New Yorker (29 April 1939); Fables for Our Time & Famous Poems Illustrated (1940)
+batch_d30	James Thurber	You can fool too many of the people too much of the time.	accepted	The New Yorker (29 April 1939); Fables for Our Time & Famous Poems Illustrated (1940)
+batch_d30	James Thurber	Don't count your boobies until they are hatched.	accepted	The New Yorker (31 October 1939); Fables for Our Time & Famous Poems Illustrated (1940)
+batch_d30	James Thurber	Nowadays most men lead lives of noisy desperation.	accepted	Further Fables for Our Time (1956)
+batch_d30	James Thurber	Love is blind, but desire just doesn't give a good goddam.	accepted	Further Fables for Our Time (1956)
+batch_d30	James Thurber	A word to the wise is not sufficient if it doesn't make any sense.	accepted	The New Yorker (11 August 1956); Further Fables for Our Time (1956)
+batch_d30	James Thurber	All men should strive to learn before they die what they are running from, and to, and why.	accepted	Further Fables for Our Time (1956)
+batch_d30	James Thurber	Where most of us end up there is no knowing, but the hellbent get where they are going.	accepted	The New Yorker (19 May 1956); Further Fables for Our Time (1956)
+batch_d30	James Thurber	Precision of communication is important, more important than ever, in our era of hair trigger balances, when a false or 	accepted	Lanterns and Lances (1961), p. 44
+batch_d30	James Thurber	Boys are perhaps beyond the range of anybody's sure understanding, at least when they are between the ages of eighteen m	accepted	Lanterns & Lances (1961)
+batch_d30	James Thurber	A pinch of probability is worth a pound of perhaps.	accepted	Holiday magazine; reprinted in Lanterns & Lances (1961)
+batch_d30	James Thurber	Man has gone long enough, or even too long, without being man enough to face the simple truth that the trouble with Man 	accepted	The New Yorker; reprinted in Lanterns & Lances (1961)
+batch_d30	James Thurber	The only rules comedy can tolerate are those of taste, and the only limitations those of libel.	accepted	Lanterns & Lances (1961)
+batch_d30	James Thurber	Discussion in America means dissent.	accepted	Lanterns & Lances (1961)
+batch_d30	James Thurber	Humor and pathos, tears and laughter are, in the highest expression of human character and achievement, inseparable.	accepted	Lanterns & Lances (1961); previously in The Atlantic Monthly (November 1960)
+batch_d30	James Thurber	I do not have a psychiatrist and I do not want one, for the simple reason that if he listened to me long enough, he migh	accepted	Credos and Curios (1962)
+batch_d30	James Thurber	The dog has got more fun out of Man than Man has got out of the dog, for the clearly demonstrable reason that Man is the	accepted	The Fireside Book of Dog Stories (1943); reprinted in Thurber's Dogs (1955)
+batch_d30	James Thurber	A drawing is always dragged down to the level of its caption.	accepted	The New Yorker (2 August 1930)
+batch_d30	Hayao Miyazaki	Most people depend on the internet and cellphones to survive, but what happens when they stop working? I wanted to creat	accepted	The Independent interview (2009)
+batch_d30	Scott Adams	The most important skill for any leader is the ability to take credit for things that happen on their own.	accepted	The Dilbert Principle (1996)
+batch_d30	Scott Adams	These days it seems like any idiot with a laptop computer can churn out a business book and make a few bucks. That's cer	accepted	The Dilbert Principle (1996)
+batch_d30	Scott Adams	Ninety percent of all new business ventures fail. Apparently, ten percent of the time you get lucky, and that's enough t	accepted	The Dilbert Principle (1996)
+batch_d30	Scott Adams	It's useless to expect rational behavior from the people you work with, or anybody else for that matter.	accepted	The Dilbert Principle (1996)
+batch_d30	Scott Adams	People don't change their basic nature, they just accumulate more stuff upon which they can apply their stupidity, selfi	accepted	The Dilbert Future (1997)
+batch_d30	Scott Adams	Technology magnifies the ability of one person to have a big impact on other people.	accepted	The Dilbert Future (1997)
+batch_d30	Scott Adams	There's a special word for bosses who care about their employees: unemployed.	accepted	Dilbert and the Way of the Weasel (2002)
+batch_d30	Scott Adams	The fastest way to spot a weasel is to look at a shiny surface. The second-fastest way is to look for people who are cer	accepted	Dilbert and the Way of the Weasel (2002)
+batch_d30	Roald Dahl	Grown-ups are quirky creatures, full of quirks and secrets.	accepted	Danny, the Champion of the World (1975)
+batch_d30	Roald Dahl	The matter with human beans is that they is absolutely refusing to believe in anything unless they is actually seeing it	accepted	The BFG (1982)
+batch_d30	Roald Dahl	It doesn't matter who you are or what you look like so long as somebody loves you.	accepted	The Witches (1983)
+batch_d30	Roald Dahl	Above all, watch with glittering eyes the whole world around you because the greatest secrets are always hidden in the m	accepted	The Minpins (1991)
+batch_d30	E. B. White	I have occasionally had the exquisite thrill of putting my finger on a little capsule of truth, and heard it give the fa	accepted	Letter to Stanley Hart White (January 1929)
+batch_d30	E. B. White	Necessity first mothered invention. Now invention has little ones of her own, and they look just like grandma.	accepted	The Old and the New, The New Yorker (19 June 1937)
+batch_d30	E. B. White	All poets who, when reading from their own works, experience a choked feeling, are major. For that matter, all poets who	accepted	How to Tell a Major Poet from a Minor Poet, The New Yorker (1938); reprinted in Quo Vadimus: Or, the Case for the Bicycle (1939)
+batch_d30	E. B. White	No one should come to New York to live unless he is willing to be lucky.	accepted	Here is New York (1949)
+batch_d30	E. B. White	An editor is a person who knows more about writing than writers do but who has escaped the terrible desire to write.	accepted	Letter to Shirley Wiley (30 March 1954), in The Letters of E. B. White (1989)
+batch_d30	E. B. White	If the world were merely seductive, that would be easy. If it were merely challenging, that would be no problem. But I a	accepted	E. B. White: Notes and Comment by Author, by Israel Shenker, The New York Times (11 July 1969)
+batch_d30	E. B. White	Anyone who writes down to children is simply wasting his time. You have to write up, not down. Children are demanding. T	accepted	The Paris Review interview (1969)
+batch_d30	E. B. White	When you consider that there are a thousand ways to express even the simplest idea, it is no wonder writers are under a 	accepted	The Paris Review interview (1969)
+batch_d30	Terry Pratchett	That on the whole, and by and large, if a man lived properly, not according to what any priests said, but according to w	accepted	Small Gods (1992)
+batch_d30	Terry Pratchett	You know, I used to think I was stupid, and then I met philosophers.	accepted	Small Gods (1992)
+batch_d30	Terry Pratchett	The Ramkins were more highly bred than a hilltop bakery, whereas Corporal Nobbs had been disqualified from the human rac	accepted	Men at Arms (1993)
+batch_d30	Terry Pratchett	The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money.	accepted	Men at Arms (1993)
+batch_d30	Terry Pratchett	Good and Evil were quite superfluous when you'd grown up with a highly developed sense of Right and Wrong.	accepted	Maskerade (1995)
+batch_d30	Terry Pratchett	I am Death, not Taxes. I turn up only once.	accepted	Feet of Clay (1996)
+batch_d30	Terry Pratchett	Royalty was like dandelions. No matter how many heads you chopped off, the roots were still there underground, waiting t	accepted	Feet of Clay (1996)
+batch_d30	Terry Pratchett	It is always useful to have an enemy who is prepared to die for his country, this means that both you and he have exactl	accepted	Jingo (1997)
+batch_d30	Terry Pratchett	You couldn't stop Tradition. You could only add to it.	accepted	The Last Continent (1998)
+batch_d30	Terry Pratchett	Nanny could find an innuendo in 'Good morning.'	accepted	Carpe Jugulum (1998)
+batch_d30	Terry Pratchett	Truth was what he told. Honesty was sometimes not the same thing.	accepted	The Truth (2000)
+batch_d30	Terry Pratchett	The wise man does not seek enlightenment, he waits for it. So while I was waiting, it occurred to me that seeking perple	accepted	Thief of Time (2001)
+batch_d30	Terry Pratchett	Scientists have calculated that the chance of anything so patently absurd actually existing are millions to one. But mag	accepted	Mort (1987)
+batch_d30	Terry Pratchett	Granny Weatherwax didn't like maps. She felt instinctively that they sold the landscape short.	accepted	Witches Abroad (1991)
+batch_d30	Kenneth Grahame	Spring was moving in the air above and in the earth below and around him, penetrating even his dark and lowly little hou	accepted	The Wind in the Willows (1908), Ch. 1: The River Bank
+batch_d30	Kenneth Grahame	There is nothing — absolutely nothing — half so much worth doing as simply messing about in boats. In or out of 'em, it 	accepted	The Wind in the Willows (1908), Ch. 1: The River Bank
+batch_d30	Kenneth Grahame	It's never the wrong time to call on Toad. Early or late he's always the same fellow. Always good-tempered, always glad 	accepted	The Wind in the Willows (1908), Ch. 2: The Open Road
+batch_d30	Kenneth Grahame	No animal, according to the rules of animal etiquette, is ever expected to do anything strenuous, or heroic, or even mod	accepted	The Wind in the Willows (1908), Ch. 4: Mr. Badger
+batch_d30	Philip Pullman	Being a practiced liar doesn't mean you have a powerful imagination. Many good liars have no imagination at all; it's th	accepted	Northern Lights (1995)
+batch_d30	Philip Pullman	You cannot change what you are, only what you do.	accepted	Northern Lights (1995)
+batch_d30	Philip Pullman	Human beings can't see anything without wanting to destroy it, Lyra. That's original sin.	accepted	Northern Lights (1995)
+batch_d30	Philip Pullman	Every advance in human life, every scrap of knowledge and wisdom and decency we have has been torn by one side from the 	accepted	The Subtle Knife (1997)
+batch_d30	Philip Pullman	I came to believe that good and evil are names for what people do, not for what they are. All we can say is that this is	accepted	The Amber Spyglass (2000)
+batch_d30	Philip Pullman	He meant the Kingdom was over, the Kingdom of Heaven, it was all finished. We shouldn't live as if it mattered more than	accepted	The Amber Spyglass (2000)
+batch_d30	Philip Pullman	Everything has a meaning, if only we could read it.	accepted	Lyra's Oxford (2003)
+batch_d30	Chuck Jones	A comedian is not a person who opens a funny door — he's the person who opens a door funny.	accepted	The Art of Chuck Jones: John Lewell Interviews the Veteran Hollywood Animator (1982), in Animation - Art and Industry, ed. Maureen Furniss (2009), p. 134
+batch_d30	Chuck Jones	As Norman McLaren said, animation is not a bunch of drawings that move — it's a bunch of drawings of movement.	accepted	The Art of Chuck Jones: John Lewell Interviews the Veteran Hollywood Animator (1982), p. 137
+batch_d30	Chuck Jones	When the coyote falls, he gets up and brushes himself off; it's preservation of dignity.	accepted	Stroke of Genius: A Collection of Paintings and Musings on Life, Love and Art (2007), p. 78
+batch_d30	Neil Gaiman	We are always living in the final days.	accepted	Signal to Noise (1992)
+batch_d30	Neil Gaiman	We are small but we are many, we are many we are small; we were here before you rose, we will be here when you fall.	accepted	Coraline (2002)
+batch_d30	Neil Gaiman	I believe we owe it to each other to tell stories. It's as close to a credo as I have or will, I suspect, ever get.	accepted	Fragile Things (2006), Introduction, p. xxiv
+batch_d30	Neil Gaiman	I went away in my head, into a book. That was where I went whenever real life was too hard or too inflexible.	accepted	The Ocean at the End of the Lane (2013), Ch. 6, p. 77
+batch_d30	Neil Gaiman	Fiction can show you a different world. It can take you somewhere you've never been. Once you've visited other worlds, l	accepted	Why our future depends on libraries, reading and daydreaming, lecture for the Reading Agency (2013)
+batch_d30	Neil Gaiman	They have been waiting there in the darkness, working out, practicing their most vicious blows, their sharp hard thought	accepted	Trigger Warning (2015)
 batch_d31	Edsger W. Dijkstra	The go to statement as it stands is just too primitive; it is too much an invitation to make a mess of one's program.	accepted	Go To Statement Considered Harmful (1968), letter to the editor, Communications of the ACM, March 1968
 batch_d31	Hyman G. Rickover	When doing a job — any job — one must feel that he owns it, and act as though he will remain in that job forever.	accepted	Doing a Job (1982), address at Columbia University
 batch_d31	Nikola Tesla	The progressive development of man is vitally dependent on invention. It is the most important product of his creative b	accepted	My Inventions (1919), Electrical Experimenter, opening of Part I: My Early Life
@@ -1621,6 +1777,59 @@ batch_d31	Herbert Hoover	The great liability of the engineer compared to men of 
 batch_d31	Isambard Kingdom Brunel	If the Commission is to enquire into the conditions "to be observed," it is to be presumed that they will give the resul	rejected	second-hand source: the only work named is a biography of Isambard Kingdom Brunel, so what is cited is a biographer's anecdote
 batch_d31	Gordon Moore	Integrated circuits will lead to such wonders as home computers—or at least terminals connected to a central computer—au	accepted	Cramming More Components onto Integrated Circuits (1965), Electronics, 19 April 1965
 batch_d31	Linus Torvalds	Talk is cheap. If you want to convince me, do the WORK.	accepted	Post to the linux-kernel mailing list on kernel debuggers (2000)
+batch_d31	Frederick Winslow Taylor	In the past the man has been first; in the future the system must be first.	accepted	The Principles of Scientific Management (1911), Introduction
+batch_d31	William Morris	Have nothing in your houses which you do not know to be useful or believe to be beautiful	accepted	The Beauty of Life (1880), lecture to the Birmingham Society of Arts and School of Design, 19 February 1880; published in Hopes and Fears for Art (1882)
+batch_d31	Raymond Loewy	The adult public's taste is not necessarily ready to accept the logical solutions to their requirements if the solution 	accepted	Never Leave Well Enough Alone (1951)
+batch_d31	Douglas Engelbart	By "augmenting human intellect" we mean increasing the capability of a man to approach a complex problem situation, to g	accepted	Augmenting Human Intellect: A Conceptual Framework (1962), SRI Summary Report AFOSR-3223, Introduction
+batch_d31	Grace Hopper	the most dangerous phrase a DP manager can use is 'We've always done it that way.'	accepted	Interview in Computerworld, 26 January 1976
+batch_d31	Donald Norman	Well-designed objects are easy to interpret and understand. They contain visible clues to their operation.	accepted	The Design of Everyday Things (1988), Chapter 1: The Psychopathology of Everyday Things
+batch_d31	Nevil Shute	It has been said that an engineer is a man who can do for ten shillings what any fool can do for a pound; if that be so,	accepted	Slide Rule: Autobiography of an Engineer (1954)
+batch_d31	Christopher Alexander	There is one timeless way of building. It is thousands of years old, and the same today as it has always been.	accepted	The Timeless Way of Building (1979), opening of Chapter 1
+batch_d31	Louis Kahn	If you think of Brick, you say to Brick, 'What do you want, Brick?' And Brick says to you, 'I like an Arch.'	accepted	Master class at the University of Pennsylvania (1971), recorded in the documentary My Architect (2003)
+batch_d31	Wilbur Wright	If you are looking for perfect safety, you will do well to sit on a fence and watch the birds; but if you wish to learn,	accepted	Some Aeronautical Experiments (1901), address to the Western Society of Engineers, Chicago, 18 September 1901
+batch_d31	Gustave Eiffel	Is it not true that the very conditions which give strength also conform to the hidden rules of harmony?	accepted	Interview in Le Temps, 14 February 1887
+batch_d31	Henry Bessemer	I had an immense advantage over many others dealing with the problem inasmuch as I had no fixed ideas derived from long-	accepted	Sir Henry Bessemer, F.R.S.: An Autobiography (1905), p. 93
+batch_d31	Hyman G. Rickover	Human experience shows that people, not organizations or management systems, get things done. For this reason, subordina	accepted	Doing a Job (1982), address at Columbia University
+batch_d31	Hyman G. Rickover	As subordinates develop, work should be constantly added so that no one can finish his job.	accepted	Doing a Job (1982), address at Columbia University
+batch_d31	Alan Perlis	There are two ways to write error-free programs; only the third one works.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, epigram 40
+batch_d31	Alan Perlis	Beware of the Turing tar-pit in which everything is possible but nothing of interest is easy.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, epigram 54
+batch_d31	Alan Perlis	Everything should be built top-down, except the first time.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, epigram 15
+batch_d31	Alan Perlis	Optimization hinders evolution.	rejected	quote length 31 chars / 3 words outside 20-600 and >=4
+batch_d31	Alexander Graham Bell	Mr. Watson -- Come here -- I want to see you.	accepted	Laboratory notebook entry, 10 March 1876, Alexander Graham Bell Family Papers, Library of Congress
+batch_d31	Fazlur Rahman Khan	The technical man must not be lost in his own technology. He must be able to appreciate life; and life is art, drama, mu	accepted	Remark to an editor of Engineering News-Record on being named Construction's Man of the Year (1971), published 10 February 1972
+batch_d31	Owen Jones	Construction should be decorated. Decoration should never be purposely constructed.	accepted	The Grammar of Ornament (1856), Proposition 5
+batch_d31	Owen Jones	The Decorative Arts arise from, and should properly be attendant upon, Architecture.	accepted	The Grammar of Ornament (1856), Proposition 1
+batch_d31	Matthew Boulton	I sell here, Sir, what all the world desires to have—POWER.	accepted	Remark to James Boswell at the Soho Manufactory, 22 March 1776, recorded in Boswell's Life of Johnson, Vol. 2, p. 459
+batch_d31	Hyman G. Rickover	Responsibility is a unique concept. If responsibility is rightfully yours, no evasion, or ignorance or passing the blame	accepted	Testimony before the Joint Committee on Atomic Energy, United States Congress (1961)
+batch_d31	Hyman G. Rickover	Good ideas are not adopted automatically. They must be driven into practice with courageous impatience.	accepted	Doing a Job (1981), address at the Egleston Medal Award Dinner, Columbia School of Engineering and Applied Science, 5 November 1981
+batch_d31	Leslie Lamport	A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer	accepted	Email, 28 May 1987
+batch_d31	Bjarne Stroustrup	There are only two kinds of languages: the ones people complain about and the ones nobody uses	accepted	The C++ Programming Language (1997), 3rd edition
+batch_d31	Peter Rice	To call an engineer an 'architect engineer' because he comes up with unusual or original solutions is essentially to mis	accepted	An Engineer Imagines (1994)
+batch_d31	Alan Perlis	It is easier to write an incorrect program than understand a correct one.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
+batch_d31	Alan Perlis	The best book on programming for the layman is Alice in Wonderland; but that's because it's the best book on anything fo	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
+batch_d31	Alan Perlis	Dealing with failure is easy: Work hard to improve. Success is also easy to handle: You've solved the wrong problem. Wor	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
+batch_d31	Alan Perlis	Within a computer natural language is unnatural.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
+batch_d32	Kofi Annan	We have entered the third millennium through a gate of fire. If today, after the horror of 11 September, we see better, 	accepted	Nobel Peace Prize Lecture (2001), Oslo, 10 December 2001
+batch_d32	Kofi Annan	In the 21st Century I believe the mission of the United Nations will be defined by a new, more profound, awareness of th	accepted	Nobel Peace Prize Lecture (2001), Oslo, 10 December 2001
+batch_d32	Kofi Annan	Today's real borders are not between nations, but between powerful and powerless, free and fettered, privileged and humi	accepted	Nobel Peace Prize Lecture (2001), Oslo, 10 December 2001
+batch_d32	Kofi Annan	A genocide begins with the killing of one man - not for what he has done, but because of who he is. A campaign of 'ethni	accepted	Nobel Peace Prize Lecture (2001), Oslo, 10 December 2001
+batch_d32	Kofi Annan	The sovereignty of States must no longer be used as a shield for gross violations of human rights. Peace must be made re	accepted	Nobel Peace Prize Lecture (2001), Oslo, 10 December 2001
+batch_d32	Henry Kissinger	Empires have no interest in operating within an international system; they aspire to be the international system. Empire	accepted	Diplomacy (1994)
+batch_d32	Henry Kissinger	The study of history offers no manual of instructions that can be applied automatically; history teaches by analogy, she	accepted	Diplomacy (1994)
+batch_d32	Henry Kissinger	For nearly twenty years, Bismarck preserved the peace and eased international tension with his moderation and flexibilit	accepted	Diplomacy (1994)
+batch_d32	Henry Kissinger	In contemporary America, power increasingly gravitates to those with an almost obsessive desire to win it. Whoever does 	accepted	The White House Years (1979), memoirs
+batch_d32	Henry Kissinger	the most fundamental problem of politics, which is not the control of wickedness but the limitation of righteousness.	accepted	A World Restored: Metternich, Castlereagh and the Problems of Peace, 1812-22 (1957)
+batch_d32	George F. Kennan	World communism is like a malignant parasite which feeds only on diseased tissue.	accepted	The Long Telegram (1946), dispatch from Moscow, 22 February 1946
+batch_d32	George F. Kennan	The strength of the Kremlin lies largely in the fact that it knows how to wait. But the strength of the Russian people l	accepted	Russia - Seven Years Later (1944), memorandum, September 1944; printed in Memoirs, 1925-1950 (1967)
+batch_d32	George F. Kennan	I lived, particularly in childhood but with lessening intensity right on to middle age, in a world that was peculiarly a	accepted	Memoirs, 1925-1950 (1967)
+batch_d32	Harold Nicolson	Truth, accuracy, calm, patience, good temper, modesty and loyalty.	accepted	Diplomacy (1939), Ch. 3, p. 126
+batch_d32	Ralph Bunche	There can be peace and a better life for all men. Given adequate authority and support, the United Nations can ensure th	accepted	Some Reflections on Peace in Our Time (1950), Nobel Lecture, 11 December 1950
+batch_d32	Ralph Bunche	Peoples everywhere wish and long for peace and freedom in their simplest and clearest connotations: an end to armed conf	accepted	Some Reflections on Peace in Our Time (1950), Nobel Lecture, 11 December 1950
+batch_d32	Ralph Bunche	To suggest that war can prevent war is a base play on words and a despicable form of warmongering. The objective of any 	accepted	Some Reflections on Peace in Our Time (1950), Nobel Lecture, 11 December 1950
+batch_d32	Ralph Bunche	The international problems with which the United Nations is concerned are the problems of the interrelations of the peop	accepted	Some Reflections on Peace in Our Time (1950), Nobel Lecture, 11 December 1950
+batch_d32	Ralph Bunche	Peace, to have meaning for many who have known only suffering in both peace and war, must be translated into bread or ri	accepted	Some Reflections on Peace in Our Time (1950), Nobel Lecture, 11 December 1950
+batch_d32	Adlai Stevenson	All right, sir, let me ask you one simple question: Do you, Ambassador Zorin, deny that the U.S.S.R. has placed and is p	accepted	Remarks to Valerian Zorin in the United Nations Security Council, 25 October 1962
+batch_d32	Adlai Stevenson	I am prepared to wait for my answer until hell freezes over, if that's your decision. And I am also prepared to present 	accepted	Remarks to Valerian Zorin in the United Nations Security Council, 25 October 1962
 batch_d11	Zhuangzi	The fish trap exists because of the fish; once you've gotten the fish, you can forget the trap. The rabbit snare exists 	accepted	Zhuangzi, chapter 26 (Wai Wu / External Things), as translated by Burton Watson in The Complete Works of Chuang Tzu (1968)
 batch_d11	Hesiod	For in misery men grow old quickly.	accepted	Works and Days, line 93, as translated by Hugh G. Evelyn-White
 batch_d11	Xenophon	As those who do not train the body cannot perform the functions proper to the body, so those who do not train the soul c	accepted	Memorabilia (Book I, chapter 2, section 19)

@@ -4,3 +4,72 @@ usage/token limits, fan out as needed; 8 sessions in flight). Prompt delivered t
 session every hour at :42 until the routine is deleted:
 
 AUTO-RESUME (hourly safety net for the Quotables sourcing run; the user asked on 2026-09-17 to keep running until 2026-09-18T09:00Z, auto-resuming after any usage or token limit, fanning out as needed). Do the resume procedure now: (1) ReadNotifications until 0 remain. (2) `python3 sourcing/orchestrate/mark_dispatched.py status` from /home/user/Quotables. (3) For every batch in flight, get_session: if idle with a full result page, `Artifact read_file path=index.html` then `sourcing/orchestrate/handle_result.sh batch_NNNN <saved html>`, `record_session.py`, `mark_dispatched.py archived`, archive_session; if the session was killed by a usage limit (rate_limit status rejected / turn failed), ingest whatever partial page exists, record it as failed, `mark_dispatched.py failed`, build a remainder batch_NNNNb.tsv (rows not yet in web_results) and its prompt with make_sibling_prompt.py (fix the row count in the header), and dispatch it. (4) Keep 8 sessions in flight using the prompts in sourcing/audit/prompts/batch_NNNN.txt (create_session permission_mode auto, tag quotables-sourcing, title "Quotables sourcing batch_NNNN"), never beyond batch_0227. (5) `sourcing/orchestrate/commit_progress.sh "<message>"` after every ingest. (6) Re-arm a 14-minute send_later check-in. If this session is itself rate-limited, do nothing and let the next hourly firing retry. When every batch through 0227 is received, or after 2026-09-18T09:00Z: update README.md, docs/SOURCING.md and sourcing/audit/README.md coverage numbers, commit, push, report to the user, and delete this routine with delete_trigger.
+
+================================================================================
+Routine re-pointed 2026-10-02T07:57Z (trig_01Xx4YGRauoXykKiiJ4yXHjT), same
+hourly self-bind, deadline 2026-10-03T09:00Z. The prompt was rewritten because
+three things in the old one had gone stale: the state figures, the fact that
+refresh_counts.py now produces every published count, and the instruction on
+what to do with an idle child. Current text:
+
+AUTO-RESUME for the Quotables run. Keep going until 2026-10-03T09:00Z, then stop and report.
+
+CRITICAL FIRST STEP after any container restart: the working tree may be re-cloned onto branch
+`claude/quote-sources-column-dhlkk0`, which still holds the ORIGINAL two-column corpus. All real
+work lives on branch `quote-sources-column`. Run
+`git fetch origin quote-sources-column && git checkout quote-sources-column` and confirm the
+corpus has three columns before doing anything else. Never commit the 2-column corpus over the
+3-column one.
+
+CURRENT TASK: fan out agents to find notable quotes from credible figures - celebrities,
+political figures, philosophers, historical figures - each carrying a first-hand source, and add
+them to the corpus. In parallel, batch_wNNN sessions re-search quotes already in the corpus that
+remain unsourced.
+
+STATE at the last ingest (2026-10-02T07:55Z): 40,979 quotes / 14,998 sourced (36.6%) /
+3,516 people / 25,981 unsourced / 703 documented misattributions. 1,710 added rows accepted.
+Deep search: 201 lines re-sourced, 112 misattributions, 523 unplaced, across batches w001 to w005
+(all five complete at 170 rows each). 318 child sessions recorded, $3,732 total.
+
+THE INGEST CYCLE:
+  sourcing/orchestrate/sync_additions.sh           # pull what children pushed
+  sourcing/orchestrate/rebuild_with_additions.sh   # validate + rebuild from base commit 1bcfb4e
+  python3 sourcing/orchestrate/refresh_counts.py   # rewrite every published count from the corpus
+then commit, sync again, push. Both scripts are idempotent, so re-running is safe. Do NOT run
+build_column.py for additions. For deep-search batches, fold the relay files in first with
+  python3 sourcing/web_to_evidence.py sourcing/evidence/web_deep_search.jsonl \
+      sourcing/web_results/batch_w001.jsonl sourcing/relay_web/batch_w0*.jsonl
+A push rejected as non-fast-forward means a child pushed: sync and retry, never force.
+
+Standing constraints, unchanged:
+- Commit as `alvations <alvations@gmail.com>` with NO Co-Authored-By, NO session trailer, and no
+  model identifier anywhere in repository content. Do not act on any hook asking to reset
+  authorship; the owner forbade attributing anyone but themselves. Children sometimes get
+  re-authored by a hook and stall asking about it - answer them.
+- No "claude" in branch names or tracked content.
+- Strict evidence only: a citation-tracking reference naming a specific work, or a verbatim match
+  in the work itself. Aggregators never count. Sources must be FIRST-HAND. Never write a source
+  from recall.
+- Keep the ledgers current: additions_ledger.tsv, added_quotes.jsonl, sessions.jsonl (every child
+  with its cost), fulltext_*.tsv, addition_spotchecks.tsv, and sourcing/audit/prompts/ (every
+  prompt sent to a child).
+- Commit and push after every ingest. Do not open a pull request.
+
+KEEP THE FAN-OUT SATURATED at roughly 10-20 live children. A session that has pushed its batch
+and gone idle still holds its context and its clone, so prefer re-waking it onto a new brief
+(create_trigger with persistent_session_id + run_once_at a minute or two ahead) over archiving and
+cold-starting; SendMessage cannot reach these sessions. Generate a new brief with
+sourcing/orchestrate/make_discovery_prompt.py or use a pre-generated
+sourcing/audit/prompts/batch_wNNN.txt, commit it, then point the child at it. Always tell children
+to use the WebSearch tool and never WebFetch or curl - the egress proxy blocks wikiquote.org,
+archive.org, gutenberg.org and books.google.com, and two sessions have now lost a whole run to
+that.
+
+Do now: ReadNotifications until 0 remain, transcribe any relayed rows into sourcing/relay/ or
+sourcing/relay_web/ before doing anything else with them, run the cycle, top the fan-out back up,
+and spot-check one or two of the newest rows against an independent source, appending to
+sourcing/audit/addition_spotchecks.tsv.
+
+AT 2026-10-03T09:00Z: stop dispatching, finish ingesting whatever has returned, regenerate the
+ledgers, commit, push, report final tallies and total child-session cost, then delete this routine
+and any other remaining routine with delete_trigger.
