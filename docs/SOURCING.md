@@ -227,19 +227,19 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | verbatim location in Gutenberg full texts, first pass (94 works + Shakespeare) | 561 (539 found by no other step) |
 | verbatim location in Gutenberg full texts, second and third passes (3,631 works, 316 authors) | 1,296 (228 found by no other step) |
 | web-search agents (sourced) | 12,201 |
-| web-search agents (misattributed, kept as `[]`) | 762 |
+| web-search agents (misattributed, kept as `[]`) | 764 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
-| deep-search batches (batch_w001 to w010) over already-unsourced classical quotes | 492 |
-| discovery phase: quotes added, each arriving with a first-hand source | 2,599 |
+| deep-search batches (batch_w001 to w010) over already-unsourced classical quotes | 503 |
+| discovery phase: quotes added, each arriving with a first-hand source | 2,674 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **16,178 of 41,868 (38.6%)** |
+| **lines with at least one source** | **16,264 of 41,943 (38.8%)** |
 
 The discovery phase moves the percentage without moving the unsourced count, because every
 line it adds already carries a source: only the denominator grows. The deep-search batches are
 the ones that move the unsourced count, since they re-search lines the corpus already held -
-26,182 down to 25,690 so far - and they also produce findings that are not sources: 286 quotes
+26,182 down to 25,679 so far - and they also produce findings that are not sources: 292 quotes
 newly documented as misattributed, which keep `[]` as the strict policy requires. Those sit in
-`sourcing/evidence/web_deep_search.jsonl` alongside the 1,146 the deeper search still could not
+`sourcing/evidence/web_deep_search.jsonl` alongside the 1,193 the deeper search still could not
 place.
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
