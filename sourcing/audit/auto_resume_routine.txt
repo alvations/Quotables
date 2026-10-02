@@ -73,3 +73,26 @@ sourcing/audit/addition_spotchecks.tsv.
 AT 2026-10-03T09:00Z: stop dispatching, finish ingesting whatever has returned, regenerate the
 ledgers, commit, push, report final tallies and total child-session cost, then delete this routine
 and any other remaining routine with delete_trigger.
+
+================================================================================
+2026-10-02T13:20Z - the seven-day usage limit stopped the whole fan-out.
+
+Every one of the twelve sessions dispatched at 08:55Z hit the weekly limit at
+about 08:58Z, three minutes in. Three of them (d37, d38, d39) had already
+pushed a first flush, so 69 rows survived; the other nine, including all six
+deep-search batches, lost everything they had done because none of it had been
+pushed. The limit reset at 13:00Z and all thirteen stalled sessions - the
+twelve plus the batch_d18 theologians retry - were re-woken by one-shot
+triggers staggered a minute apart from 13:22Z.
+
+Two things to carry forward:
+
+1. Children must push early and often. The brief says to push after every 40
+   rows; for the resumed sessions this was tightened to every 15, because a
+   usage limit takes everything that has not reached the branch. The relay is
+   a fallback for push failures, not for usage limits: a session killed
+   mid-turn sends nothing at all.
+2. A usage limit is not a session failure. The container, the clone and the
+   context survive it, so the right response is a one-shot trigger just after
+   the reset time, which the rate_limit_info.resetsAt field in get_session
+   gives as a Unix timestamp.
