@@ -227,19 +227,19 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | verbatim location in Gutenberg full texts, first pass (94 works + Shakespeare) | 561 (539 found by no other step) |
 | verbatim location in Gutenberg full texts, second and third passes (3,631 works, 316 authors) | 1,296 (228 found by no other step) |
 | web-search agents (sourced) | 12,201 |
-| web-search agents (misattributed, kept as `[]`) | 703 |
+| web-search agents (misattributed, kept as `[]`) | 750 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
-| deep-search batches (batch_w001 to w005) over already-unsourced classical quotes | 201 |
-| discovery phase: quotes added, each arriving with a first-hand source | 1,917 |
+| deep-search batches (batch_w001 to w005) over already-unsourced classical quotes | 411 |
+| discovery phase: quotes added, each arriving with a first-hand source | 2,282 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **15,205 of 41,186 (36.9%)** |
+| **lines with at least one source** | **15,780 of 41,551 (38.0%)** |
 
 The discovery phase moves the percentage without moving the unsourced count, because every
 line it adds already carries a source: only the denominator grows. The deep-search batches are
 the ones that move the unsourced count, since they re-search lines the corpus already held -
-26,182 down to 25,981 so far - and they also produce findings that are not sources: 112 quotes
+26,182 down to 25,771 so far - and they also produce findings that are not sources: 232 quotes
 newly documented as misattributed, which keep `[]` as the strict policy requires. Those sit in
-`sourcing/evidence/web_deep_search.jsonl` alongside the 523 the deeper search still could not
+`sourcing/evidence/web_deep_search.jsonl` alongside the 944 the deeper search still could not
 place.
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
