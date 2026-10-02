@@ -230,9 +230,9 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | web-search agents (misattributed, kept as `[]`) | 703 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
 | deep-search batches (batch_w001 to w005) over already-unsourced classical quotes | 201 |
-| discovery phase: quotes added, each arriving with a first-hand source | 1,592 |
+| discovery phase: quotes added, each arriving with a first-hand source | 1,643 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **14,880 of 40,861 (36.4%)** |
+| **lines with at least one source** | **14,931 of 40,912 (36.5%)** |
 
 The discovery phase moves the percentage without moving the unsourced count, because every
 line it adds already carries a source: only the denominator grows. The deep-search batches are
@@ -361,6 +361,13 @@ times, and rebuilding from the base means a re-run can neither double-add a quot
 ledger with "already in the corpus" rejections that are really an earlier run's own work.
 `sourcing/orchestrate/sync_additions.sh` pulls what the agents pushed, resolving conflicts by
 ownership rather than by taking one side wholesale.
+
+`sourcing/orchestrate/refresh_counts.py` rewrites every count quoted in `README.md` and in the
+coverage table above, reading them off the corpus and the evidence files rather than from a
+previous version of the prose. Each ingest moves five or six of those figures, and editing them
+by hand is how a published number drifts away from the file it describes. Run it after each
+rebuild; `--check` reports staleness without writing, and exits non-zero, which is what a
+pre-push check wants.
 
 ### Spot-checks
 
