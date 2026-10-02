@@ -10,7 +10,17 @@
   "batch_d08": "session_01Gkskbp22HYkKL4Qt4zC48o",
   "batch_d09": "session_01J7KfQWfHpm8tbLGgJ173wc",
   "batch_d10": "session_01KoY1y5bkeGhF5LBku4MC5u",
-  "batch_w001": "session_01RVDjBSd7oZ5Lj9DHBNQ1mW"
+  "batch_w001": "session_01RVDjBSd7oZ5Lj9DHBNQ1mW",
+  "batch_d11": "session_01NBV461CBfzQCxwfo8iGWfN",
+  "batch_d12": "session_01Tq3nNM9sSkjTeSKgGrkvB9",
+  "batch_d13": "session_01L4ZBa12zqDvPS7mMTLo7uZ",
+  "batch_d14": "session_0138csJUoL83g7whWYYKH5uG",
+  "batch_d15": "session_01V41Z9ddmMc1V6PeFc7MwkM",
+  "batch_d16": "session_01VdkB9L8Rqnaur9b7P7ZJEY",
+  "batch_d17": "session_01NggEYfajgGugkbfUP1BaUx",
+  "batch_d18": "session_011CDU4rWbuZmoAWPggdbKFv",
+  "batch_w002": "session_01NBxf2feoEuWphjypsgc2dQ",
+  "batch_w003": "session_01UP2oyy9QTLJuhhv2wsFwVm"
  },
  "received": [
   "batch_d01",
@@ -36,7 +46,17 @@
   "batch_d08": "civil rights, activists, religious figures",
   "batch_d09": "film, television, theatre, music",
   "batch_d10": "athletes, explorers, business, technology",
-  "batch_w001": "deeper web pass over already-unsourced classical quotes"
+  "batch_w001": "deeper web pass over already-unsourced classical quotes",
+  "batch_d11": "ancient and classical figures",
+  "batch_d12": "mathematicians and computer scientists",
+  "batch_d13": "naturalists and physicians",
+  "batch_d14": "composers and classical musicians",
+  "batch_d15": "architects, designers, visual artists",
+  "batch_d16": "military figures and explorers",
+  "batch_d17": "economists and social scientists",
+  "batch_d18": "theologians and mystics",
+  "batch_w002": "deeper web pass, classical unsourced",
+  "batch_w003": "deeper web pass, classical unsourced"
  },
  "corpus_base_commit": "1bcfb4e"
 }
