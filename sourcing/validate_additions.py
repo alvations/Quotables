@@ -93,6 +93,32 @@ CHECKABLE = re.compile(r"""(?ix)
          | poem | play | novel | autobiograph ) \b""")
 
 
+# Two further shapes that name something real and still are not the speaker on the record.
+#
+# A source whose PRIMARY claim is that somebody else quoted the line - one that opens with
+# "Quoted in Cecil Gray, Sibelius: The Symphonies (1935)" - is offering a secondary source as
+# its citation. Where a quoting verb comes later in the string the row has already named a
+# first-hand work and is only saying which edition or translation it read, which is fine:
+# Schoenberg's "'New Music, Outmoded Music, Style and Idea' (1946), as quoted in Style and
+# Idea (1985), p. 124" names his own essay first and survives.
+QUOTED_FIRST = re.compile(r"""(?ix) ^ \s* (?: as\s+ )?
+    (?: quoted | cited | recorded | reported | recounted | related | mentioned ) \s+ (?: in | by ) \b""")
+# A conversation survives only in the other party's memory of it, so "in conversation with
+# Gustav Mahler" is Mahler's account however well attested the occasion is. A published
+# interview is different - it is a transcript - and SPEAKING keeps those.
+CONVERSATION = re.compile(r"""(?ix)
+    \b (?: in\s+conversation\s+with | conversation\s+with | said\s+to
+         | as\s+recalled\s+by | in\s+discussion\s+with ) \b""")
+
+# A biography title can appear as the VENUE of a first-hand text rather than as the source
+# of a remark: Darwin's own autobiography was first published inside The Life and Letters of
+# Charles Darwin, so naming that volume is saying where to find his own words. Any mention of
+# the person's own life writing therefore disarms the biography rule.
+OWN_LIFE_WRITING = re.compile(
+    r"(?i)\b(?:autobiograph|memoirs?\b|as\s+told\s+to|diary|diaries"
+    r"|journals?\b|notebooks?\b|letters\s+of)")
+
+
 def surnames(name):
     """Every substantial word of a person's name, folded to lowercase ASCII.
 
@@ -112,9 +138,13 @@ def secondhand_reason(author, src):
         return (f"credited to {m.group(1).strip()}'s account of the line, "
                 f"not to anything {author} wrote or said on the record")
     m = BIOGRAPHY_OF.search(src)
-    if m and (surnames(m.group(1)) & own):
+    if m and (surnames(m.group(1)) & own) and not OWN_LIFE_WRITING.search(src):
         return (f"the only work named is a biography of {author}, "
                 "so what is cited is a biographer's anecdote")
+    if QUOTED_FIRST.search(src):
+        return "the citation itself is somebody else quoting the line, not a work by the speaker"
+    if CONVERSATION.search(src) and not SPEAKING.search(src):
+        return "a conversation, which survives only in the other party's account of it"
     return None
 
 

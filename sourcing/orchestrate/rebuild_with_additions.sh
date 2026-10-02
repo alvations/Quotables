@@ -9,8 +9,18 @@ set -e
 cd "$(git rev-parse --show-toplevel)"
 BASE=$(python3 -c "import json;print(json.load(open('sourcing/discovery_state.json'))['corpus_base_commit'])")
 git show "$BASE:author-quote.txt" > /tmp/corpus_base.txt
+# Children return rows twice over: a git push to sourcing/additions/, and a text relay that
+# this session writes to sourcing/relay/. The git push is authoritative where it exists - it
+# is the child's own latest state - so a relay file is only read for a batch that never
+# managed to push, which is how a batch whose session died still reaches the corpus. Feeding
+# both would fill the ledger with "duplicate within this run" rejections that mean nothing.
+RELAY=()
+for r in sourcing/relay/*.jsonl; do
+  [ -e "$r" ] || continue
+  [ -e "sourcing/additions/$(basename "$r")" ] || RELAY+=("$r")
+done
 python3 sourcing/validate_additions.py /tmp/corpus_base.txt /tmp/corpus_staged.txt \
-        sourcing/audit/additions_ledger.tsv sourcing/additions/*.jsonl
+        sourcing/audit/additions_ledger.tsv sourcing/additions/*.jsonl "${RELAY[@]}"
 # Where a public-domain text was read and the quote found in it, that confirmation is folded
 # in alongside the row's citation. It lives in its own ledger so the rebuild stays idempotent.
 if [ -s sourcing/audit/fulltext_corroboration.tsv ]; then
