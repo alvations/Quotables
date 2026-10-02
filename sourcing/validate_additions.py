@@ -116,7 +116,11 @@ CONVERSATION = re.compile(r"""(?ix)
 # the person's own life writing therefore disarms the biography rule.
 OWN_LIFE_WRITING = re.compile(
     r"(?i)\b(?:autobiograph|memoirs?\b|as\s+told\s+to|diary|diaries"
-    r"|journals?\b|notebooks?\b|letters\s+of)")
+    r"|journals?\b|notebooks?\b|letters\s+of"
+    r"|(?:interesting\s+)?narrative\s+of\s+the\s+life"
+    r"|incidents\s+in\s+the\s+life"
+    r"|written\s+by\s+(?:him|her)self"
+    r"|life\s+and\s+times\s+of)")
 
 
 def surnames(name):
