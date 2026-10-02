@@ -7,10 +7,10 @@ A Corpus of Quotes.
 **Bruce Lee**
 
 # Statistics:
- - 40,552 quotes with
- - 1,055,540 words from
+ - 40,551 quotes with
+ - 1,055,522 words from
  - 3,418 people
- - 14,370 quotes (35.4%) carry a verified first-hand source; 26,182 (64.6%) do not:
+ - 14,369 quotes (35.4%) carry a verified first-hand source; 26,182 (64.6%) do not:
    they were searched without finding one, and 664 of them are recorded as misattributed
    or apocryphal (see docs/SOURCING.md; audit trail in sourcing/audit/)
 

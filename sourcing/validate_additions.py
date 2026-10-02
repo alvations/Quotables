@@ -159,6 +159,40 @@ def key(s):
     return " ".join(norm(s))
 
 
+# Rows withdrawn after a spot-check went and read an independent source. The listing is a
+# ledger, not a blocklist of wording: a quote here failed review for a stated reason, and
+# that reason is in sourcing/audit/withdrawn_additions.tsv next to the row.
+#
+# The first entry is the one that showed why this file is needed. Gauss's "Mathematics is the
+# queen of the sciences" arrived citing a Letter to Bessel (1826), which is a real locator on
+# the Wikiquote page - just sitting beside a different quote. The line itself comes from a
+# memorial his colleague Sartorius published the year after he died. The citation was real,
+# the evidence URL was real, and the pairing was wrong, which is the one failure no amount of
+# checking that a source "names a work" can catch.
+def load_withdrawn(path):
+    out = {}
+    try:
+        with open(path, encoding="utf8") as f:
+            next(f, None)
+            for line in f:
+                p = line.rstrip("\n").split("\t")
+                if len(p) >= 3 and p[0].strip():
+                    out[(key(p[0]), key(p[1]))] = p[2]
+    except FileNotFoundError:
+        pass
+    return out
+
+
+# An evidence note that hedges about WHICH entry on a page the citation came from is the
+# signature of exactly that failure. The Gauss row is the only one in a thousand that hedged,
+# and it was the one that turned out wrong, so the hedge is worth acting on rather than
+# merely noting.
+HEDGED = re.compile(r"""(?ix)
+    \b (?: this\s+variant | a\s+variant | variant\s+of | a\s+similar\s+(?:line|quote|entry)
+         | nearby | elsewhere\s+on\s+the\s+page | appears\s+to\s+be
+         | presumably | probably | likely\s+from ) \b""")
+
+
 def canonical_author(name, corpus_authors, added_authors):
     """Spell an added quote's author the way the corpus already spells them.
 
@@ -190,6 +224,7 @@ corpus_authors = {}
 for a, _, _ in rows:
     corpus_authors.setdefault(key(a), a)
 
+withdrawn = load_withdrawn("sourcing/audit/withdrawn_additions.tsv")
 accepted, ledger, seen = [], [], set()
 added_authors, renamed = {}, 0
 for path in sys.argv[4:]:
@@ -243,6 +278,10 @@ for path in sys.argv[4:]:
         disputed = [disputed_reason(s) for s in srcs]
         if all(disputed):
             reject("disputed work: " + disputed[0]); continue
+        if (key(a), key(q)) in withdrawn:
+            reject("withdrawn after review: " + withdrawn[(key(a), key(q))][:160]); continue
+        if ev and all(HEDGED.search(str(e)) for e in ev):
+            reject("evidence hedges about which entry on the page the citation came from"); continue
         if (key(a), key(q)) in have_pair:
             reject("already in the corpus"); continue
         if key(q) in have_quote:
