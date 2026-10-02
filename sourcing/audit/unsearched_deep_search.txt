@@ -1,0 +1,17 @@
+# Deep-search rows left unsearched when a batch's budget ran out.
+# Corpus line numbers against the original 39,269-line corpus.
+# batch_w004:
+3928
+3929
+3930
+19893
+19899
+19900
+19902
+19905
+19906
+19908
+19909
+19911
+19913
+19914
