@@ -229,17 +229,17 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | web-search agents (sourced) | 12,201 |
 | web-search agents (misattributed, kept as `[]`) | 664 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
-| deep-search batches (batch_w001 to batch_w003) over already-unsourced classical quotes | 96 |
+| deep-search batches (batch_w001, w002, w003, w005) over already-unsourced classical quotes | 107 |
 | discovery phase: quotes added, each arriving with a first-hand source | 1,592 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **14,775 of 40,861 (36.2%)** |
+| **lines with at least one source** | **14,786 of 40,861 (36.2%)** |
 
 The discovery phase moves the percentage without moving the unsourced count, because every
 line it adds already carries a source: only the denominator grows. The deep-search batches are
 the ones that move the unsourced count, since they re-search lines the corpus already held -
-26,182 down to 26,086 so far - and they also produce findings that are not sources: 49 quotes
+26,182 down to 26,075 so far - and they also produce findings that are not sources: 62 quotes
 newly documented as misattributed, which keep `[]` as the strict policy requires. Those sit in
-`sourcing/evidence/web_deep_search.jsonl` alongside the 365 the deeper search still could not
+`sourcing/evidence/web_deep_search.jsonl` alongside the 383 the deeper search still could not
 place.
 
 The web pass is complete: all 39,269 lines were searched, in 239 batch runs (batches 0000 to
