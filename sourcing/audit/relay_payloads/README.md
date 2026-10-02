@@ -11,6 +11,6 @@ same shape as `sourcing/web_results/`.
 They matter because the relay turned out to be the last line of defence rather than a
 redundancy. Twelve children were stopped by a seven-day usage limit three minutes after
 dispatch on 2026-10-02, and when they resumed, several reported through the relay and were
-archived before they managed a push. Seven instalments - 278 rows across five batches - arrived
+archived before they managed a push. Seven instalments - 318 rows across five batches - arrived
 after the run had already been declared finished, in the notification queue; without this
 directory they would have existed only in one session's inbox.

@@ -264,9 +264,9 @@ the run stopped.
   `author-quote.txt`, so the file on the branch satisfies every invariant this documentation
   claims for it.
 
-The last 278 of those deep-search rows arrived after the run had been wound up, as seven relay
-instalments sitting in the notification queue from children that were archived before they
-could push. They are in `relay_payloads/` verbatim beside the rows transcribed from them,
+The last 318 of those deep-search rows arrived after the run had been wound up, as seven relay
+instalments across five batches, sitting in the notification queue from children that were
+archived before they could push. They are in `relay_payloads/` verbatim beside the rows transcribed from them,
 which is the reason that directory exists.
 
 Two decisions were left open for the repository's owner, because both would move line numbers
