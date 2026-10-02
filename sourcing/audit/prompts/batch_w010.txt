@@ -30,15 +30,45 @@ One JSON object per row, one per line (JSONL):
 Source strings: work title, year of first publication when known, locator (chapter, act/scene, section, page, date) when the evidence gives one. Omit the author's name. Never invent a title, year or locator. Never put a Wikiquote or Quote Investigator URL in `sources` - those belong in `evidence`.
 
 ## Returning the results (essential)
-Keep results in a local file `results.jsonl` as you go, appending every 10 rows. Do NOT publish an artifact and do NOT attempt any git push - both are unavailable to you. Return the rows as plain text instead, IN INSTALMENTS, never saved for the end:
+Keep results in a local file `results.jsonl` as you go, appending every 10 rows. Then return
+them through BOTH channels below, in instalments, never saved for the end. Do not publish an
+artifact: that channel is out of quota.
 
-After every 40 rows, and again when finished, send the rows you have not yet sent by calling the `create_trigger` tool of the remote-session MCP server with:
+**Channel 1, git (try this first, after every 40 rows).** An earlier version of this brief said
+git push was unavailable. It is available, and it is the channel that matters, because a push
+puts the rows in the repository where nobody has to transcribe them:
+    git clone --depth 1 --branch quote-sources-column https://github.com/alvations/Quotables /home/user/quotables-corpus
+    cd /home/user/quotables-corpus
+    mkdir -p sourcing/web_results
+    cp /home/user/results.jsonl sourcing/web_results/batch_w010.jsonl
+    git -c user.name=alvations -c user.email=alvations@gmail.com add sourcing/web_results/batch_w010.jsonl
+    git -c user.name=alvations -c user.email=alvations@gmail.com commit -q -m "Deep search results: batch_w010"
+    git pull --rebase -q origin quote-sources-column && git push -q origin quote-sources-column
+Commit as alvations exactly as shown, with no other trailers. If the push is rejected because
+the branch moved, `git pull --rebase` and push again. Write the whole file each time rather than
+appending, so the pushed copy is always your current state. If your permission system refuses
+`git add`, `git commit`, `git config` or `git push`, do not fight it and do not ask - rely on
+channel 2 for the rest of the run.
+
+**Channel 2, text relay (a fallback, and a receipt).** After every 40 rows, and again when
+finished, call the `create_trigger` tool of the remote-session MCP server with:
   name: "results batch_w010 part <k>"
   persistent_session_id: "session_018SonTZr2inCLhXqzcif71w"
   run_once_at: an RFC3339 UTC time 2 minutes in the future (run `date -u +%Y-%m-%dT%H:%M:%SZ` for the current time)
   initiation: "human_schedule"
-  prompt: the literal text "RESULTS batch_w010 PART <k>" then a newline, then those rows re-serialised compactly, one JSON object per line, via `json.dumps(obj, separators=(",",":"), ensure_ascii=False)`.
-If create_trigger fails, retry after 30s, then after 60s. Sending in instalments matters: if this session is stopped by a usage limit, everything not yet sent is lost.
+  prompt: *If the push for those rows succeeded*, ONLY the single line
+          "RESULTS batch_w010 PART <k> PUSHED rows=<n> sourced=<n> misattributed=<n> unverified=<n>".
+          That is a receipt: it says the rows are in the repository and nothing needs
+          transcribing.
+          *If the push did NOT succeed* - refused by your permission system, still failing
+          after a pull and retry, or not attempted - then the literal text
+          "RESULTS batch_w010 PART <k> NOT PUSHED" then a newline, then those rows re-serialised
+          compactly, one JSON object per line, via
+          `json.dumps(obj, separators=(",",":"), ensure_ascii=False)`.
+Do not send the rows when the push worked: the orchestrator reads every relay message by hand,
+and rows it already has in the repository cost that reading for nothing. Do send them the moment
+a push fails, because then the relay is the only copy that leaves this container.
+If create_trigger fails, retry after 30s, then after 60s.
 
 Your final reply must be the single line "RESULTS batch_w010 done sourced=<n> misattributed=<n> unverified=<n>". Do not paste the JSONL into the reply.
 

@@ -94,18 +94,27 @@ the branch moved, `git pull --rebase` and push again. If your permission system 
 add`, `git commit`, `git config` or `git push`, do not fight it and do not ask - go straight to
 channel 2 and keep using it for the rest of the run.
 
-**Channel 2, text relay (always, even when git works).** After every 15 rows, and again when
-finished, send the rows not yet sent by calling the `create_trigger` tool of the remote-session
-MCP server with:
+**Channel 2, text relay (a fallback, and a receipt).** The relay exists because a push can be
+refused and a container can die, not to duplicate work the push already did. So after every 15
+rows, and again when finished, call the `create_trigger` tool of the remote-session MCP server
+with:
   name: "additions {name} part <k>"
   persistent_session_id: "{parent}"
   run_once_at: an RFC3339 UTC time 2 minutes in the future (`date -u +%Y-%m-%dT%H:%M:%SZ`)
   initiation: "human_schedule"
-  prompt: the literal text "ADDITIONS {name} PART <k>" then a newline, then those rows
-          re-serialised compactly, one per line, via
+  prompt: *If the push for those rows succeeded*, ONLY the single line
+          "ADDITIONS {name} PART <k> PUSHED rows=<n> total=<t> head=<the commit sha>".
+          That is a receipt: it tells the orchestrator the rows are in the repository and
+          nothing needs transcribing.
+          *If the push did NOT succeed* - refused by your permission system, rejected and
+          still failing after a pull and retry, or not attempted because git is unavailable -
+          then the literal text "ADDITIONS {name} PART <k> NOT PUSHED" then a newline, then
+          those rows re-serialised compactly, one per line, via
           `json.dumps(obj, separators=(",",":"), ensure_ascii=False)`.
-If create_trigger fails, retry after 30s, then after 60s. Instalments matter: if a usage limit
-stops this session, anything not yet sent is lost.
+Do not send the rows when the push worked: the orchestrator reads every relay message by hand,
+and a batch that pastes rows it has already pushed costs that reading for nothing. Do send them
+the moment a push fails, because then the relay is the only copy that leaves this container.
+If create_trigger fails, retry after 30s, then after 60s.
 
 Your final reply must be the single line "ADDITIONS {name} done rows=<n>". Do not paste the
 JSONL into the reply.
