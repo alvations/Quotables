@@ -954,42 +954,42 @@
   {
    "batch": "batch_0136b",
    "session": "session_01Nc9kWZffBhw7V7irfhieK8",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0137b",
    "session": "session_01Bgh8bmaU7ho7L8sC5ShDmV",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0138",
    "session": "session_01XJ9EyRCL4sn5dWhQBcgKHi",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0139",
    "session": "session_01GqZwPiu3wV8gwVzrTJ2ZuK",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0140b",
    "session": "session_018HndSbskEnUFoHafCFq2Uo",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0141b",
    "session": "session_0198zh2uaGGzFWYi2jcthWhz",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0142b",
    "session": "session_01WvEZpqEdyPmRhpFGVtso2d",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0143b",
    "session": "session_01VWbPKrGAuNDyGvYWndmNQD",
-   "reason": "seven-day Fable model limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on claude-opus-5"
+   "reason": "seven-day model-usage limit 2026-09-18T03:49Z (resets 13:00Z) before any page was published; re-dispatched on the fallback model"
   },
   {
    "batch": "batch_0187",

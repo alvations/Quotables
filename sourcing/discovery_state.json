@@ -20,7 +20,13 @@
   "batch_d17": "session_01NggEYfajgGugkbfUP1BaUx",
   "batch_d18": "session_011CDU4rWbuZmoAWPggdbKFv",
   "batch_w002": "session_01NBxf2feoEuWphjypsgc2dQ",
-  "batch_w003": "session_01UP2oyy9QTLJuhhv2wsFwVm"
+  "batch_w003": "session_01UP2oyy9QTLJuhhv2wsFwVm",
+  "batch_d19": "session_01GGugJL1kT1omsbuiZEm9GS",
+  "batch_d20": "session_01EM7UcU1ZjHEFTfHFNYUofo",
+  "batch_d21": "session_01HkZBJtCWNBUJjJhd7CWsXQ",
+  "batch_d22": "session_01J7BFAUuPMbZYs8EvWkRanG",
+  "batch_d23": "session_019ZWs7ZXsPUQ2Nd9U9FDgTm",
+  "batch_d24": "session_01DMiV6aoVbC5F9Lzvd6zTod"
  },
  "received": [
   "batch_d01",
@@ -56,8 +62,21 @@
   "batch_d17": "economists and social scientists",
   "batch_d18": "theologians and mystics",
   "batch_w002": "deeper web pass, classical unsourced",
-  "batch_w003": "deeper web pass, classical unsourced"
+  "batch_w003": "deeper web pass, classical unsourced",
+  "batch_d19": "Nobel laureates - literature and peace prize lectures and acceptance speeches",
+  "batch_d20": "jurists, judges and legal scholars - written opinions, dissents and legal writing",
+  "batch_d21": "aviators, astronauts and space-programme figures",
+  "batch_d22": "comedians, humorists and satirists",
+  "batch_d23": "suffragists, feminist writers and women's-rights campaigners",
+  "batch_d24": "writers, thinkers and leaders of Africa, Asia, the Middle East and Latin America"
  },
  "corpus_base_commit": "1bcfb4e",
- "note_return_channels": "Children's git pushes to sourcing/additions/ have carried every row so far, checked against the text relay rather than assumed: each batch's newest relayed authors were already present in its pushed file. The relay stays on as the fallback, since in earlier runs a permission classifier refused git in children and the relay was the only channel that worked."
+ "note_return_channels": "Children's git pushes to sourcing/additions/ have carried every row so far, checked against the text relay rather than assumed: each batch's newest relayed authors were already present in its pushed file. The relay stays on as the fallback, since in earlier runs a permission classifier refused git in children and the relay was the only channel that worked.",
+ "reruns": {
+  "batch_d08": {
+   "session": "session_01Gkskbp22HYkKL4Qt4zC48o",
+   "reason": "first attempt used WebFetch, which the egress proxy blocks, and returned 0 rows; re-woken 2026-10-02T04:28Z with instructions to research through WebSearch instead",
+   "trigger": "trig_01HVCrgCgjHYeVJVo6aRoi1j"
+  }
+ }
 }

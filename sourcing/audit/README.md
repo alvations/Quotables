@@ -108,7 +108,7 @@ sessions and an hourly self-wake routine was added so the run survives a limit t
 session too. Batches 0120 to 0179 completed normally (the five-hour limit killed the 0136-0143
 wave on 2026-09-17T23:24Z; their partial pages were ingested and the remainders re-run as
 b-batches, and the seven-day Fable pool was exhausted at 03:49Z, after which children were
-created on claude-opus-5 instead).
+created on the fallback model instead).
 
 Batches 0180 to 0187 then hit a harder problem: **the account's artifact-publishing quota ran
 out at about 06:03Z** (it resets near 00:06Z). Artifacts had been the return channel for every
