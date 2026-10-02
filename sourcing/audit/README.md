@@ -238,3 +238,36 @@ comparisons: 1,354 located, 18,006 below threshold, 21,731 no match).
   Titles that legitimately begin with the author's name - *Josh Billings: His Sayings*, *Jane
   Campion: Interviews*, *William Lloyd Garrison, 1805-1879* - were checked by hand and left
   alone. `sourcing/normalize_sources.py` applies the corrections as a reproducible step.
+
+## Close of the discovery run (2026-10-02)
+
+The figures above are snapshots of the passes they describe; these are the totals at the point
+the run stopped.
+
+- **330 agent sessions** are recorded in `sessions.jsonl`, USD 3,954.55 in total, every one of
+  them with a cost. The ledger carries a reconciliation record for each session whose real cost
+  was only readable after it finished, so a session may appear more than once: the last record
+  for a session is the authoritative one.
+- The corpus finished at **41,943 lines, 16,264 of them sourced (38.8%), covering 3,785
+  people**, with 25,679 lines still unsourced and 764 quotations documented as misattributed
+  and therefore deliberately left with `[]`.
+- The discovery phase contributed **2,674 added lines**, each one arriving with a first-hand
+  source; 84 of them were additionally confirmed verbatim in public-domain full text.
+- The deep-search batches (`batch_w001` to `w016`) re-searched lines the corpus already held:
+  **503 gained a source, 292 were documented as misattributions, 1,193 could not be placed**,
+  and 164 were never reached - their ids are in `unsearched_deep_search.txt`, not silently
+  counted as searched.
+- `verify_corpus.py` is the gate the rebuild runs before it is allowed to replace
+  `author-quote.txt`, so the file on the branch satisfies every invariant this documentation
+  claims for it.
+
+Two decisions were left open for the repository's owner, because both would move line numbers
+or source attributions that the evidence files address by line:
+
+- Twelve people are spelled two ways in the corpus (an accented form against an ASCII
+  flattening of it). Additions now adopt the majority spelling, but the existing rows were not
+  merged.
+- Three pairs of lines are duplicated in the base corpus (3916/3921, 20438/20459, 29147/29153).
+  They are reported by `verify_corpus.py` rather than removed, because every `id` in
+  `sourcing/evidence/` is a line number into the base corpus and deleting a line would
+  silently repoint thousands of citations.
