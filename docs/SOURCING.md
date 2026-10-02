@@ -393,6 +393,31 @@ both leave a real citation pointing at a real work:
 Of 14 checks, 12 confirmed and 2 found defects; both defects were corrected, and the failing
 checks are recorded as failures rather than quietly fixed.
 
+## Verifying the file
+
+`sourcing/verify_corpus.py` checks `author-quote.txt` against every invariant this
+documentation claims for it, and exits non-zero on any failure, so it can be wired into a
+pre-push hook:
+
+```
+python3 sourcing/verify_corpus.py
+41,620 lines / 15,856 sourced (38.1%) / 3,693 people
+3 duplicate pair(s) inherited from the base corpus, left in place: 3916/3921, 20438/20459, 29147/29153
+every invariant holds
+```
+
+It checks that every line has three tab-separated columns and no control characters, that
+column 3 parses as a JSON list of strings, that no author or quote is empty, that no source
+names an aggregator or is only a bare year, and that every evidence id points at a line that
+exists.
+
+The duplicate report is deliberately not a failure. Three (author, quote) pairs were already
+duplicated in the corpus before this project touched it - Disraeli on means and leisure, Keats
+on unheard melodies, Ovid on being asked - and they cannot be removed, because every id in
+`sourcing/evidence/` is a line number into the base corpus and deleting a line would silently
+repoint thousands of citations. A duplicate involving an *added* line does fail, since
+`validate_additions.py` is supposed to reject those before they land.
+
 ## Known limits
 
 - Coverage is partial. Many lines in this corpus circulate only on aggregator sites and have
