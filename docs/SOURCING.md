@@ -373,8 +373,25 @@ pre-push check wants.
 
 `sourcing/audit/addition_spotchecks.tsv` records rows checked by hand against a source
 independent of the one the agent used, with the verdict. These are the project's own sampling
-of its agents' work, not a claim about every row, and one of them is how the Gauss error came
-to light.
+of its agents' work, not a claim about every row.
+
+They have found two kinds of defect that no automatic check in this pipeline can see, because
+both leave a real citation pointing at a real work:
+
+- **The wrong line on the right page.** Gauss's "Mathematics is the queen of the sciences" was
+  recorded against a citation that belonged to a neighbouring quotation on the same page. The
+  reference existed, the URL resolved, and the pairing was still wrong. Two gates came out of
+  this one: a row is rejected when its evidence hedges about which entry on the page it came
+  from, and withdrawn pairings are kept in `withdrawn_additions.tsv` so they cannot return.
+- **The right work, the wrong words.** A row read "The electric things have their life too"
+  where *Do Androids Dream of Electric Sheep?* reads "The electric things have their lives,
+  too", and Martha Graham's *This I Believe* essay was cited under the title of a different
+  essay of hers. The book, the chapter and the author were right in both cases. Only reading
+  the text catches this, which is the argument for sampling by hand rather than trusting the
+  gate.
+
+Of 14 checks, 12 confirmed and 2 found defects; both defects were corrected, and the failing
+checks are recorded as failures rather than quietly fixed.
 
 ## Known limits
 
