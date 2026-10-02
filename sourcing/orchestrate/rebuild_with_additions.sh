@@ -37,15 +37,8 @@ if [ -s sourcing/audit/fulltext_corroboration.tsv ]; then
 else
   cp /tmp/corpus_staged.txt /tmp/corpus_new.txt
 fi
-python3 - <<'PY'
-import json
-n=s=0
-for i,l in enumerate(open('/tmp/corpus_new.txt',encoding='utf8'),1):
-    p=l.rstrip('\n').split('\t'); n+=1
-    assert len(p)==3, f"line {i} has {len(p)} columns"
-    for t in json.loads(p[2]):
-        assert not any(c in t for c in '\r\n\t'), f"line {i}: control char in source"
-    if json.loads(p[2]): s+=1
-print(f"verified {n:,} lines, {s:,} sourced")
-PY
+# The rebuilt file is checked against every invariant the documentation claims for it before
+# it is allowed to replace author-quote.txt. verify_corpus.py exits non-zero on any failure,
+# so a bad rebuild leaves the committed corpus untouched rather than overwriting it.
+python3 sourcing/verify_corpus.py /tmp/corpus_new.txt
 cp /tmp/corpus_new.txt author-quote.txt
