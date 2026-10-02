@@ -230,9 +230,9 @@ stay absent from the evidence file and are picked up again by the resume procedu
 | web-search agents (misattributed, kept as `[]`) | 752 |
 | **lines with at least one source, before the discovery phase** | **13,087 of 39,269 (33.3%)** |
 | deep-search batches (batch_w001 to w010) over already-unsourced classical quotes | 418 |
-| discovery phase: quotes added, each arriving with a first-hand source | 2,351 |
+| discovery phase: quotes added, each arriving with a first-hand source | 2,358 |
 | of those, additionally confirmed verbatim in public-domain full text | 84 |
-| **lines with at least one source** | **15,856 of 41,620 (38.1%)** |
+| **lines with at least one source** | **15,863 of 41,627 (38.1%)** |
 
 The discovery phase moves the percentage without moving the unsourced count, because every
 line it adds already carries a source: only the denominator grows. The deep-search batches are
