@@ -34,6 +34,122 @@ URL = re.compile(r"https?://")
 CONTROL = re.compile(r"[\x00-\x1f\x7f]")
 
 
+# A first-hand source is a document the speaker themself produced: a book, essay, poem, play,
+# letter, diary, speech text, article, or a transcribed interview or broadcast. Two shapes are
+# not first-hand however famous the line is, and both slipped past the earlier gate:
+#
+#   "Remark on elegant proofs, recorded in My Brain Is Open (1998) by Bruce Schechter, p. 14"
+#       - the only work named belongs to somebody else, so what is cited is a third party's
+#         recollection of a remark rather than the remark itself.
+#   "Remark at the Battle of Copenhagen (1801), as given in The Life of Nelson, Ch. 7"
+#       - a biography OF the speaker, written by somebody else, usually long afterwards.
+#
+# Two neighbouring shapes look similar and must survive, which is what keeps this rule narrow:
+#
+#   A self-report. Hillary recounting his own Everest line in his own autobiography, or Kay
+#   recounting his own 1971 remark in his own 1998 email, is the speaker on the record. The
+#   test is therefore whose name follows the recording verb, not whether one appears at all.
+#
+#   An autobiography. "Personal Memoirs of General U. S. Grant", "The Memoirs of Marshal
+#   Zhukov" and "The Curves of Time: The Memoirs of Oscar Niemeyer" all read as "memoirs of
+#   <the author>", and all three are the person writing their own life down - the strongest
+#   first-hand source there is. Only a LIFE of somebody, written by somebody else, is the
+#   biographer's anecdote this rule exists to catch.
+#
+#   A contemporaneous press record of a speech. Sojourner Truth's Akron convention remarks
+#   survive because Marius Robinson printed them in the Anti-Slavery Bugle three weeks later;
+#   that is a transcription of her speaking, not a recollection, and it is the source
+#   scholarship prefers over the famous rewrite published twelve years afterwards. A source
+#   that names a speaking occasion is therefore left alone.
+RECORDED_BY = re.compile(r"""(?ix)
+    \b(?: recorded | reported | recounted | related | quoted | as\s+told\s+to )\b
+    [^.;]{0,60}? \bby\s+
+    ( [A-Z][\w.'-]*
+      (?: \s+ (?: van | von | de | du | del | della | di ) )?
+      (?: \s+ [A-Z][\w.'-]* ){0,3} )""")
+BIOGRAPHY_OF = re.compile(r"""(?ix)
+    \b (?: the\s+ )?
+    (?: life\s+and\s+(?:letters|times|works?) | life | lives | biography )
+    \s+ of \s+
+    ( [A-Z][\w.'-]* (?: \s+ [A-Z][\w.'-]* ){0,3} )""")
+# A named speaking occasion: whoever wrote the words down was recording the person speaking.
+SPEAKING = re.compile(r"""(?ix)
+    \b (?: speech | speeches | address | addresses | remarks?\s+(?:at|to|before)
+         | convention | debate | testimony | hearing | lecture | sermon | oration
+         | proceedings | hansard | congressional\s+record | press\s+conference
+         | interview | broadcast | transcript | deposition | trial ) \b""")
+# A remark with nothing behind it - no document, no occasion, no date - is hearsay with a
+# name attached. These are flagged for review rather than rejected outright, because the
+# judgement of whether a named work is the speaker's own needs reading, not a regex.
+BARE_REMARK = re.compile(r"(?i)\b(?:remark|reportedly|anecdote|frequently\s+said)\b")
+CHECKABLE = re.compile(r"""(?ix)
+    \b 1[0-9]\d\d \b | \b 20[0-2]\d \b
+  | \b p{1,2} \. \s* \d
+  | \b (?: ch | chap | chapter | act | scene | book | vol | canto | sect | section | line )
+    \b \.? \s* [\dIVXLCivxlc]
+  | \b (?: letter | diary | journal | notebook | speech | address | lecture | sermon
+         | testimony | interview | broadcast | transcript | dispatch | telegram | email
+         | essay | preface | foreword | introduction | article | column | editorial
+         | poem | play | novel | autobiograph ) \b""")
+
+
+def surnames(name):
+    """Every substantial word of a person's name, folded to lowercase ASCII.
+
+    Comparing on the words is what distinguishes a self-report from a third party's account:
+    "recounted by Kay" against the author Alan Kay overlaps, "by Bruce Schechter" against
+    Paul Erdos does not. Accents are folded so "Erdos" still matches "Erdős".
+    """
+    flat = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    return {w.strip(".,'-").lower() for w in flat.split() if len(w.strip(".,'-")) > 2}
+
+
+def secondhand_reason(author, src):
+    """Why this source is somebody else's account rather than the speaker's own, or None."""
+    own = surnames(author)
+    m = RECORDED_BY.search(src)
+    if m and not (surnames(m.group(1)) & own) and not SPEAKING.search(src):
+        return (f"credited to {m.group(1).strip()}'s account of the line, "
+                f"not to anything {author} wrote or said on the record")
+    m = BIOGRAPHY_OF.search(src)
+    if m and (surnames(m.group(1)) & own):
+        return (f"the only work named is a biography of {author}, "
+                "so what is cited is a biographer's anecdote")
+    return None
+
+
+def thin_remark(src):
+    """True when a source calls the line a remark and offers nothing to check it against."""
+    return bool(BARE_REMARK.search(src)) and not CHECKABLE.search(src)
+
+
+# Works whose authenticity is itself contested in the relevant scholarship. A quote can be
+# copied faithfully out of one of these and still not be something the person said, so a
+# source that rests on nothing else does not clear the bar, however respectable the citation
+# looks. Each entry carries the reason, which is written into the rejection ledger.
+DISPUTED_WORKS = [
+    (re.compile(r"(?i)\bTestimony\b.{0,40}\bShostakovich\b|\bVolkov\b.{0,40}\bTestimony\b"),
+     "Testimony (1979) is a contested source: musicologists including Laurel Fay and Richard "
+     "Taruskin have shown that passages Volkov presents as dictated recollection reproduce "
+     "articles Shostakovich published earlier, and the manuscript he initialled cannot be "
+     "matched to the book as printed"),
+    (re.compile(r"(?i)\bDonation\s+of\s+Constantine\b"),
+     "the Donation of Constantine is an eighth-century forgery"),
+    (re.compile(r"(?i)\bProtocols\s+of\s+the\s+Elders\b"),
+     "a fabricated text, not a record of anything anyone said"),
+    (re.compile(r"(?i)\bAutobiography\s+of\s+Howard\s+Hughes\b|\bClifford\s+Irving\b"),
+     "the Irving autobiography was a hoax Hughes never gave"),
+]
+
+
+def disputed_reason(src):
+    """The reason this named work cannot carry a quote on its own, or None."""
+    for pat, why in DISPUTED_WORKS:
+        if pat.search(src):
+            return why
+    return None
+
+
 def norm(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9 ]", " ", s).split()
@@ -119,6 +235,14 @@ for path in sys.argv[4:]:
             reject("source string is a bare URL, not a work"); continue
         if any(key(s) == key(a) for s in srcs):
             reject("source string only repeats the author's name"); continue
+        secondhand = [secondhand_reason(a, s) for s in srcs]
+        if all(secondhand):
+            reject("second-hand source: " + secondhand[0]); continue
+        if all(thin_remark(s) for s in srcs):
+            reject("thin remark: no document, occasion or date to check it against"); continue
+        disputed = [disputed_reason(s) for s in srcs]
+        if all(disputed):
+            reject("disputed work: " + disputed[0]); continue
         if (key(a), key(q)) in have_pair:
             reject("already in the corpus"); continue
         if key(q) in have_quote:
