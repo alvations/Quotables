@@ -41110,7 +41110,7 @@ Hyman G. Rickover	Good ideas are not adopted automatically. They must be driven 
 Leslie Lamport	A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable	["Email, 28 May 1987"]
 Bjarne Stroustrup	There are only two kinds of languages: the ones people complain about and the ones nobody uses	["The C++ Programming Language (1997), 3rd edition"]
 Peter Rice	To call an engineer an 'architect engineer' because he comes up with unusual or original solutions is essentially to misunderstand the role of the engineer in society.	["An Engineer Imagines (1994)"]
-Alan Perlis	It is easier to write an incorrect program than understand a correct one.	["Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13"]
+Alan Perlis	It is easier to write an incorrect program than understand a correct one.	["Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13, epigram 7"]
 Alan Perlis	The best book on programming for the layman is Alice in Wonderland; but that's because it's the best book on anything for the layman.	["Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13"]
 Alan Perlis	Dealing with failure is easy: Work hard to improve. Success is also easy to handle: You've solved the wrong problem. Work hard to improve.	["Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13"]
 Alan Perlis	Within a computer natural language is unnatural.	["Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13"]

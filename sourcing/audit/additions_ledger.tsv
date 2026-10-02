@@ -1876,7 +1876,7 @@ batch_d31	Hyman G. Rickover	Good ideas are not adopted automatically. They must 
 batch_d31	Leslie Lamport	A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer	accepted	Email, 28 May 1987
 batch_d31	Bjarne Stroustrup	There are only two kinds of languages: the ones people complain about and the ones nobody uses	accepted	The C++ Programming Language (1997), 3rd edition
 batch_d31	Peter Rice	To call an engineer an 'architect engineer' because he comes up with unusual or original solutions is essentially to mis	accepted	An Engineer Imagines (1994)
-batch_d31	Alan Perlis	It is easier to write an incorrect program than understand a correct one.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
+batch_d31	Alan Perlis	It is easier to write an incorrect program than understand a correct one.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13, epigram 7
 batch_d31	Alan Perlis	The best book on programming for the layman is Alice in Wonderland; but that's because it's the best book on anything fo	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
 batch_d31	Alan Perlis	Dealing with failure is easy: Work hard to improve. Success is also easy to handle: You've solved the wrong problem. Wor	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
 batch_d31	Alan Perlis	Within a computer natural language is unnatural.	accepted	Epigrams on Programming (1982), ACM SIGPLAN Notices 17:9, pp. 7-13
