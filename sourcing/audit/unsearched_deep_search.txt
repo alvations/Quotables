@@ -1,168 +1,427 @@
-# Deep-search rows left unsearched when a batch's budget ran out.
-# Corpus line numbers against the original 39,269-line corpus.
-# batch_w004:
-3928
-3929
-3930
-19893
-19899
-19900
-19902
-19905
-19906
-19908
-19909
-19911
-19913
-19914
-# batch_w012: left unsearched when the seven-day usage limit stopped the run at 08:58Z
-26528
-26529
-26533
-26534
-26543
-26544
-26545
-26548
-26550
-26551
-30604
-30606
-30609
-30610
-30611
-30613
-30616
-30618
-30621
-10795
-10797
-10804
-10806
-10807
-10810
-10813
-10814
-10816
-3280
-3284
-3285
-3287
-3288
-3289
-3291
-3292
-3293
-21301
-21302
-21304
-21305
-21307
-21308
-21309
-21310
-21311
-19657
-19661
-19663
-19664
-19665
-19668
-19669
-19671
-19673
-12659
-12664
-12667
-12669
-12672
-12674
-12675
-12677
-12679
-26343
-26344
-26347
-26351
-26353
-26355
-26357
-26360
-26363
-38110
-38111
-38112
-38115
-38117
-38121
-38127
-38133
-38134
-37956
-37958
-37960
-37969
-37972
-37973
-37975
-37977
-37980
-13269
-13273
-13274
-13275
-13276
-13277
-13278
-13281
-13282
-1250
-1252
-1253
-1254
-1259
-1260
-1268
-1270
-1273
-14040
-14041
-14048
-14049
-14051
-14056
-14057
-14058
-14060
-23290
-23292
-23297
-23298
-23299
-23300
-23301
-23303
-23305
-36046
-36048
-36049
-36050
-36053
-36054
-36055
-36056
-36057
-13673
-13674
-13675
-13677
-13678
-13680
-13684
-13687
-13689
-15195
-15199
-15202
-15206
-15208
+# Corpus lines a deep-search batch was given and never actually searched.
+# Line numbers against the original 39,269-line corpus, which is what every id in
+# sourcing/evidence/ refers to. Two ways a line lands here: the batch reported it with a
+# NOT SEARCHED note after its search budget ran out, or the batch was stopped (by a usage
+# limit, then by the end of the run) before it reached the line at all. Neither is counted
+# as searched anywhere in the documentation.
+#
+# Regenerated from the batch prompts and the result files, so it is derived rather than
+# hand-kept: id, batch, reason.
+#
+# batch_w004: 14 reported unsearched, 0 never reached
+3928	batch_w004	budget-exhausted
+3929	batch_w004	budget-exhausted
+3930	batch_w004	budget-exhausted
+19893	batch_w004	budget-exhausted
+19899	batch_w004	budget-exhausted
+19900	batch_w004	budget-exhausted
+19902	batch_w004	budget-exhausted
+19905	batch_w004	budget-exhausted
+19906	batch_w004	budget-exhausted
+19908	batch_w004	budget-exhausted
+19909	batch_w004	budget-exhausted
+19911	batch_w004	budget-exhausted
+19913	batch_w004	budget-exhausted
+19914	batch_w004	budget-exhausted
+#
+# batch_w006: 3 reported unsearched, 0 never reached
+2220	batch_w006	budget-exhausted
+12563	batch_w006	budget-exhausted
+12564	batch_w006	budget-exhausted
+#
+# batch_w009: 0 reported unsearched, 70 never reached
+5697	batch_w009	not-reached
+5699	batch_w009	not-reached
+5701	batch_w009	not-reached
+5704	batch_w009	not-reached
+5709	batch_w009	not-reached
+12016	batch_w009	not-reached
+12018	batch_w009	not-reached
+12019	batch_w009	not-reached
+12020	batch_w009	not-reached
+12021	batch_w009	not-reached
+12023	batch_w009	not-reached
+12024	batch_w009	not-reached
+12025	batch_w009	not-reached
+12026	batch_w009	not-reached
+12030	batch_w009	not-reached
+12033	batch_w009	not-reached
+12034	batch_w009	not-reached
+12035	batch_w009	not-reached
+14570	batch_w009	not-reached
+14571	batch_w009	not-reached
+14572	batch_w009	not-reached
+14573	batch_w009	not-reached
+14578	batch_w009	not-reached
+14579	batch_w009	not-reached
+14580	batch_w009	not-reached
+14581	batch_w009	not-reached
+14583	batch_w009	not-reached
+14587	batch_w009	not-reached
+14588	batch_w009	not-reached
+14592	batch_w009	not-reached
+14593	batch_w009	not-reached
+14619	batch_w009	not-reached
+14622	batch_w009	not-reached
+14626	batch_w009	not-reached
+14627	batch_w009	not-reached
+14628	batch_w009	not-reached
+14629	batch_w009	not-reached
+14630	batch_w009	not-reached
+14632	batch_w009	not-reached
+14634	batch_w009	not-reached
+14635	batch_w009	not-reached
+14638	batch_w009	not-reached
+14640	batch_w009	not-reached
+14641	batch_w009	not-reached
+31762	batch_w009	not-reached
+31763	batch_w009	not-reached
+31766	batch_w009	not-reached
+31769	batch_w009	not-reached
+31770	batch_w009	not-reached
+31772	batch_w009	not-reached
+31774	batch_w009	not-reached
+31775	batch_w009	not-reached
+31777	batch_w009	not-reached
+31778	batch_w009	not-reached
+31780	batch_w009	not-reached
+31782	batch_w009	not-reached
+31787	batch_w009	not-reached
+34435	batch_w009	not-reached
+34439	batch_w009	not-reached
+34440	batch_w009	not-reached
+34441	batch_w009	not-reached
+34443	batch_w009	not-reached
+34447	batch_w009	not-reached
+34450	batch_w009	not-reached
+34452	batch_w009	not-reached
+34453	batch_w009	not-reached
+34455	batch_w009	not-reached
+34456	batch_w009	not-reached
+34457	batch_w009	not-reached
+34460	batch_w009	not-reached
+#
+# batch_w012: 0 reported unsearched, 126 never reached
+1250	batch_w012	not-reached
+1252	batch_w012	not-reached
+1253	batch_w012	not-reached
+1254	batch_w012	not-reached
+1259	batch_w012	not-reached
+1260	batch_w012	not-reached
+1268	batch_w012	not-reached
+1270	batch_w012	not-reached
+1273	batch_w012	not-reached
+3280	batch_w012	not-reached
+3284	batch_w012	not-reached
+3285	batch_w012	not-reached
+3287	batch_w012	not-reached
+3288	batch_w012	not-reached
+3289	batch_w012	not-reached
+3291	batch_w012	not-reached
+3292	batch_w012	not-reached
+3293	batch_w012	not-reached
+10804	batch_w012	not-reached
+10806	batch_w012	not-reached
+10814	batch_w012	not-reached
+10816	batch_w012	not-reached
+12659	batch_w012	not-reached
+12664	batch_w012	not-reached
+12667	batch_w012	not-reached
+12669	batch_w012	not-reached
+12672	batch_w012	not-reached
+12674	batch_w012	not-reached
+12675	batch_w012	not-reached
+12677	batch_w012	not-reached
+12679	batch_w012	not-reached
+13269	batch_w012	not-reached
+13273	batch_w012	not-reached
+13274	batch_w012	not-reached
+13275	batch_w012	not-reached
+13276	batch_w012	not-reached
+13277	batch_w012	not-reached
+13278	batch_w012	not-reached
+13281	batch_w012	not-reached
+13282	batch_w012	not-reached
+13673	batch_w012	not-reached
+13674	batch_w012	not-reached
+13675	batch_w012	not-reached
+13677	batch_w012	not-reached
+13678	batch_w012	not-reached
+13680	batch_w012	not-reached
+13684	batch_w012	not-reached
+13687	batch_w012	not-reached
+13689	batch_w012	not-reached
+14040	batch_w012	not-reached
+14041	batch_w012	not-reached
+14048	batch_w012	not-reached
+14049	batch_w012	not-reached
+14051	batch_w012	not-reached
+14056	batch_w012	not-reached
+14057	batch_w012	not-reached
+14058	batch_w012	not-reached
+14060	batch_w012	not-reached
+15195	batch_w012	not-reached
+15199	batch_w012	not-reached
+15202	batch_w012	not-reached
+15206	batch_w012	not-reached
+15208	batch_w012	not-reached
+19657	batch_w012	not-reached
+19661	batch_w012	not-reached
+19663	batch_w012	not-reached
+19664	batch_w012	not-reached
+19665	batch_w012	not-reached
+19668	batch_w012	not-reached
+19669	batch_w012	not-reached
+19671	batch_w012	not-reached
+19673	batch_w012	not-reached
+21301	batch_w012	not-reached
+21302	batch_w012	not-reached
+21304	batch_w012	not-reached
+21305	batch_w012	not-reached
+21307	batch_w012	not-reached
+21308	batch_w012	not-reached
+21309	batch_w012	not-reached
+21310	batch_w012	not-reached
+21311	batch_w012	not-reached
+23290	batch_w012	not-reached
+23292	batch_w012	not-reached
+23297	batch_w012	not-reached
+23298	batch_w012	not-reached
+23299	batch_w012	not-reached
+23300	batch_w012	not-reached
+23301	batch_w012	not-reached
+23303	batch_w012	not-reached
+23305	batch_w012	not-reached
+26343	batch_w012	not-reached
+26344	batch_w012	not-reached
+26347	batch_w012	not-reached
+26351	batch_w012	not-reached
+26353	batch_w012	not-reached
+26355	batch_w012	not-reached
+26357	batch_w012	not-reached
+26360	batch_w012	not-reached
+26363	batch_w012	not-reached
+36046	batch_w012	not-reached
+36048	batch_w012	not-reached
+36049	batch_w012	not-reached
+36050	batch_w012	not-reached
+36053	batch_w012	not-reached
+36054	batch_w012	not-reached
+36055	batch_w012	not-reached
+36056	batch_w012	not-reached
+36057	batch_w012	not-reached
+37956	batch_w012	not-reached
+37958	batch_w012	not-reached
+37960	batch_w012	not-reached
+37969	batch_w012	not-reached
+37972	batch_w012	not-reached
+37973	batch_w012	not-reached
+37975	batch_w012	not-reached
+37977	batch_w012	not-reached
+37980	batch_w012	not-reached
+38110	batch_w012	not-reached
+38111	batch_w012	not-reached
+38112	batch_w012	not-reached
+38115	batch_w012	not-reached
+38117	batch_w012	not-reached
+38121	batch_w012	not-reached
+38127	batch_w012	not-reached
+38133	batch_w012	not-reached
+38134	batch_w012	not-reached
+#
+# batch_w013: 0 reported unsearched, 87 never reached
+1278	batch_w013	not-reached
+1279	batch_w013	not-reached
+1280	batch_w013	not-reached
+1284	batch_w013	not-reached
+1295	batch_w013	not-reached
+1296	batch_w013	not-reached
+1298	batch_w013	not-reached
+1329	batch_w013	not-reached
+1330	batch_w013	not-reached
+1338	batch_w013	not-reached
+1339	batch_w013	not-reached
+1344	batch_w013	not-reached
+1348	batch_w013	not-reached
+1349	batch_w013	not-reached
+3579	batch_w013	not-reached
+3580	batch_w013	not-reached
+3586	batch_w013	not-reached
+3587	batch_w013	not-reached
+3590	batch_w013	not-reached
+3591	batch_w013	not-reached
+3594	batch_w013	not-reached
+10358	batch_w013	not-reached
+10359	batch_w013	not-reached
+10360	batch_w013	not-reached
+10362	batch_w013	not-reached
+10365	batch_w013	not-reached
+10367	batch_w013	not-reached
+10377	batch_w013	not-reached
+13436	batch_w013	not-reached
+13437	batch_w013	not-reached
+13438	batch_w013	not-reached
+13439	batch_w013	not-reached
+13441	batch_w013	not-reached
+13442	batch_w013	not-reached
+13443	batch_w013	not-reached
+13444	batch_w013	not-reached
+15063	batch_w013	not-reached
+15066	batch_w013	not-reached
+15068	batch_w013	not-reached
+15069	batch_w013	not-reached
+15074	batch_w013	not-reached
+15080	batch_w013	not-reached
+15081	batch_w013	not-reached
+15082	batch_w013	not-reached
+16388	batch_w013	not-reached
+16391	batch_w013	not-reached
+16392	batch_w013	not-reached
+16393	batch_w013	not-reached
+16394	batch_w013	not-reached
+16396	batch_w013	not-reached
+16399	batch_w013	not-reached
+19768	batch_w013	not-reached
+19769	batch_w013	not-reached
+19771	batch_w013	not-reached
+19773	batch_w013	not-reached
+19774	batch_w013	not-reached
+19776	batch_w013	not-reached
+19777	batch_w013	not-reached
+29079	batch_w013	not-reached
+29081	batch_w013	not-reached
+29083	batch_w013	not-reached
+29091	batch_w013	not-reached
+29095	batch_w013	not-reached
+29101	batch_w013	not-reached
+29102	batch_w013	not-reached
+30564	batch_w013	not-reached
+30565	batch_w013	not-reached
+30566	batch_w013	not-reached
+30569	batch_w013	not-reached
+30573	batch_w013	not-reached
+30574	batch_w013	not-reached
+30582	batch_w013	not-reached
+32564	batch_w013	not-reached
+32566	batch_w013	not-reached
+32567	batch_w013	not-reached
+32568	batch_w013	not-reached
+32576	batch_w013	not-reached
+32578	batch_w013	not-reached
+32579	batch_w013	not-reached
+32584	batch_w013	not-reached
+33075	batch_w013	not-reached
+33078	batch_w013	not-reached
+33082	batch_w013	not-reached
+33091	batch_w013	not-reached
+33092	batch_w013	not-reached
+33093	batch_w013	not-reached
+33096	batch_w013	not-reached
+#
+# batch_w014: 0 reported unsearched, 26 never reached
+18047	batch_w014	not-reached
+18048	batch_w014	not-reached
+18049	batch_w014	not-reached
+18051	batch_w014	not-reached
+18055	batch_w014	not-reached
+18057	batch_w014	not-reached
+31131	batch_w014	not-reached
+31136	batch_w014	not-reached
+31137	batch_w014	not-reached
+31145	batch_w014	not-reached
+31146	batch_w014	not-reached
+31147	batch_w014	not-reached
+31604	batch_w014	not-reached
+31606	batch_w014	not-reached
+31608	batch_w014	not-reached
+31612	batch_w014	not-reached
+31621	batch_w014	not-reached
+31624	batch_w014	not-reached
+36252	batch_w014	not-reached
+36256	batch_w014	not-reached
+36257	batch_w014	not-reached
+36268	batch_w014	not-reached
+36269	batch_w014	not-reached
+37537	batch_w014	not-reached
+37546	batch_w014	not-reached
+37547	batch_w014	not-reached
+#
+# batch_w015: 0 reported unsearched, 50 never reached
+1456	batch_w015	not-reached
+1458	batch_w015	not-reached
+1459	batch_w015	not-reached
+1773	batch_w015	not-reached
+1776	batch_w015	not-reached
+1778	batch_w015	not-reached
+2644	batch_w015	not-reached
+2645	batch_w015	not-reached
+2646	batch_w015	not-reached
+6310	batch_w015	not-reached
+6313	batch_w015	not-reached
+6315	batch_w015	not-reached
+7975	batch_w015	not-reached
+7981	batch_w015	not-reached
+7983	batch_w015	not-reached
+8797	batch_w015	not-reached
+8798	batch_w015	not-reached
+8799	batch_w015	not-reached
+10792	batch_w015	not-reached
+10793	batch_w015	not-reached
+10794	batch_w015	not-reached
+11047	batch_w015	not-reached
+11052	batch_w015	not-reached
+11055	batch_w015	not-reached
+12398	batch_w015	not-reached
+12400	batch_w015	not-reached
+12402	batch_w015	not-reached
+13237	batch_w015	not-reached
+13238	batch_w015	not-reached
+13239	batch_w015	not-reached
+14653	batch_w015	not-reached
+14654	batch_w015	not-reached
+15514	batch_w015	not-reached
+15526	batch_w015	not-reached
+15534	batch_w015	not-reached
+21682	batch_w015	not-reached
+21683	batch_w015	not-reached
+21684	batch_w015	not-reached
+23866	batch_w015	not-reached
+23869	batch_w015	not-reached
+23882	batch_w015	not-reached
+25250	batch_w015	not-reached
+25251	batch_w015	not-reached
+25252	batch_w015	not-reached
+28059	batch_w015	not-reached
+28062	batch_w015	not-reached
+28063	batch_w015	not-reached
+29769	batch_w015	not-reached
+29771	batch_w015	not-reached
+29773	batch_w015	not-reached
+#
+# batch_w016: 0 reported unsearched, 26 never reached
+257	batch_w016	not-reached
+1520	batch_w016	not-reached
+1661	batch_w016	not-reached
+6257	batch_w016	not-reached
+6367	batch_w016	not-reached
+9767	batch_w016	not-reached
+10168	batch_w016	not-reached
+11279	batch_w016	not-reached
+12815	batch_w016	not-reached
+13233	batch_w016	not-reached
+14083	batch_w016	not-reached
+15482	batch_w016	not-reached
+21279	batch_w016	not-reached
+21867	batch_w016	not-reached
+23040	batch_w016	not-reached
+28759	batch_w016	not-reached
+34292	batch_w016	not-reached
+34411	batch_w016	not-reached
+34874	batch_w016	not-reached
+36120	batch_w016	not-reached
+37860	batch_w016	not-reached
+38014	batch_w016	not-reached
+38248	batch_w016	not-reached
+38401	batch_w016	not-reached
+38689	batch_w016	not-reached
+38800	batch_w016	not-reached

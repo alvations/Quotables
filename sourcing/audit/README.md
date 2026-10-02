@@ -255,8 +255,11 @@ the run stopped.
   source; 84 of them were additionally confirmed verbatim in public-domain full text.
 - The deep-search batches (`batch_w001` to `w016`) re-searched lines the corpus already held:
   **629 gained a source, 319 were documented as misattributions, 1,358 could not be placed**,
-  and 164 were never reached - their ids are in `unsearched_deep_search.txt`, not silently
-  counted as searched.
+  and **402 of the 2,708 lines handed out were never actually searched** - 17 reported with a
+  NOT SEARCHED note after a batch's search budget ran out, 385 never reached because the batch
+  was stopped first. Their ids, batches and reasons are in `unsearched_deep_search.txt`, which
+  is regenerated from the prompts and the result files rather than kept by hand, so it cannot
+  drift. They are not counted as searched anywhere here.
 - `verify_corpus.py` is the gate the rebuild runs before it is allowed to replace
   `author-quote.txt`, so the file on the branch satisfies every invariant this documentation
   claims for it.

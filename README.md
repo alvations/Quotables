@@ -27,7 +27,8 @@ A Corpus of Quotes.
 
 How the sources were found, what evidence backs each one, and how to extend the column are
 described in [docs/SOURCING.md](docs/SOURCING.md); the scripts and per-line evidence are in
-`sourcing/`.
+`sourcing/`. [docs/RESUMING.md](docs/RESUMING.md) is the short version for picking the work
+back up: the ingest cycle, what is left to do, and the rules the sourcing was held to.
 
 # Contribute
 - Feel free to fork it, add more quotes and do a pull merge request
