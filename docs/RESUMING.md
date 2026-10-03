@@ -110,7 +110,13 @@ Both would move line numbers or repoint citations, so they were left alone:
   Transcribe a relayed payload into `sourcing/relay/` or `sourcing/relay_web/` *before* doing
   anything else with it, and keep the message verbatim in `sourcing/audit/relay_payloads/`.
 - **Sessions created before the branch carried push credentials cannot push.** Prefer a fresh
-  `create_session` for new work; re-waking is for a session that stalled.
+  `create_session` for new work; re-waking is for a session that stalled. `batch_d14` and
+  `batch_d35` came back entirely through the relay for this reason.
+- **A child can end up holding finished work and waiting to be told to push it.** The `w003`
+  session finished `batch_w010` and sat with its `results.jsonl` in the container, asking for a
+  go-ahead; only the relay copy saved those 170 rows. Say in the brief that pushing needs no
+  permission, and check a finished child's own summary for a `needs_action` before archiving
+  it.
 - **The egress proxy blocks** wikiquote.org, archive.org, gutenberg.org and books.google.com,
   and `WebFetch` altogether. Children must use the `WebSearch` tool and reason over its
   snippets. Two sessions lost a whole run to this.

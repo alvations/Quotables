@@ -244,10 +244,13 @@ comparisons: 1,354 located, 18,006 below threshold, 21,731 no match).
 The figures above are snapshots of the passes they describe; these are the totals at the point
 the run stopped.
 
-- **330 agent sessions** are recorded in `sessions.jsonl`, USD 3,954.55 in total, every one of
-  them with a cost. The ledger carries a reconciliation record for each session whose real cost
-  was only readable after it finished, so a session may appear more than once: the last record
-  for a session is the authoritative one.
+- **330 agent sessions** are recorded in `sessions.jsonl`, **USD 4,145.17** in total, every one
+  of them with a cost read from the session itself rather than estimated. The ledger carries a
+  reconciliation record for each session whose real cost was only readable after it finished,
+  so a session may appear more than once: the last record for a session is the authoritative
+  one. The figure rose by USD 190.62 at the very end, when the last 30 idle children were
+  archived and their true costs read; a session re-used for a second batch carries the cost of
+  both, which is why some records are far above the per-batch average.
 - The corpus finished at **41,943 lines, 16,390 of them sourced (39.1%), covering 3,785
   people**, with 25,553 lines still unsourced and 771 quotations documented as misattributed
   and therefore deliberately left with `[]`.
